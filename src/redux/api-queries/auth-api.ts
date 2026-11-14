@@ -15,10 +15,26 @@ export interface ILoginResponse {
 
 const authApi = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
-        // === admin login ===
-        login: builder.mutation<IApiResponse<ILoginResponse>, ILoginPayload>({
+        // === staff login (dashboard) ===
+        adminLogin: builder.mutation<
+            IApiResponse<ILoginResponse>,
+            ILoginPayload
+        >({
             query: (payload) => ({
                 url: '/user/admin/login',
+                method: 'POST',
+                body: payload
+            }),
+            invalidatesTags: ['USER_PROFILE']
+        }),
+
+        // === customer login (public site) ===
+        userLogin: builder.mutation<
+            IApiResponse<ILoginResponse>,
+            ILoginPayload
+        >({
+            query: (payload) => ({
+                url: '/user/login',
                 method: 'POST',
                 body: payload
             }),
@@ -33,4 +49,8 @@ const authApi = apiSlice.injectEndpoints({
     })
 });
 
-export const { useLoginMutation, useGetUserProfileQuery } = authApi;
+export const {
+    useAdminLoginMutation,
+    useUserLoginMutation,
+    useGetUserProfileQuery
+} = authApi;

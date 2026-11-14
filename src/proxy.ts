@@ -1,47 +1,79 @@
 import { ACCESS_TOKEN_KEY } from '@/auth/constants';
 import { getDecodedUser, isTokenExpired } from '@/auth/decoded';
+import { isAdminRole } from '@/auth/roles';
 import {
+    ADMIN_AREA,
     AUTH_ROUTES,
-    DEFAULT_LOGIN_REDIRECT,
+    getHomeForRole,
+    isUnder,
     NEXT_PARAM,
-    PROTECTED_PREFIX
+    USER_AREA
 } from '@/auth/routes';
-import { routes } from '@/routes';
 import { NextResponse, type NextRequest } from 'next/server';
 
 /**
  * Optimistic auth guard (Next.js 16 "proxy", formerly middleware).
- * It decodes the access-token cookie and checks expiry. Signature checks and
- * role/permission rules belong to the backend, which validates the bearer
- * token on every API request; an invalid token makes `GET /user` fail and
- * `useLoggedInUser` signs the user out.
+ * Decodes the access-token cookie, checks expiry and routes by `role`:
+ *
+ * | path          | guest            | customer (USER) | staff (admin roles) |
+ * | ------------- | ---------------- | --------------- | ------------------- |
+ * | /login        | ✓                | → /profile      | → /admin            |
+ * | /admin-login  | ✓                | → /profile      | → /admin            |
+ * | /profile/*    | → /login?next    | ✓               | → /admin            |
+ * | /admin/*      | → /admin-login   | → /profile      | ✓                   |
+ *
+ * The token signature is checked by the backend on every API call, which
+ * remains the real authority; this only keeps people on the right pages.
  */
 export function proxy(request: NextRequest) {
     const { nextUrl } = request;
     const { pathname } = nextUrl;
 
-    const accessToken = request.cookies.get(ACCESS_TOKEN_KEY)?.value;
-    const user = getDecodedUser(accessToken);
+    const user = getDecodedUser(request.cookies.get(ACCESS_TOKEN_KEY)?.value);
     const isAuthenticated = user !== null && !isTokenExpired(user);
+    const isAdmin = isAuthenticated && isAdminRole(user.role);
 
-    // Logged-in users have no business on the login page.
+    const redirectTo = (path: string) =>
+        NextResponse.redirect(new URL(path, nextUrl));
+
+    const redirectToLogin = (loginPath: string) => {
+        const url = new URL(loginPath, nextUrl);
+        url.searchParams.set(NEXT_PARAM, pathname);
+        return NextResponse.redirect(url);
+    };
+
+    // Login pages are for guests only.
     if (AUTH_ROUTES.includes(pathname)) {
         return isAuthenticated
-            ? NextResponse.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl))
+            ? redirectTo(getHomeForRole(user.role))
             : NextResponse.next();
     }
 
-    // Guests trying to reach the admin area go to login (and come back after).
-    if (pathname.startsWith(PROTECTED_PREFIX) && !isAuthenticated) {
-        const loginUrl = new URL(routes.adminLogin, nextUrl);
-        loginUrl.searchParams.set(NEXT_PARAM, pathname);
-        return NextResponse.redirect(loginUrl);
+    // Admin dashboard: staff only.
+    if (isUnder(pathname, ADMIN_AREA.prefix)) {
+        if (!isAuthenticated) return redirectToLogin(ADMIN_AREA.login);
+        if (!isAdmin) return redirectTo(USER_AREA.home);
+        return NextResponse.next();
+    }
+
+    // Customer area: regular users only.
+    if (isUnder(pathname, USER_AREA.prefix)) {
+        if (!isAuthenticated) return redirectToLogin(USER_AREA.login);
+        if (isAdmin) return redirectTo(ADMIN_AREA.home);
+        return NextResponse.next();
     }
 
     return NextResponse.next();
 }
 
 export const config = {
-    // Only the admin area and its login page; the marketing site is untouched.
-    matcher: ['/admin', '/admin/:path*', '/admin-login']
+    // Only the guarded areas and their login pages; the marketing site is untouched.
+    matcher: [
+        '/admin',
+        '/admin/:path*',
+        '/admin-login',
+        '/profile',
+        '/profile/:path*',
+        '/login'
+    ]
 };

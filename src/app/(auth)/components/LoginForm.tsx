@@ -1,11 +1,9 @@
 'use client';
 
-import { setAccessToken, setRefreshToken } from '@/auth/cookies';
-import {
-    DEFAULT_LOGIN_REDIRECT,
-    NEXT_PARAM,
-    PROTECTED_PREFIX
-} from '@/auth/routes';
+import { clearSession, setAccessToken, setRefreshToken } from '@/auth/cookies';
+import { getDecodedUser } from '@/auth/decoded';
+import { isAdminRole } from '@/auth/roles';
+import { getSafeRedirect, NEXT_PARAM } from '@/auth/routes';
 import { Button } from '@/components/ui/button';
 import {
     Form,
@@ -17,7 +15,10 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { getApiErrorMessage } from '@/lib/api-error';
-import { useLoginMutation } from '@/redux/api-queries/auth-api';
+import {
+    useAdminLoginMutation,
+    useUserLoginMutation
+} from '@/redux/api-queries/auth-api';
 import { LoginSchema, type TLoginSchema } from '@/schema/login';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader } from 'lucide-react';
@@ -25,11 +26,29 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
-/** Only allow returning to pages inside the admin area (no open redirects). */
-const getSafeRedirect = (next: string | null) =>
-    next && next.startsWith(PROTECTED_PREFIX) ? next : DEFAULT_LOGIN_REDIRECT;
+type TLoginVariant = 'admin' | 'user';
 
-const AdminLoginForm = () => {
+const COPY: Record<TLoginVariant, { title: string; description: string }> = {
+    admin: {
+        title: 'Admin Login',
+        description: 'Sign in to manage the dashboard.'
+    },
+    user: {
+        title: 'Login',
+        description: 'Sign in to your account.'
+    }
+};
+
+interface IProps {
+    variant: TLoginVariant;
+}
+
+/**
+ * Phone + password login shared by `/login` (customers) and `/admin-login`
+ * (staff). Each variant calls its own backend endpoint; the admin variant
+ * also refuses accounts without a staff role.
+ */
+const LoginForm = ({ variant }: IProps) => {
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -41,7 +60,10 @@ const AdminLoginForm = () => {
         }
     });
 
-    const [login, { isLoading }] = useLoginMutation();
+    const [adminLogin, adminState] = useAdminLoginMutation();
+    const [userLogin, userState] = useUserLoginMutation();
+    const login = variant === 'admin' ? adminLogin : userLogin;
+    const isLoading = adminState.isLoading || userState.isLoading;
 
     const handleLogin = async (values: TLoginSchema) => {
         try {
@@ -52,16 +74,27 @@ const AdminLoginForm = () => {
                 return;
             }
 
-            setAccessToken(res.data.access_token);
-            setRefreshToken(res.data.refresh_token);
+            const { access_token, refresh_token } = res.data;
+            const role = getDecodedUser(access_token)?.role;
+
+            if (variant === 'admin' && !isAdminRole(role)) {
+                clearSession();
+                toast.error('This account does not have dashboard access.');
+                return;
+            }
+
+            setAccessToken(access_token);
+            setRefreshToken(refresh_token);
 
             toast.success('Login successful!');
-            router.replace(getSafeRedirect(searchParams.get(NEXT_PARAM)));
+            router.replace(getSafeRedirect(searchParams.get(NEXT_PARAM), role));
             router.refresh();
         } catch (error) {
             toast.error(getApiErrorMessage(error, 'Failed to login!'));
         }
     };
+
+    const { title, description } = COPY[variant];
 
     return (
         <Form {...form}>
@@ -72,10 +105,10 @@ const AdminLoginForm = () => {
             >
                 <div>
                     <h3 className='text-2xl font-medium text-gray-900 dark:text-gray-100'>
-                        Admin Login
+                        {title}
                     </h3>
                     <p className='text-sm text-gray-600 dark:text-gray-400'>
-                        Sign in to manage the dashboard.
+                        {description}
                     </p>
                 </div>
 
@@ -126,4 +159,4 @@ const AdminLoginForm = () => {
     );
 };
 
-export default AdminLoginForm;
+export default LoginForm;
