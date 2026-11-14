@@ -2,6 +2,7 @@
 
 import { clearSession, setAccessToken, setRefreshToken } from '@/auth/cookies';
 import { getDecodedUser } from '@/auth/decoded';
+import { loginRequest, type TLoginVariant } from '@/auth/login-request';
 import { isAdminRole } from '@/auth/roles';
 import { getSafeRedirect, NEXT_PARAM } from '@/auth/routes';
 import { Button } from '@/components/ui/button';
@@ -15,18 +16,13 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { getApiErrorMessage } from '@/lib/api-error';
-import {
-    useAdminLoginMutation,
-    useUserLoginMutation
-} from '@/redux/api-queries/auth-api';
 import { LoginSchema, type TLoginSchema } from '@/schema/login';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader } from 'lucide-react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
-
-type TLoginVariant = 'admin' | 'user';
 
 const COPY: Record<TLoginVariant, { title: string; description: string }> = {
     admin: {
@@ -50,7 +46,6 @@ interface IProps {
  */
 const LoginForm = ({ variant }: IProps) => {
     const router = useRouter();
-    const searchParams = useSearchParams();
 
     const form = useForm<TLoginSchema>({
         resolver: zodResolver(LoginSchema),
@@ -60,14 +55,12 @@ const LoginForm = ({ variant }: IProps) => {
         }
     });
 
-    const [adminLogin, adminState] = useAdminLoginMutation();
-    const [userLogin, userState] = useUserLoginMutation();
-    const login = variant === 'admin' ? adminLogin : userLogin;
-    const isLoading = adminState.isLoading || userState.isLoading;
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleLogin = async (values: TLoginSchema) => {
+        setIsLoading(true);
         try {
-            const res = await login(values).unwrap();
+            const res = await loginRequest(variant, values);
 
             if (!res.success) {
                 toast.error(res.message || 'Failed to login!');
@@ -87,10 +80,17 @@ const LoginForm = ({ variant }: IProps) => {
             setRefreshToken(refresh_token);
 
             toast.success('Login successful!');
-            router.replace(getSafeRedirect(searchParams.get(NEXT_PARAM), role));
+            // Read `?next=` only when submitting: calling useSearchParams()
+            // during render would drop the form out of the static HTML.
+            const next = new URLSearchParams(window.location.search).get(
+                NEXT_PARAM
+            );
+            router.replace(getSafeRedirect(next, role));
             router.refresh();
         } catch (error) {
             toast.error(getApiErrorMessage(error, 'Failed to login!'));
+        } finally {
+            setIsLoading(false);
         }
     };
 

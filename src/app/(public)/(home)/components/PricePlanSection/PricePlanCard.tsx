@@ -33,9 +33,9 @@ const PricePlanCard: FC<IProps> = ({
                 {name}
             </h3>
             <div className='mb-8'>
-                <h4 className='mb-4 text-3xl font-semibold text-gray-900 capitalize dark:text-gray-100'>
+                <h3 className='mb-4 text-3xl font-semibold text-gray-900 capitalize dark:text-gray-100'>
                     {pricingModel === 'monthly' ? price.monthly : price.yearly}
-                </h4>
+                </h3>
                 <p className='text-gray-500'>
                     {pricingModel === 'monthly' ? 'Per month' : 'Per year'}
                 </p>

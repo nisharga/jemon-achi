@@ -1,6 +1,5 @@
 import Logo from '@/components/Logo';
 import Link from 'next/link';
-import { Suspense } from 'react';
 import LoginForm from './LoginForm';
 
 interface IProps {
@@ -16,10 +15,7 @@ const LoginCard = ({ variant }: IProps) => {
                     <Logo />
                 </Link>
             </div>
-            {/* useSearchParams inside the form requires a Suspense boundary */}
-            <Suspense fallback={null}>
-                <LoginForm variant={variant} />
-            </Suspense>
+            <LoginForm variant={variant} />
         </div>
     );
 };

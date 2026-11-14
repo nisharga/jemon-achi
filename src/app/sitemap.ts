@@ -1,21 +1,13 @@
 import { SITE_DOMAIN } from '@/configs/env';
+import { routes } from '@/routes';
+import type { MetadataRoute } from 'next';
 
-interface ISitemap {
-    url: string;
-    lastModified: Date;
-}
+// Public, indexable pages only.
+const PUBLIC_PAGES = [routes.base, routes.contactUs, routes.blogs];
 
-const sitemap = (): ISitemap[] => {
-    return [
-        {
-            url: SITE_DOMAIN,
-            lastModified: new Date()
-        },
-        {
-            url: SITE_DOMAIN + '/contact-us',
-            lastModified: new Date()
-        }
-    ];
-};
+const sitemap = (): MetadataRoute.Sitemap =>
+    PUBLIC_PAGES.map((path) => ({
+        url: new URL(path, SITE_DOMAIN).toString()
+    }));
 
 export default sitemap;

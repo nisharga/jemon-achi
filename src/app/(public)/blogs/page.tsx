@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
+import { BlogSection } from '../(home)/components';
+
+export const metadata: Metadata = {
+    title: 'Blogs'
+};
+
 const BlogPage = () => {
-    return <div>BlogPage</div>;
+    return <BlogSection aboveFold />;
 };
 
 export default BlogPage;

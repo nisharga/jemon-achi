@@ -11,15 +11,14 @@ const Logo: FC<IProps> = ({ className }) => {
         <Image
             height={45}
             width={125}
-            src={'/logo.svg'}
+            src={'/logo.png'}
             alt='site-logo'
-            // The logo sits in the sticky header, so it is the LCP element.
+            // Above the fold on every page: load straight away.
             loading='eager'
-            fetchPriority='high'
             // Height comes from the classes; keep width proportional.
             style={{ width: 'auto' }}
+            sizes='125px'
             className={cn('h-8 w-auto md:h-9', className)}
-            unoptimized
         />
     );
 };

@@ -7,9 +7,19 @@ interface IProps {
     excerpt: string;
     contents: string;
     thumbnail: string;
+    /** Load the image immediately (card is above the fold). */
+    eager?: boolean;
+    /** Preload with high priority (only the page's LCP image). */
+    preload?: boolean;
 }
 
-const BlogPostCard: React.FC<IProps> = ({ title, excerpt, thumbnail }) => {
+const BlogPostCard: React.FC<IProps> = ({
+    title,
+    excerpt,
+    thumbnail,
+    eager = false,
+    preload = false
+}) => {
     return (
         <div className='flex flex-col gap-5'>
             <div>
@@ -17,8 +27,12 @@ const BlogPostCard: React.FC<IProps> = ({ title, excerpt, thumbnail }) => {
                     src={thumbnail}
                     className='w-full'
                     alt={title}
-                    width={100}
-                    height={150}
+                    loading={eager || preload ? 'eager' : 'lazy'}
+                    preload={preload}
+                    fetchPriority={preload ? 'high' : undefined}
+                    width={387}
+                    height={213}
+                    sizes='(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw'
                 />
             </div>
             <div>

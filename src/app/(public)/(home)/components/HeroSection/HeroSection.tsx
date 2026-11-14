@@ -12,10 +12,9 @@ const HeroSection = () => {
         <section className='flex min-h-[calc(100vh-90px)] items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat py-10 dark:bg-linear-to-t dark:from-gray-950 dark:to-gray-950'>
             <div className='container'>
                 <div className='mb-10 text-center'>
-                    <h1
-                        data-aos='fade-down'
-                        className='mx-auto mb-6 w-full text-[46px] leading-tight! font-semibold text-gray-900 xs:text-5xl lg:w-4/5 lg:text-6xl dark:text-gray-100'
-                    >
+                    {/* Above the fold: no AOS here. AOS hides elements until it
+                        starts, which would delay the LCP headline. */}
+                    <h1 className='mx-auto mb-6 w-full text-[46px] leading-tight! font-semibold text-gray-900 xs:text-5xl lg:w-4/5 lg:text-6xl dark:text-gray-100'>
                         {title.split('%').map((str, i: number) => (
                             <span
                                 className={`${
@@ -27,10 +26,7 @@ const HeroSection = () => {
                             </span>
                         ))}
                     </h1>
-                    <p
-                        data-aos='fade-up'
-                        className='mx-auto w-full text-2xl leading-normal font-light lg:w-4/5'
-                    >
+                    <p className='mx-auto w-full text-2xl leading-normal font-light lg:w-4/5'>
                         {description}
                     </p>
                 </div>
@@ -39,7 +35,6 @@ const HeroSection = () => {
                     {(features ?? []).map(({ id, label, icon }) => {
                         return (
                             <div
-                                data-aos='zoom-in'
                                 key={id}
                                 className='inline-flex items-center justify-center gap-4 rounded-full border-[1.5px] border-primary-100 px-6 py-3'
                             >

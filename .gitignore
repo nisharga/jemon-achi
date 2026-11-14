@@ -45,3 +45,5 @@ next-env.d.ts
 starter/
 readme
 CLAUDE.md
+# lighthouse ci reports
+.lighthouseci

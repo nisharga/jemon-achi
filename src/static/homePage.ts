@@ -60,7 +60,7 @@ export const FEATURE_SECTION = {
         'Software compliancy monitoring',
         'Maximized savings'
     ],
-    image: '/images/feature-section-img.svg',
+    image: '/images/feature-section-img.webp',
     link: {
         label: 'Chat With Us',
         url: '/contact-us'

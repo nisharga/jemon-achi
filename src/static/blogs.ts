@@ -5,7 +5,7 @@ export const BLOGS_POST = [
         excerpt:
             'Streamline and manage software assets with a single-architecture SAM solution.',
         contents: `There are many reasons why someone might choose to quit their corporate job and travel the world. For some, it's a desire for adventure and new experiences. For others, it's a.`,
-        thumbnail: '/images/blog-card-image.svg'
+        thumbnail: '/images/blog-card-image.webp'
     },
     {
         slug: 'hello-world-2',
@@ -13,7 +13,7 @@ export const BLOGS_POST = [
         excerpt:
             'Streamline and manage software assets with a single-architecture SAM solution.',
         contents: `There are many reasons why someone might choose to quit their corporate job and travel the world. For some, it's a desire for adventure and new experiences. For others, it's a.`,
-        thumbnail: '/images/blog-card-image.svg'
+        thumbnail: '/images/blog-card-image.webp'
     },
     {
         slug: 'hello-world-3',
@@ -21,6 +21,6 @@ export const BLOGS_POST = [
         excerpt:
             'Streamline and manage software assets with a single-architecture SAM solution.',
         contents: `There are many reasons why someone might choose to quit their corporate job and travel the world. For some, it's a desire for adventure and new experiences. For others, it's a.`,
-        thumbnail: '/images/blog-card-image.svg'
+        thumbnail: '/images/blog-card-image.webp'
     }
 ];

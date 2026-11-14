@@ -34,9 +34,9 @@ const TheFooter = () => {
             <div className='container'>
                 <div className='grid grid-cols-2 gap-14 sm:grid-cols-12 xl:gap-20'>
                     <div className='col-span-2 sm:col-span-6 lg:col-span-4'>
-                        <h4 className='mb-8 text-lg font-semibold text-gray-900 dark:text-gray-100'>
+                        <h2 className='mb-8 text-lg font-semibold text-gray-900 dark:text-gray-100'>
                             {title}
-                        </h4>
+                        </h2>
                         <p className='mb-8'>{description}</p>
                         <div className='mb-4 flex h-11 items-center justify-center overflow-hidden rounded-full border border-primary-800 p-0.5'>
                             <input
@@ -62,9 +62,9 @@ const TheFooter = () => {
                     </div>
                     {(widgets ?? []).map(({ heading, links }, i: number) => (
                         <div className='sm:col-span-6 lg:col-span-3' key={i}>
-                            <h4 className='mb-8 text-lg font-semibold text-gray-900 dark:text-gray-100'>
+                            <h2 className='mb-8 text-lg font-semibold text-gray-900 dark:text-gray-100'>
                                 {heading}
-                            </h4>
+                            </h2>
                             <ul className='flex flex-col gap-2'>
                                 {(links ?? []).map(({ label, url }) => (
                                     <li key={url}>
@@ -80,14 +80,15 @@ const TheFooter = () => {
                         </div>
                     ))}
                     <div className='flex-col sm:col-span-6 lg:col-span-2 xl:flex'>
-                        <h4 className='mb-8 text-lg font-semibold text-gray-900 dark:text-gray-100'>
+                        <h2 className='mb-8 text-lg font-semibold text-gray-900 dark:text-gray-100'>
                             {socialMedias.heading}
-                        </h4>
+                        </h2>
                         <ul className='flex gap-4'>
                             {(socialMedias.links ?? []).map(
-                                ({ url, icon }, i: number) => (
+                                ({ name, url, icon }, i: number) => (
                                     <li key={i}>
                                         <Link
+                                            aria-label={name}
                                             target='_blank'
                                             className='hover:text-primary-800'
                                             href={url}
@@ -106,10 +107,11 @@ const TheFooter = () => {
 
             <div className='absolute right-0 bottom-0 -z-10'>
                 <Image
-                    src={'/images/footer-bg.svg'}
+                    src={'/images/footer-bg.webp'}
                     width={445}
                     height={392}
-                    alt='footer bg'
+                    sizes='445px'
+                    alt=''
                 />
             </div>
 

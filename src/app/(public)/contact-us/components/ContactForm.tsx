@@ -74,9 +74,9 @@ const ContactForm = () => {
 
     return (
         <div className='rounded-lg border border-primary-50 bg-primary-100/20 p-6'>
-            <h3 className='mb-4 text-xl font-semibold capitalize'>
+            <h2 className='mb-4 text-xl font-semibold capitalize'>
                 Get in touch
-            </h3>
+            </h2>
             {status === 'success' ? (
                 <p className='mb-6 text-sm text-success'>
                     Thanks for contacting. We will reply within 24 hours.

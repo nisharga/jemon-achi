@@ -13,9 +13,9 @@ const ServiceCard: FC<IProps> = ({ icon, name, details }) => {
             className='rounded-lg bg-primary-50 px-4 py-5 dark:bg-primary-900'
         >
             <div className='mb-6'>{icon}</div>
-            <h5 className='mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100'>
+            <h3 className='mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100'>
                 {name}
-            </h5>
+            </h3>
             <p>{details}</p>
         </div>
     );

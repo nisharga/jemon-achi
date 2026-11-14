@@ -11,7 +11,9 @@
         "typecheck": "tsc --noEmit",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
-        "prepare": "husky"
+        "prepare": "husky",
+        "analyze": "next analyze",
+        "perf": "pnpm build && lhci autorun"
     },
     "dependencies": {
         "@hookform/resolvers": "^7.0.6",
@@ -44,6 +46,7 @@
     "devDependencies": {
         "@commitlint/cli": "^21.2.4",
         "@commitlint/config-conventional": "^21.2.4",
+        "@lhci/cli": "^0.16.1",
         "@tailwindcss/turbopack": "4.3.3",
         "@types/aos": "^3.0.8",
         "@types/js-cookie": "^3.0.6",
@@ -51,10 +54,12 @@
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "@types/react-slick": "^0.23.13",
+        "babel-plugin-react-compiler": "^1.0.0",
         "eslint": "^9",
         "eslint-config-next": "16.4.6",
         "eslint-config-prettier": "^10.1.8",
         "husky": "^9.1.7",
+        "lighthouse": "^13.6.0",
         "lint-staged": "^17.6.0",
         "prettier": "^3.10.1",
         "prettier-plugin-tailwindcss": "^0.8.1",

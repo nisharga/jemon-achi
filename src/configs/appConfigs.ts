@@ -11,5 +11,8 @@ export const FONT_DEFAULT = Be_Vietnam_Pro({
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-be-vietnam-pro',
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+    // Only the weights the UI uses (font-light/normal/medium/semibold, plus
+    // 700 for <b>/<strong>). Each weight is a separate preloaded file, and
+    // unused ones delay the first paint on slow connections.
+    weight: ['300', '400', '500', '600', '700']
 });

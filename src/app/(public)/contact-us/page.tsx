@@ -1,11 +1,12 @@
-'use client';
+import type { Metadata } from 'next';
+import { CalendlyWidget, ContactForm } from './components';
 
-import { useMounted } from '@/hooks';
-import { ContactForm } from './components';
+export const metadata: Metadata = {
+    title: 'Contact Us'
+};
 
+// Server component: only the form and the Calendly embed ship JavaScript.
 const ContactUsPage = () => {
-    const isMounted = useMounted();
-
     return (
         <section className='py-10'>
             <div className='container'>
@@ -23,19 +24,7 @@ const ContactUsPage = () => {
                         <p className='absolute top-20 left-1/2 -translate-x-1/2 dark:text-gray-300'>
                             Calendar is loading...
                         </p>
-                        {isMounted ? (
-                            <div>
-                                <div
-                                    className='calendly-inline-widget h-[800px]'
-                                    data-url='https://calendly.com/truup/book-for-free-consultation'
-                                ></div>
-                                <script
-                                    type='text/javascript'
-                                    src='https://assets.calendly.com/assets/external/widget.js'
-                                    async
-                                ></script>
-                            </div>
-                        ) : null}
+                        <CalendlyWidget />
                     </div>
                 </div>
             </div>

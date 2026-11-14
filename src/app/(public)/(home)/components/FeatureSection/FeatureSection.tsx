@@ -32,9 +32,10 @@ const FeatureSection = () => {
                         <Image
                             src={image}
                             className='w-full'
-                            alt='feature-image'
-                            width={0}
-                            height={0}
+                            alt='Truup dashboard overview'
+                            width={1440}
+                            height={1039}
+                            sizes='(min-width: 1280px) 1216px, 100vw'
                         />
                     </div>
                 </div>
