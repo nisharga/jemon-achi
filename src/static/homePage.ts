@@ -10,7 +10,7 @@ export const HERO_SECTION = {
     buttons: [
         {
             label: 'Request a Demo',
-            url: '/contact-us',
+            url: '/landing/contact-us',
             type: 'primary'
         }
     ]
@@ -63,7 +63,7 @@ export const FEATURE_SECTION = {
     image: '/images/feature-section-img.webp',
     link: {
         label: 'Chat With Us',
-        url: '/contact-us'
+        url: '/landing/contact-us'
     }
 };
 
@@ -130,7 +130,7 @@ export const CTA_SECTION = {
     },
     link: {
         label: 'let’s talk with us',
-        url: '/contact-us'
+        url: '/landing/contact-us'
     }
 };
 export const PRICE_PLAN_SECTION = {
@@ -150,7 +150,7 @@ export const PRICE_PLAN_SECTION = {
             },
             actionButton: {
                 label: 'Contact Sales',
-                url: '/contact-us'
+                url: '/landing/contact-us'
             },
             features: [
                 'Single tenant',
@@ -169,7 +169,7 @@ export const PRICE_PLAN_SECTION = {
             },
             actionButton: {
                 label: 'Contact Sales',
-                url: '/contact-us'
+                url: '/landing/contact-us'
             },
             features: [
                 'Single tenant',
@@ -192,7 +192,7 @@ export const PRICE_PLAN_SECTION = {
             },
             actionButton: {
                 label: 'Contact Sales',
-                url: '/contact-us'
+                url: '/landing/contact-us'
             },
             features: [
                 'Multi-tenant',

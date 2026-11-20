@@ -21,7 +21,11 @@ export const USER_AREA = {
 } as const;
 
 /** Login pages: only for guests. */
-export const AUTH_ROUTES: string[] = [routes.login, routes.adminLogin];
+export const AUTH_ROUTES: string[] = [
+    routes.login,
+    routes.register,
+    routes.adminLogin
+];
 
 /** Query param used to return the user to the page they originally asked for. */
 export const NEXT_PARAM = 'next';

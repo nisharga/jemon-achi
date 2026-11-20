@@ -1,9 +1,13 @@
 // write internal navigation routes paths here...
 export const routes = {
+    /** Storefront home (the shop lives at the root). */
     base: '/',
-    contactUs: '/contact-us',
-    blogs: '/blogs',
+    landing: '/landing',
+    contactUs: '/landing/contact-us',
+    blogs: '/landing/blog',
+    // Storefront customer pages (src/app/(shop)).
     login: '/login',
+    register: '/register',
     profile: '/profile',
     adminLogin: '/admin-login',
     admin: {

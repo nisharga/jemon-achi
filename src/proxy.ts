@@ -74,6 +74,7 @@ export const config = {
         '/admin-login',
         '/profile',
         '/profile/:path*',
-        '/login'
+        '/login',
+        '/register'
     ]
 };

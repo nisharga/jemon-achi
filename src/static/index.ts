@@ -6,25 +6,25 @@ export const MENUS = [
     {
         id: 1,
         label: 'Connectors',
-        route: '/#connectors',
+        route: '/landing#connectors',
         isButton: false
     },
     {
         id: 2,
         label: 'Features',
-        route: '/#features',
+        route: '/landing#features',
         isButton: false
     },
     {
         id: 3,
         label: 'Pricing',
-        route: '/#pricing',
+        route: '/landing#pricing',
         isButton: false
     },
     {
         id: 4,
         label: 'Contact Sales',
-        route: '/contact-us',
+        route: '/landing/contact-us',
         isButton: true
     }
 ];
@@ -43,19 +43,19 @@ export const FOOTER_SECTION = {
             links: [
                 {
                     label: 'Connectors',
-                    url: '/#connectors'
+                    url: '/landing#connectors'
                 },
                 {
                     label: 'Features',
-                    url: '/#features'
+                    url: '/landing#features'
                 },
                 {
                     label: 'Pricing',
-                    url: '/#pricing'
+                    url: '/landing#pricing'
                 },
                 {
                     label: 'Contact Sales',
-                    url: '/contact-us'
+                    url: '/landing/contact-us'
                 }
             ]
         }

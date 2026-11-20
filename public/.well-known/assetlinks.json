@@ -1,0 +1,14 @@
+[
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.griipbuddy.griipbuddy",
+            "sha256_cert_fingerprints": [
+                "45:9E:AC:05:2E:F3:9A:8E:5D:FC:7B:18:D3:1C:9B:8C:6A:B2:1C:33:FA:08:56:D8:13:44:F5:C2:F7:10:F2:16",
+                "2B:FE:D3:55:37:79:FB:CD:5E:E8:E1:E2:3E:3F:0D:99:8D:3E:BC:DE:DE:AD:24:7D:14:00:80:50:B9:74:44:59",
+                "41:98:8A:76:64:B2:68:7D:31:74:70:45:DA:CD:0A:F1:FD:7E:E2:F5:4B:FC:9A:C0:6F:A1:79:98:F5:8E:86:67"
+            ]
+        }
+    }
+]

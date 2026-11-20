@@ -3,7 +3,12 @@ import { routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 
 // Public, indexable pages only.
-const PUBLIC_PAGES = [routes.base, routes.contactUs, routes.blogs];
+const PUBLIC_PAGES = [
+    routes.base,
+    routes.landing,
+    routes.contactUs,
+    routes.blogs
+];
 
 const sitemap = (): MetadataRoute.Sitemap =>
     PUBLIC_PAGES.map((path) => ({

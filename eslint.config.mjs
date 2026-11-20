@@ -6,6 +6,29 @@ import prettier from 'eslint-config-prettier/flat';
 const eslintConfig = defineConfig([
     ...nextVitals,
     ...nextTs,
+    // Storefront (griipbuddy-frontend) and admin (griipbuddy-admin-new) code
+    // imported as-is: relaxed until it is cleaned up. The rest of the app keeps
+    // the strict rules.
+    {
+        files: [
+            'src/shop/**',
+            'src/app/(shop)/**',
+            'src/app/api/upload/**',
+            'src/admin/**',
+            'src/app/(admin)/**',
+            'src/app/api/fraud-check/**'
+        ],
+        rules: {
+            '@typescript-eslint/no-explicit-any': 'off',
+            '@typescript-eslint/ban-ts-comment': 'off',
+            // React Compiler skips these components (safe), so warn only.
+            'react-hooks/set-state-in-effect': 'warn',
+            'react-hooks/immutability': 'warn',
+            'react-hooks/static-components': 'warn',
+            'react-hooks/purity': 'warn',
+            'react-hooks/preserve-manual-memoization': 'warn'
+        }
+    },
     // Must come last: disables formatting rules that conflict with Prettier.
     prettier,
     // Override default ignores of eslint-config-next.
