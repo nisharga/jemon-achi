@@ -7,14 +7,14 @@ import {
     SelectContent,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-} from '@/admin/components/ui/accordion';
+} from '@/components/ui/accordion';
 import {
     BarChart3,
     Clock,
@@ -24,17 +24,17 @@ import {
     ShoppingCart,
     TrendingUp
 } from 'lucide-react';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/admin/types/business-location';
-import { useGetPosSalesReportQuery } from '@/admin/redux/api-queries/pos-sale-api';
-import { DateRangeCalendar } from '@/admin/components/ui/date-range-calendar';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { IBusiness_location } from '@/types/business-location';
+import { useGetPosSalesReportQuery } from '@/redux/api-queries/pos-sale-api';
+import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
 import type { DateRange } from 'react-day-picker';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle
-} from '@/admin/components/ui/card';
+} from '@/components/ui/admin-card';
 
 const PosSalesReportPage = () => {
     // === api query states ===

@@ -1,4 +1,4 @@
-import { ComingSoon } from '@/admin/components/shared/coming-soon';
+import { ComingSoon } from '@/components/shared/coming-soon';
 import React from 'react';
 
 const CurrentPlanPage = () => {

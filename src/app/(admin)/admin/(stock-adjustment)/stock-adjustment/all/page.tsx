@@ -1,8 +1,8 @@
 'use client';
 
-import Pagination from '@/admin/components/shared/pagination';
+import Pagination from '@/components/shared/pagination';
 import React, { Suspense, useEffect, useState } from 'react';
-import { useGetAllStockAdjustmentQuery } from '@/admin/redux/api-queries/stock-api';
+import { useGetAllStockAdjustmentQuery } from '@/redux/api-queries/stock-api';
 import { StockAdjustmentTable } from './_components/stock-adjustment-table';
 import {
     parseAsIsoDate,
@@ -10,7 +10,7 @@ import {
     useQueryState,
     useQueryStates
 } from 'nuqs';
-import useDebounce from '@/admin/hooks/use-debounce';
+import useDebounce from '@/hooks/use-debounce';
 import { endOfYear, startOfYear } from 'date-fns';
 import { DateRange } from 'react-day-picker';
 import {
@@ -18,7 +18,7 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-} from '@/admin/components/ui/accordion';
+} from '@/components/ui/accordion';
 import { Filter } from 'lucide-react';
 import {
     Select,
@@ -26,21 +26,21 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { Label } from '@/admin/components/ui/label';
-import { Input } from '@/admin/components/ui/input';
-import { DateRangeCalendar } from '@/admin/components/ui/date-range-calendar';
-import { Button } from '@/admin/components/ui/button';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/admin/types/business-location';
-import { useGetAllStaffsQuery } from '@/admin/redux/api-queries/staff-api';
-import { IRoles, TUser } from '@/admin/types/user';
-import { getRoleBadgeVariant } from '@/admin/utils/getRoleBadgeVariant';
-import { Badge } from '@/admin/components/ui/badge';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
+} from '@/components/ui/select';
+import { Label } from '@/components/ui/admin-label';
+import { Input } from '@/components/ui/admin-input';
+import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
+import { Button } from '@/components/ui/admin-button';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { IBusiness_location } from '@/types/business-location';
+import { useGetAllStaffsQuery } from '@/redux/api-queries/staff-api';
+import { IRoles, TUser } from '@/types/admin-user';
+import { getRoleBadgeVariant } from '@/utils/getRoleBadgeVariant';
+import { Badge } from '@/components/ui/admin-badge';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { PermissionEnum } from '@/types/permistion';
+import { useHasPermission } from '@/hooks/use-has-permission';
 
 const AllStockAdjustmentComponent = () => {
     // === check permissions ===

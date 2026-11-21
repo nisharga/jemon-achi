@@ -1,17 +1,17 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { orderStatusList } from '@/admin/types/order';
+} from '@/components/ui/select';
+import { orderStatusList } from '@/types/order';
 import React, { useState } from 'react';
 import { formatString } from './order-details';
-import { useUpdatOrderStatusMutation } from '@/admin/redux/api-queries/order-api';
+import { useUpdatOrderStatusMutation } from '@/redux/api-queries/order-api';
 import { toast } from 'sonner';
 import { Loader } from 'lucide-react';
 

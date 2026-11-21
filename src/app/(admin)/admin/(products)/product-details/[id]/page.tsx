@@ -1,8 +1,8 @@
 import React from 'react';
 import ProductDetails from './_components/product-details';
 import Link from 'next/link';
-import { cn } from '@/admin/lib/utils';
-import { buttonVariants } from '@/admin/components/ui/button';
+import { cn } from '@/lib/admin-utils';
+import { buttonVariants } from '@/components/ui/admin-button';
 import { ChevronLeft } from 'lucide-react';
 
 const ProductDetailsPage = async ({

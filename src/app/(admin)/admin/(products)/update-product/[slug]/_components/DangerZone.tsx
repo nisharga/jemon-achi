@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Table,
     TableBody,
@@ -9,10 +9,10 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
+} from '@/components/ui/table';
 import { AlertTriangle, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
-import { useDeleteVariantsByProductIdMutation } from '@/admin/redux/api-queries/product-api';
+import { useDeleteVariantsByProductIdMutation } from '@/redux/api-queries/product-api';
 
 type TVariantRow = {
     _id: string;

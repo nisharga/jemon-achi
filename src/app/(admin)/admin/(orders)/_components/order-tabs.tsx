@@ -1,9 +1,9 @@
 'use client';
 
-import { Badge } from '@/admin/components/ui/badge';
-import { useGetAllAssignedOrdersQuery } from '@/admin/redux/api-queries/assigned-order-api';
-import { useGetAllOrdersQuery } from '@/admin/redux/api-queries/order-api';
-import { TOrder } from '@/admin/types/order';
+import { Badge } from '@/components/ui/admin-badge';
+import { useGetAllAssignedOrdersQuery } from '@/redux/api-queries/assigned-order-api';
+import { useGetAllOrdersQuery } from '@/redux/api-queries/order-api';
+import { TOrder } from '@/types/order';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';

@@ -4,36 +4,36 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { toast } from 'sonner';
 import { Search, Check, X, Loader2, RefreshCcw } from 'lucide-react';
 
-import { useGetAllSubCategoriesQuery } from '@/admin/redux/api-queries/subcategory-api';
+import { useGetAllSubCategoriesQuery } from '@/redux/api-queries/subcategory-api';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle,
     CardDescription
-} from '@/admin/components/ui/card';
-import { Input } from '@/admin/components/ui/input';
-import { Textarea } from '@/admin/components/ui/textarea';
-import { Switch } from '@/admin/components/ui/switch';
-import { Label } from '@/admin/components/ui/label';
-import { Separator } from '@/admin/components/ui/separator';
-import { Badge } from '@/admin/components/ui/badge';
+} from '@/components/ui/admin-card';
+import { Input } from '@/components/ui/admin-input';
+import { Textarea } from '@/components/ui/textarea';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/admin-label';
+import { Separator } from '@/components/ui/admin-separator';
+import { Badge } from '@/components/ui/admin-badge';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { Checkbox } from '@/admin/components/ui/checkbox';
-import { ScrollArea } from '@/admin/components/ui/scroll-area';
-import { Skeleton } from '@/admin/components/ui/skeleton';
+} from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Skeleton } from '@/components/ui/admin-skeleton';
 import {
     useGetOfferPageQuery,
     usePutOfferPageMutation
-} from '@/admin/redux/api-queries/offerpage-api';
+} from '@/redux/api-queries/offerpage-api';
 
 type TOfferTimerMode = 'countdown' | '12h_timer' | '24h_timer';
 

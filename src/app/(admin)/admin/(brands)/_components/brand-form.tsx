@@ -11,11 +11,11 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
-import { Button } from '@/admin/components/ui/button';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
+import { Button } from '@/components/ui/admin-button';
 import { Loader } from 'lucide-react';
-import { TagsInput } from '@/admin/components/ui/tags-input';
+import { TagsInput } from '@/components/ui/tags-input';
 
 const BrandSchema = z.object({
     name: z.string().min(1, 'Brand name is required'),

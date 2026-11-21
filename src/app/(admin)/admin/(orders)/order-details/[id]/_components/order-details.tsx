@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Table,
     TableBody,
@@ -8,21 +8,21 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
-import { useGetSingleOrderByIdQuery } from '@/admin/redux/api-queries/order-api';
-import { TOrder } from '@/admin/types/order';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
+import { useGetSingleOrderByIdQuery } from '@/redux/api-queries/order-api';
+import { TOrder } from '@/types/order';
 import { format } from 'date-fns';
 import React, { useState } from 'react';
 import AssignOrderDialog from '../../../_components/assign-order-dialog';
 import { Printer } from 'lucide-react';
 import Image from 'next/image';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import OrderActions from '../../../_components/order-actions';
-import { OrderStatusBadge } from '@/admin/components/shared/order-status-badge';
+import { OrderStatusBadge } from '@/components/shared/order-status-badge';
 
 type OrderLog = {
     _id: string;

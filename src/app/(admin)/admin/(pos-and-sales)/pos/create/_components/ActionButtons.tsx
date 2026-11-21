@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import { Loader } from 'lucide-react';
 
 interface Props {

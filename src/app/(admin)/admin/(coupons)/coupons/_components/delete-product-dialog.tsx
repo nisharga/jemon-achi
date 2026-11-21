@@ -1,14 +1,14 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { useDeleteCouponMutation } from '@/admin/redux/api-queries/coupon-api';
+} from '@/components/ui/dialog';
+import { useDeleteCouponMutation } from '@/redux/api-queries/coupon-api';
 import { Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

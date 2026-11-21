@@ -1,14 +1,14 @@
 'use client';
 
 import { MoreHorizontal } from 'lucide-react';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuLabel,
     DropdownMenuTrigger
-} from '@/admin/components/ui/dropdown-menu';
+} from '@/components/ui/admin-dropdown-menu';
 import {
     Table,
     TableBody,
@@ -16,11 +16,11 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { useDeleteBrandMutation } from '@/admin/redux/api-queries/brand-api';
+} from '@/components/ui/table';
+import { useDeleteBrandMutation } from '@/redux/api-queries/brand-api';
 import { toast } from 'sonner';
 import Link from 'next/link';
-import { Badge } from '@/admin/components/ui/badge';
+import { Badge } from '@/components/ui/admin-badge';
 
 export interface IBrand {
     _id: string;

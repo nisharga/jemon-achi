@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
     partialPrefetching: true,
     // Automatic memoisation; no hand-written useMemo/useCallback needed.
     reactCompiler: true,
+    // The dashboard home is the overview page. Done here (not in a page that
+    // calls redirect()) so prerendering never renders a redirect-only segment.
+    async redirects() {
+        return [{ source: '/admin', destination: '/admin/overview', permanent: false }];
+    },
     images: {
         // next/image serves AVIF where supported, WebP otherwise.
         formats: ['image/avif', 'image/webp'],

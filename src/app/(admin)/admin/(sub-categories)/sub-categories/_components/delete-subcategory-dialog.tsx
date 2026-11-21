@@ -1,17 +1,17 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
+} from '@/components/ui/dialog';
 import {
     useDeleteSubCategoryMutation,
     useDeleteSubSubCategoryMutation
-} from '@/admin/redux/api-queries/subcategory-api';
+} from '@/redux/api-queries/subcategory-api';
 import { AlertTriangle, Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

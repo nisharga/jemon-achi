@@ -5,15 +5,15 @@ import {
     useCreateFeaturedProductsMutation,
     useCreateMobileBannerMutation,
     useGetAllBannersQuery
-} from '@/admin/redux/api-queries/banner-api';
+} from '@/redux/api-queries/banner-api';
 import React, { useState } from 'react';
 import { Check, ChevronsUpDown, Loader, X } from 'lucide-react';
-import { ImageUploadInput } from '@/admin/components/ui/image-upload-input';
-import { Button } from '@/admin/components/ui/button';
+import { ImageUploadInput } from '@/components/ui/image-upload-input';
+import { Button } from '@/components/ui/admin-button';
 import { toast } from 'sonner';
-import { useUploadFileToAWSMutation } from '@/admin/redux/api-queries/file-upload-api';
-import { useGetAllProductsQuery } from '@/admin/redux/api-queries/product-api';
-import { TProduct } from '@/admin/types/product';
+import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
+import { TProduct } from '@/types/product';
 
 import {
     Command,
@@ -21,24 +21,24 @@ import {
     CommandGroup,
     CommandItem,
     CommandList
-} from '@/admin/components/ui/command';
+} from '@/components/ui/command';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger
-} from '@/admin/components/ui/popover';
-import { cn } from '@/admin/lib/utils';
-import { Input } from '@/admin/components/ui/input';
-import useDebounce from '@/admin/hooks/use-debounce';
+} from '@/components/ui/popover';
+import { cn } from '@/lib/admin-utils';
+import { Input } from '@/components/ui/admin-input';
+import useDebounce from '@/hooks/use-debounce';
 import Image from 'next/image';
 import BannerCard from './_components/banner-card';
-import { TBanner } from '@/admin/types/banner';
-import { Badge } from '@/admin/components/ui/badge';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { TBanner } from '@/types/banner';
+import { Badge } from '@/components/ui/admin-badge';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 const BannerUpdatePage = () => {
     // === check permissions ===

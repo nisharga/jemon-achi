@@ -1,23 +1,23 @@
 'use client';
 
-import type { TInventory } from '@/admin/types/product';
+import type { TInventory } from '@/types/product';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle
-} from '@/admin/components/ui/card';
+} from '@/components/ui/admin-card';
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger
-} from '@/admin/components/ui/collapsible';
-import { Badge } from '@/admin/components/ui/badge';
+} from '@/components/ui/admin-collapsible';
+import { Badge } from '@/components/ui/admin-badge';
 import { ChevronsDown, ChevronsRight, Package } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
 import { BarcodeImage } from './barcode-image';
-import { cn } from '@/admin/lib/utils';
+import { cn } from '@/lib/admin-utils';
 import {
     Table,
     TableBody,
@@ -25,8 +25,8 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { getImgFullUrl } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 type InventoryTableProps = {
     inventories: TInventory[];

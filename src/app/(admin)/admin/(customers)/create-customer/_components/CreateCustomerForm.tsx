@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -12,22 +12,22 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { Loader, Camera } from 'lucide-react';
-import { useUploadFileMutation } from '@/admin/redux/api-queries/file-upload-api'; // Adjust path
-import { ENV } from '@/admin/constants/env';
+import { useUploadFileMutation } from '@/redux/api-queries/file-upload-api'; // Adjust path
+import { ENV } from '@/constants/env';
 import Image from 'next/image';
-import { useCreateCustomerMutation } from '@/admin/redux/api-queries/customer-api';
+import { useCreateCustomerMutation } from '@/redux/api-queries/customer-api';
 
 // Define User Schema based on your API response
 const CreateUserSchema = z.object({

@@ -1,21 +1,21 @@
 'use client';
 
-import { TableCell, TableRow } from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
-import { TOrder } from '@/admin/types/order';
+import { TableCell, TableRow } from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
+import { TOrder } from '@/types/order';
 import OrderActions from '../../_components/order-actions';
-import { Badge } from '@/admin/components/ui/badge';
+import { Badge } from '@/components/ui/admin-badge';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import Image from 'next/image';
-import { OrderStatusBadge } from '@/admin/components/shared/order-status-badge';
+import { OrderStatusBadge } from '@/components/shared/order-status-badge';
 import {
     Dialog,
     DialogContent,
     DialogHeader,
     DialogTitle,
     DialogTrigger
-} from '@/admin/components/ui/dialog';
+} from '@/components/ui/dialog';
 import {
     Info,
     AlertTriangle,
@@ -26,13 +26,13 @@ import React, { useEffect, useState } from 'react';
 
 import { RepeatCustomerModal } from './RepeatCustomerModal';
 import FraudChecker from './FraudChecker';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 import {
     useAcceptAwaitingStockOrderMutation,
     useDeclineAwaitingStockOrderMutation,
     useMarkOrderAsCalledMutation
-} from '@/admin/redux/api-queries/order-api';
-import { OrderStatus } from '@/admin/types/order';
+} from '@/redux/api-queries/order-api';
+import { OrderStatus } from '@/types/order';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 

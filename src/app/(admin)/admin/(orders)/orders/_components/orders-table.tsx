@@ -6,9 +6,9 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
-import { TOrder } from '@/admin/types/order';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
+import { TOrder } from '@/types/order';
 import React from 'react';
 import OrdersTableRow from './order-table-row';
 

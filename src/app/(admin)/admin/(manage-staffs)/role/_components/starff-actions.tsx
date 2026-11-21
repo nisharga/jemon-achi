@@ -1,20 +1,20 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger
-} from '@/admin/components/ui/dropdown-menu';
+} from '@/components/ui/admin-dropdown-menu';
 import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import ManagePermissionsDialog from './manage-permissons-dialog';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { useDeleteRoleMutation } from '@/admin/redux/api-queries/roles-api';
+import { PermissionEnum } from '@/types/permistion';
+import { useDeleteRoleMutation } from '@/redux/api-queries/roles-api';
 
 const StaffActions = ({
     staff,

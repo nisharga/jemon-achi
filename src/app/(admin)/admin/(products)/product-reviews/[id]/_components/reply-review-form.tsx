@@ -1,25 +1,25 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { toast } from 'sonner';
 import { useState } from 'react';
 
 // UI Components
-import { Card, CardContent, CardHeader } from '@/admin/components/ui/card';
-import { Button } from '@/admin/components/ui/button';
-import { Textarea } from '@/admin/components/ui/textarea';
-import { Badge } from '@/admin/components/ui/badge';
+import { Card, CardContent, CardHeader } from '@/components/ui/admin-card';
+import { Button } from '@/components/ui/admin-button';
+import { Textarea } from '@/components/ui/textarea';
+import { Badge } from '@/components/ui/admin-badge';
 import { Star, User, Calendar, CheckCircle2 } from 'lucide-react';
 
 import {
     useGetReviewByIdQuery,
     useReviewAdminMutation
-} from '@/admin/redux/api-queries/reviews-api';
-import { getMediaUrl } from '@/admin/utils/get-media-url';
+} from '@/redux/api-queries/reviews-api';
+import { getMediaUrl } from '@/utils/get-media-url';
 import Image from 'next/image';
 
 const ReplyReviewForm = ({ id }: { id: string }) => {

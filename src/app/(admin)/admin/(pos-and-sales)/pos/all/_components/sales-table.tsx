@@ -7,12 +7,12 @@
 //   TableHead,
 //   TableHeader,
 //   TableRow,
-// } from "@/admin/components/ui/table";
-// import { cn } from "@/admin/lib/utils";
+// } from "@/components/ui/table";
+// import { cn } from "@/lib/admin-utils";
 // import React from "react";
 // import { format } from "date-fns";
-// import { Badge } from "@/admin/components/ui/badge";
-// import { IPOSSale } from "@/admin/types/pos-sale";
+// import { Badge } from "@/components/ui/admin-badge";
+// import { IPOSSale } from "@/types/pos-sale";
 // import SaleActions from "./sale-actions";
 
 // type PurchaseTableProps = {
@@ -295,22 +295,22 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React, { useState } from 'react';
 import { format } from 'date-fns';
-import { Badge } from '@/admin/components/ui/badge';
-import { IPOSSale } from '@/admin/types/pos-sale';
+import { Badge } from '@/components/ui/admin-badge';
+import { IPOSSale } from '@/types/pos-sale';
 import SaleActions from './sale-actions';
-import { Checkbox } from '@/admin/components/ui/checkbox';
-import { Label } from '@/admin/components/ui/label';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Label } from '@/components/ui/admin-label';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger
-} from '@/admin/components/ui/dropdown-menu';
-import { Button } from '@/admin/components/ui/button';
+} from '@/components/ui/admin-dropdown-menu';
+import { Button } from '@/components/ui/admin-button';
 import { ChevronDown } from 'lucide-react';
 
 type PurchaseTableProps = {

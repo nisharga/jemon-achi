@@ -12,41 +12,41 @@ import {
     Edit,
     X
 } from 'lucide-react';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 import {
     useGetHomepageQuery,
     useUpsertNewArrivalsMutation,
     useUpdateNewArrivalGroupMutation,
     useDeleteNewArrivalGroupMutation
-} from '@/admin/redux/api-queries/homepage-api';
-import { useGetAllProductsQuery } from '@/admin/redux/api-queries/product-api';
-import { TNewArrivalGroup } from '@/admin/types/homepage';
+} from '@/redux/api-queries/homepage-api';
+import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
+import { TNewArrivalGroup } from '@/types/homepage';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle,
     CardDescription
-} from '@/admin/components/ui/card';
-import { Input } from '@/admin/components/ui/input';
-import { Label } from '@/admin/components/ui/label';
-import { Skeleton } from '@/admin/components/ui/skeleton';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { Badge } from '@/admin/components/ui/badge';
+} from '@/components/ui/admin-card';
+import { Input } from '@/components/ui/admin-input';
+import { Label } from '@/components/ui/admin-label';
+import { Skeleton } from '@/components/ui/admin-skeleton';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { Badge } from '@/components/ui/admin-badge';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { Textarea } from '@/admin/components/ui/textarea';
+} from '@/components/ui/dialog';
+import { Textarea } from '@/components/ui/textarea';
 import Image from 'next/image';
 
 type TNewArrivalForm = Omit<TNewArrivalGroup, '_id'> & {

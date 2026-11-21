@@ -3,7 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import type { z } from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -11,20 +11,20 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
+} from '@/components/ui/admin-form';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import { useState, useEffect } from 'react';
 import { Loader, Trash2, Plus } from 'lucide-react';
 import { toast } from 'sonner';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { Input } from '@/admin/components/ui/input';
-import useDebounce from '@/admin/hooks/use-debounce';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { Input } from '@/components/ui/admin-input';
+import useDebounce from '@/hooks/use-debounce';
 import {
     Table,
     TableBody,
@@ -32,15 +32,15 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
+} from '@/components/ui/table';
 import { useRouter } from 'next/navigation';
 import {
     useCreateStockAdjustmentMutation,
     useGetAllStocksQuery
-} from '@/admin/redux/api-queries/stock-api';
-import { StockAdjustmentSchema } from '@/admin/schema/stock-adjustment';
-import { Label } from '@/admin/components/ui/label';
-import { Textarea } from '@/admin/components/ui/textarea';
+} from '@/redux/api-queries/stock-api';
+import { StockAdjustmentSchema } from '@/schema/stock-adjustment';
+import { Label } from '@/components/ui/admin-label';
+import { Textarea } from '@/components/ui/textarea';
 
 // --- Interfaces ---
 interface ProductItem {

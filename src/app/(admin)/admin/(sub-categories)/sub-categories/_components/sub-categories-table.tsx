@@ -7,13 +7,13 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import { CornerDownRight, Loader } from 'lucide-react';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 import Image from 'next/image';
 import React from 'react';
-import { TSubCategory } from '@/admin/types/sub-category';
+import { TSubCategory } from '@/types/sub-category';
 import SubCategoryActions from './subcategory-actions';
 
 type SubCategoriesTableProps = {

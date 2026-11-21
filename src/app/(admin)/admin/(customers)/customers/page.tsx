@@ -5,14 +5,14 @@ import * as XLSX from 'xlsx';
 import {
     useGetAllCustomersQuery,
     useLazyGetAllCustomersQuery
-} from '@/admin/redux/api-queries/customer-api';
+} from '@/redux/api-queries/customer-api';
 import { CustomersTable } from './_components/customers-table';
-import Pagination from '@/admin/components/shared/pagination';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { Button } from '@/admin/components/ui/button';
+import Pagination from '@/components/shared/pagination';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { Button } from '@/components/ui/admin-button';
 import { Download } from 'lucide-react';
 
 const CustomersPage = () => {

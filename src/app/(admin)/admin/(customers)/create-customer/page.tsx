@@ -2,13 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { cn } from '@/admin/lib/utils';
-import { buttonVariants } from '@/admin/components/ui/button';
+import { cn } from '@/lib/admin-utils';
+import { buttonVariants } from '@/components/ui/admin-button';
 import { ChevronLeft } from 'lucide-react';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { CreateUserForm } from './_components/CreateCustomerForm';
 
 const CreateBusinessLocationPage = () => {

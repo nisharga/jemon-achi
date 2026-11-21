@@ -1,12 +1,12 @@
 'use client';
 
-import { useGetInventoriesByWarehouseIdQuery } from '@/admin/redux/api-queries/inventory-api';
+import { useGetInventoriesByWarehouseIdQuery } from '@/redux/api-queries/inventory-api';
 import { useSearchParams } from 'next/navigation';
-import { Card, CardContent } from '@/admin/components/ui/card';
-import { Badge } from '@/admin/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/admin-card';
+import { Badge } from '@/components/ui/admin-badge';
 import { Package, Warehouse, MapPin, AlertCircle } from 'lucide-react';
 import InventoryTable from '../../_components/inventory-table';
-import Pagination from '@/admin/components/shared/pagination';
+import Pagination from '@/components/shared/pagination';
 import { useEffect, useState } from 'react';
 
 const WarehouseInventoryView = () => {

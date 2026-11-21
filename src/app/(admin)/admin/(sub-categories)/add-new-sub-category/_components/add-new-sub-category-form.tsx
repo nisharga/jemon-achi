@@ -3,7 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm, useWatch } from 'react-hook-form';
 import React, { useState, useEffect } from 'react';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -11,30 +11,30 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
-import { createSubCategorySchema } from '@/admin/schema/sub-category';
-import { ImageUploadInput } from '@/admin/components/ui/image-upload-input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
+import { createSubCategorySchema } from '@/schema/sub-category';
+import { ImageUploadInput } from '@/components/ui/image-upload-input';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { useGetAllCategoriesQuery } from '@/admin/redux/api-queries/category-api';
-import { TCategory } from '@/admin/types/category';
+} from '@/components/ui/select';
+import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
+import { TCategory } from '@/types/category';
 import Image from 'next/image';
-import { useUploadFileToAWSMutation } from '@/admin/redux/api-queries/file-upload-api';
+import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
 import {
     useCreateSubCategoryMutation,
     useCreateSubSubCategoryMutation,
     useGetAllSubCategoryQuery
-} from '@/admin/redux/api-queries/subcategory-api';
+} from '@/redux/api-queries/subcategory-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { Loader, Video, ImageIcon, Loader2 } from 'lucide-react';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 const AddNewSubCategoryForm = () => {
     const router = useRouter();

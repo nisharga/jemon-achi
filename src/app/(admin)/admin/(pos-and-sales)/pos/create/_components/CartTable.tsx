@@ -8,9 +8,9 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { Input } from '@/admin/components/ui/input';
-import { Button } from '@/admin/components/ui/button';
+} from '@/components/ui/table';
+import { Input } from '@/components/ui/admin-input';
+import { Button } from '@/components/ui/admin-button';
 import { Trash2 } from 'lucide-react';
 import { ToggleSwitch } from './ToggleSwitch'; // Assuming this is a custom component
 import {
@@ -18,7 +18,7 @@ import {
     CartItemUI,
     DiscountCalculationType
     // type PosSaleRequest,
-} from '@/admin/types/pos';
+} from '@/types/pos';
 
 interface Props {
     cart: CartItemUI[];

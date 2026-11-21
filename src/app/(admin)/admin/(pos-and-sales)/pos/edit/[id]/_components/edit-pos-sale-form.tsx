@@ -3,17 +3,17 @@
 import {
     useEditPosSaleMutation,
     useGetSinglePosSaleQuery
-} from '@/admin/redux/api-queries/pos-sale-api';
+} from '@/redux/api-queries/pos-sale-api';
 import React, { useEffect, useState } from 'react';
-import { Input } from '@/admin/components/ui/input';
-import { Textarea } from '@/admin/components/ui/textarea';
+import { Input } from '@/components/ui/admin-input';
+import { Textarea } from '@/components/ui/textarea';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import {
     Table,
     TableBody,
@@ -21,21 +21,21 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { Button } from '@/admin/components/ui/button';
-import { Label } from '@/admin/components/ui/label';
+} from '@/components/ui/table';
+import { Button } from '@/components/ui/admin-button';
+import { Label } from '@/components/ui/admin-label';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { Loader, Trash } from 'lucide-react';
-import { DatePicker } from '@/admin/components/ui/date-picker';
-import { PAYMENT_METHODS } from '@/admin/types/pos-sale';
-import useDebounce from '@/admin/hooks/use-debounce';
-import { useGetAllStocksQuery } from '@/admin/redux/api-queries/stock-api';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import BackBtn from '@/admin/components/shared/back-btn';
+import { DatePicker } from '@/components/ui/date-picker';
+import { PAYMENT_METHODS } from '@/types/pos-sale';
+import useDebounce from '@/hooks/use-debounce';
+import { useGetAllStocksQuery } from '@/redux/api-queries/stock-api';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import BackBtn from '@/components/shared/back-btn';
 
 interface Discount {
     type: 'PERCENTAGE' | 'FLAT';

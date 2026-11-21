@@ -1,20 +1,20 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger
-} from '@/admin/components/ui/dropdown-menu';
-import { TUser } from '@/admin/types/user';
+} from '@/components/ui/admin-dropdown-menu';
+import { TUser } from '@/types/admin-user';
 import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import DeleteStaffDialog from './delete-staff-dialog';
 import ManagePermissionsDialog from './manage-permissons-dialog';
-import { PermissionEnum } from '@/admin/types/permistion';
+import { PermissionEnum } from '@/types/permistion';
 
 const StaffActions = ({
     staff,

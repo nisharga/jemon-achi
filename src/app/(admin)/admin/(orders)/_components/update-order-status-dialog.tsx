@@ -1,15 +1,15 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { Label } from '@/admin/components/ui/label';
-import { useUpdatOrderStatusMutation } from '@/admin/redux/api-queries/order-api';
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/admin-label';
+import { useUpdatOrderStatusMutation } from '@/redux/api-queries/order-api';
 import { Loader } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'sonner';
@@ -19,8 +19,8 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { OrderStatus } from '@/admin/types/order';
+} from '@/components/ui/select';
+import { OrderStatus } from '@/types/order';
 
 type DialogProps = {
     open: boolean;

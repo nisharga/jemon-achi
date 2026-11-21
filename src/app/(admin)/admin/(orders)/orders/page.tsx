@@ -1,8 +1,8 @@
 'use client';
 
-import Pagination from '@/admin/components/shared/pagination';
-import { Input } from '@/admin/components/ui/input';
-import useDebounce from '@/admin/hooks/use-debounce';
+import Pagination from '@/components/shared/pagination';
+import { Input } from '@/components/ui/admin-input';
+import useDebounce from '@/hooks/use-debounce';
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { OrdersTable } from './_components/orders-table';
 import {
@@ -10,7 +10,7 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-} from '@/admin/components/ui/accordion';
+} from '@/components/ui/accordion';
 import { FileSpreadsheet, Filter, Truck } from 'lucide-react';
 import {
     parseAsIsoDate,
@@ -19,36 +19,36 @@ import {
     useQueryStates
 } from 'nuqs';
 import { DateRange } from 'react-day-picker';
-import { DateRangeCalendar } from '@/admin/components/ui/date-range-calendar';
-import { Button } from '@/admin/components/ui/button';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
+import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
+import { Button } from '@/components/ui/admin-button';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
 import OrderTabsV2 from '../_components/order-tabs-v2';
 import { usePathname } from 'next/navigation';
-import { getTodayDateRange } from '@/admin/utils/getTodayDateRange';
+import { getTodayDateRange } from '@/utils/getTodayDateRange';
 import * as XLSX from 'xlsx';
-import { useOrderData } from '@/admin/hooks/useOrderData';
-import { Label } from '@/admin/components/ui/label';
+import { useOrderData } from '@/hooks/useOrderData';
+import { Label } from '@/components/ui/admin-label';
 import {
     SelectItem,
     Select,
     SelectContent,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { Badge } from '@/admin/components/ui/badge';
-import { getRoleBadgeVariant } from '@/admin/utils/getRoleBadgeVariant';
-import { IRoles, TUser } from '@/admin/types/user';
-import { useGetAllStaffsQuery } from '@/admin/redux/api-queries/staff-api';
+} from '@/components/ui/select';
+import { Badge } from '@/components/ui/admin-badge';
+import { getRoleBadgeVariant } from '@/utils/getRoleBadgeVariant';
+import { IRoles, TUser } from '@/types/admin-user';
+import { useGetAllStaffsQuery } from '@/redux/api-queries/staff-api';
 import {
     //  useGetAllOrderSummaryQuery,
     // useGetAllOrderSummaryQuery,
     useLazyGetAllOrdersQuery,
     useLazyGetAllTodaysActivityQuery,
     useLazySynchWithCourierQuery
-} from '@/admin/redux/api-queries/order-api';
+} from '@/redux/api-queries/order-api';
 import { toast } from 'sonner';
 
 const OrdersPageComponent = () => {

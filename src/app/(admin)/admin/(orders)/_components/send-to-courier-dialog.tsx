@@ -1,19 +1,19 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/dialog';
+import { cn } from '@/lib/admin-utils';
 import {
     useGetSuggestedOutletProductsQuery,
     useUpdatOrderStatusMutation
-} from '@/admin/redux/api-queries/order-api';
-import { OrderStatus } from '@/admin/types/order';
+} from '@/redux/api-queries/order-api';
+import { OrderStatus } from '@/types/order';
 import { Label } from '@radix-ui/react-label';
 import { CheckCircle, Loader } from 'lucide-react';
 import React, { useEffect, useState } from 'react';

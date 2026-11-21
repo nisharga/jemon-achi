@@ -20,24 +20,24 @@ import {
     useUpdateTopBarMessageMutation,
     useDeleteTopBarMessageMutation,
     useToggleTopBarMessageMutation
-} from '@/admin/redux/api-queries/topbar-api';
+} from '@/redux/api-queries/topbar-api';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle,
     CardDescription
-} from '@/admin/components/ui/card';
-import { Input } from '@/admin/components/ui/input';
-import { Label } from '@/admin/components/ui/label';
-import { Skeleton } from '@/admin/components/ui/skeleton';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { Switch } from '@/admin/components/ui/switch';
+} from '@/components/ui/admin-card';
+import { Input } from '@/components/ui/admin-input';
+import { Label } from '@/components/ui/admin-label';
+import { Skeleton } from '@/components/ui/admin-skeleton';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { Switch } from '@/components/ui/switch';
 
 type TTopBarMessage = {
     _id?: string;

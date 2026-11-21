@@ -6,14 +6,14 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
 import ProductActions from './product-actions';
-import { ICoupon } from '@/admin/types/coupon';
-import { useToggleCouponStatusMutation } from '@/admin/redux/api-queries/coupon-api';
+import { ICoupon } from '@/types/coupon';
+import { useToggleCouponStatusMutation } from '@/redux/api-queries/coupon-api';
 import { toast } from 'sonner';
-import { Switch } from '@/admin/components/ui/switch';
+import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';
 
 type ProductsTableProps = {

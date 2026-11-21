@@ -1,27 +1,27 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
-import { useGetAllProductsQuery } from '@/admin/redux/api-queries/product-api';
+import { Button } from '@/components/ui/admin-button';
+import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
 import Link from 'next/link';
 import React, { Suspense, useEffect, useState } from 'react';
 import { ProductsTable } from './_components/products-table';
-import { Input } from '@/admin/components/ui/input';
-import useDebounce from '@/admin/hooks/use-debounce';
-import Pagination from '@/admin/components/shared/pagination';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { Input } from '@/components/ui/admin-input';
+import useDebounce from '@/hooks/use-debounce';
+import Pagination from '@/components/shared/pagination';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-} from '@/admin/components/ui/accordion';
+} from '@/components/ui/accordion';
 import { Filter } from 'lucide-react';
-import { Label } from '@/admin/components/ui/label';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/admin/types/business-location';
+import { Label } from '@/components/ui/admin-label';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { IBusiness_location } from '@/types/business-location';
 import { useQueryState } from 'nuqs';
 import {
     Select,
@@ -29,11 +29,11 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { TCategory } from '@/admin/types/category';
-import { useGetAllCategoriesQuery } from '@/admin/redux/api-queries/category-api';
-import { TSubCategory } from '@/admin/types/sub-category';
-import { useGetAllSubCategoriesQuery } from '@/admin/redux/api-queries/subcategory-api';
+} from '@/components/ui/select';
+import { TCategory } from '@/types/category';
+import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
+import { TSubCategory } from '@/types/sub-category';
+import { useGetAllSubCategoriesQuery } from '@/redux/api-queries/subcategory-api';
 
 const ProductsPageComponent = () => {
     // === check permissions ===

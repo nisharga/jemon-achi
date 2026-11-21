@@ -7,21 +7,21 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { TUser } from '@/admin/types/user';
+import { TUser } from '@/types/admin-user';
 import { toast } from 'sonner';
-import { useUpdateStatusMutation } from '@/admin/redux/api-queries/reviews-api';
+import { useUpdateStatusMutation } from '@/redux/api-queries/reviews-api';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import Image from 'next/image';
-import { getMediaUrl } from '@/admin/utils/get-media-url';
+import { getMediaUrl } from '@/utils/get-media-url';
 import ProductActions from './product-actions';
 // import ProductActions from "./product-actions";
 

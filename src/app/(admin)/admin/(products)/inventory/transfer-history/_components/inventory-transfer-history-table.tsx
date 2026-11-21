@@ -7,13 +7,13 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { TInventoryTransferHistory } from '@/admin/types/inventory';
-import { Badge } from '@/admin/components/ui/badge';
-import { getRoleBadgeVariant } from '@/admin/utils/getRoleBadgeVariant';
-import { IRoles } from '@/admin/types/user';
+import { TInventoryTransferHistory } from '@/types/inventory';
+import { Badge } from '@/components/ui/admin-badge';
+import { getRoleBadgeVariant } from '@/utils/getRoleBadgeVariant';
+import { IRoles } from '@/types/admin-user';
 import { format } from 'date-fns';
 
 type ProductsTableProps = {

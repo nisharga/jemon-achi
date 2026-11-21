@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import ProductSearchAndSelect from '../../_components/ProductSearchAndSelect';
-import { TProduct } from '@/admin/types/product';
+import { TProduct } from '@/types/product';
 import AvailableWarehousesAndSelect from './AvailableWarehousesAndSelect';
-import { TOutlet } from '@/admin/types/product';
+import { TOutlet } from '@/types/product';
 import UpdateVariants from './UpdateVariants';
 
 const WarehouseInventoryUpdate = () => {

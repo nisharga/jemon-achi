@@ -2,18 +2,18 @@ import React, { FC, useEffect, useState } from 'react';
 import {
     useGetInventoryByProductAndOutletIdQuery,
     useGetInventoryByProductAndWarehouseIdQuery
-} from '@/admin/redux/api-queries/inventory-api';
-import { TProduct, TOutlet, TVariantCombination } from '@/admin/types/product';
-import { Button } from '@/admin/components/ui/button';
+} from '@/redux/api-queries/inventory-api';
+import { TProduct, TOutlet, TVariantCombination } from '@/types/product';
+import { Button } from '@/components/ui/admin-button';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle
-} from '@/admin/components/ui/card';
-import { Input } from '@/admin/components/ui/input';
-import { Checkbox } from '@/admin/components/ui/checkbox';
-import { useUpdateInventoryWarehouseToOutletMutation } from '@/admin/redux/api-queries/outlet-api';
+} from '@/components/ui/admin-card';
+import { Input } from '@/components/ui/admin-input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { useUpdateInventoryWarehouseToOutletMutation } from '@/redux/api-queries/outlet-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 

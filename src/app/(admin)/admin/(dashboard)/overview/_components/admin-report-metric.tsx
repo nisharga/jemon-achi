@@ -1,17 +1,17 @@
 'use client';
 
-import { DateRangeCalendar } from '@/admin/components/ui/date-range-calendar';
+import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { useGetAdminReportMetricsQuery } from '@/admin/redux/api-queries/metadata-api';
+} from '@/components/ui/select';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { useGetAdminReportMetricsQuery } from '@/redux/api-queries/metadata-api';
 
-import { IBusiness_location } from '@/admin/types/business-location';
+import { IBusiness_location } from '@/types/business-location';
 import React, { useState } from 'react';
 import { DateRange } from 'react-day-picker';
 

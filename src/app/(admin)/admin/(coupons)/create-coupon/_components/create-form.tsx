@@ -3,38 +3,38 @@ import type { Resolver } from 'react-hook-form';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
     FormField,
     FormItem,
     FormLabel
-} from '@/admin/components/ui/form';
+} from '@/components/ui/admin-form';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { Switch } from '@/admin/components/ui/switch';
-import { MultiSelect } from '@/admin/components/ui/multi-select';
+} from '@/components/ui/select';
+import { Switch } from '@/components/ui/switch';
+import { MultiSelect } from '@/components/ui/multi-select';
 import { useEffect, useState } from 'react';
 import { Loader } from 'lucide-react';
-import { useGetAllCategoriesQuery } from '@/admin/redux/api-queries/category-api';
+import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
 import {
     useGetAllSubCategoriesByCategoryIdQuery,
     useGetAllSubSubCategoriesByCategoryIdQuery
-} from '@/admin/redux/api-queries/subcategory-api';
-import { FormEditor, FormInput } from '@/admin/components/form-items';
-import { CouponSchema, CouponFormValues } from '@/admin/schema/coupon';
+} from '@/redux/api-queries/subcategory-api';
+import { FormEditor, FormInput } from '@/components/form-items';
+import { CouponSchema, CouponFormValues } from '@/schema/coupon';
 import {
     useGetAllProductsQuery,
     useGetAllProductVariantQuery
-} from '@/admin/redux/api-queries/product-api';
-import { FormDatePicker } from '@/admin/components/form-items/form-date-picker';
-import { useCreateCouponMutation } from '@/admin/redux/api-queries/coupon-api';
+} from '@/redux/api-queries/product-api';
+import { FormDatePicker } from '@/components/form-items/form-date-picker';
+import { useCreateCouponMutation } from '@/redux/api-queries/coupon-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 

@@ -9,20 +9,20 @@ import {
     SelectValue,
     SelectContent,
     SelectItem
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import type { DateRange } from 'react-day-picker';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import type { IBusiness_location } from '@/admin/types/business-location';
-import { DateRangeCalendar } from '@/admin/components/ui/date-range-calendar';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import type { IBusiness_location } from '@/types/business-location';
+import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
 import {
     parseAsIsoDate,
     parseAsString,
     useQueryState,
     useQueryStates
 } from 'nuqs';
-import { Button } from '@/admin/components/ui/button';
-import { Card, CardContent } from '@/admin/components/ui/card';
-import { useGetBusinessReportQuery } from '@/admin/redux/api-queries/report-api';
+import { Button } from '@/components/ui/admin-button';
+import { Card, CardContent } from '@/components/ui/admin-card';
+import { useGetBusinessReportQuery } from '@/redux/api-queries/report-api';
 import {
     TrendingUp,
     RotateCcw,
@@ -35,7 +35,7 @@ import {
     Filter
 } from 'lucide-react';
 import { JSX } from 'react/jsx-runtime';
-import { getTodayDateRange } from '@/admin/utils/getTodayDateRange';
+import { getTodayDateRange } from '@/utils/getTodayDateRange';
 import { ReportChart } from './report-chart';
 
 // === type definitions for business report data ===

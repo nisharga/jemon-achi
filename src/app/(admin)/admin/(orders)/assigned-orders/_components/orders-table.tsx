@@ -7,15 +7,15 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
-import { TOrder } from '@/admin/types/order';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
+import { TOrder } from '@/types/order';
 import React from 'react';
 import { format } from 'date-fns';
-import { Badge } from '@/admin/components/ui/badge';
-import { TVariantCombination } from '@/admin/types/product';
+import { Badge } from '@/components/ui/admin-badge';
+import { TVariantCombination } from '@/types/product';
 import OrderActions from '../../_components/order-actions';
-import { OrderStatusBadge } from '@/admin/components/shared/order-status-badge';
+import { OrderStatusBadge } from '@/components/shared/order-status-badge';
 import Link from 'next/link';
 
 type OrdersTableProps = {

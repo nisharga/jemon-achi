@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import * as z from 'zod/v3';
 import React, { useEffect, useMemo, useState } from 'react';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -14,29 +14,29 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
-import { Textarea } from '@/admin/components/ui/textarea';
-import { Separator } from '@/admin/components/ui/separator';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
+import { Textarea } from '@/components/ui/textarea';
+import { Separator } from '@/components/ui/admin-separator';
 import { X, Plus, Minus, Loader, ImagePlus } from 'lucide-react';
-import useDebounce from '@/admin/hooks/use-debounce';
-import { useUploadMultipleFileToAWSMutation } from '@/admin/redux/api-queries/file-upload-api';
+import useDebounce from '@/hooks/use-debounce';
+import { useUploadMultipleFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
 
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { useCreateOrderByAdminMutation } from '@/admin/redux/api-queries/order-api';
-import { useGetAllSearchVariantsQuery } from '@/admin/redux/api-queries/product-api';
+import { useCreateOrderByAdminMutation } from '@/redux/api-queries/order-api';
+import { useGetAllSearchVariantsQuery } from '@/redux/api-queries/product-api';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { FraudData } from '@/admin/redux/api-queries/fraudApi';
-import FraudListModal from '@/admin/components/shared/FraudListModal';
-import { getImgFullUrl } from '@/admin/lib/utils';
+} from '@/components/ui/select';
+import { FraudData } from '@/redux/api-queries/fraudApi';
+import FraudListModal from '@/components/shared/FraudListModal';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 // === simple zod schema for the form (products intentionally removed) ===
 const DeliveryAddressSchema = z.object({

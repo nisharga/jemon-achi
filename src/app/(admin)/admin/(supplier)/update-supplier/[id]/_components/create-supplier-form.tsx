@@ -3,7 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -12,24 +12,24 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { Textarea } from '@/admin/components/ui/textarea';
+} from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
 import { useParams, useRouter } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
 import {
     useGetSingleSupplierQuery,
     useUpdateSupplierMutation
-} from '@/admin/redux/api-queries/supplier-slice';
-import { CreateSupplierSchema } from '@/admin/schema/supplier';
+} from '@/redux/api-queries/supplier-slice';
+import { CreateSupplierSchema } from '@/schema/supplier';
 import { useEffect } from 'react';
 
 type FormValues = z.infer<typeof CreateSupplierSchema>;

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Input } from '@/admin/components/ui/input';
+import { Input } from '@/components/ui/admin-input';
 import { ToggleSwitch } from './ToggleSwitch';
 
 interface Props {

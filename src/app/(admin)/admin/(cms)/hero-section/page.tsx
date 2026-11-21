@@ -16,36 +16,36 @@ import {
     useGetHeroSectionQuery,
     useUpsertHeroSectionMutation,
     useDeleteHeroVideoMutation
-} from '@/admin/redux/api-queries/herosection-api';
-import { useUploadFileToAWSMutation } from '@/admin/redux/api-queries/file-upload-api';
-import { THeroVideoItem, THeroVideoButton } from '@/admin/types/hero-section';
+} from '@/redux/api-queries/herosection-api';
+import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+import { THeroVideoItem, THeroVideoButton } from '@/types/hero-section';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle,
     CardDescription
-} from '@/admin/components/ui/card';
-import { Input } from '@/admin/components/ui/input';
-import { Switch } from '@/admin/components/ui/switch';
-import { Label } from '@/admin/components/ui/label';
-import { Skeleton } from '@/admin/components/ui/skeleton';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { ImageUploadInput } from '@/admin/components/ui/image-upload-input';
-import { VideoUploadInput } from '@/admin/components/ui/video-upload-input';
+} from '@/components/ui/admin-card';
+import { Input } from '@/components/ui/admin-input';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/admin-label';
+import { Skeleton } from '@/components/ui/admin-skeleton';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { ImageUploadInput } from '@/components/ui/image-upload-input';
+import { VideoUploadInput } from '@/components/ui/video-upload-input';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { getImgFullUrl } from '@/admin/lib/utils';
+} from '@/components/ui/select';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 type TVideoForm = {
     _id?: string;

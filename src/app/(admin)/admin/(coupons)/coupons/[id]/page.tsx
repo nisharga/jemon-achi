@@ -1,4 +1,4 @@
-import SectionTitle from '@/admin/components/shared/section-title';
+import SectionTitle from '@/components/shared/section-title';
 import React from 'react';
 import SingleCouponPage from './_component/SingleCouponPage';
 

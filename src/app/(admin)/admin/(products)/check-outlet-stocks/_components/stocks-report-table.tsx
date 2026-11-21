@@ -1,6 +1,6 @@
 'use client';
 
-import { Badge } from '@/admin/components/ui/badge';
+import { Badge } from '@/components/ui/admin-badge';
 import {
     Table,
     TableBody,
@@ -8,8 +8,8 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React, { useEffect, useState } from 'react';
 import StockReportViewDialog from './stock-report-view-dialog';
 import { useQueryState } from 'nuqs';

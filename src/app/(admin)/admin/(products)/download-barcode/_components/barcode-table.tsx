@@ -2,8 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
-import { Input } from '@/admin/components/ui/input';
+import { Button } from '@/components/ui/admin-button';
+import { Input } from '@/components/ui/admin-input';
 import {
     Table,
     TableBody,
@@ -11,10 +11,10 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { Checkbox } from '@/admin/components/ui/checkbox'; // ✅ Add a checkbox UI component
-import { cn } from '@/admin/lib/utils';
-import { TVariantCombination } from '@/admin/types/product';
+} from '@/components/ui/table';
+import { Checkbox } from '@/components/ui/checkbox'; // ✅ Add a checkbox UI component
+import { cn } from '@/lib/admin-utils';
+import { TVariantCombination } from '@/types/product';
 import { useBarcode } from 'next-barcode';
 import React, { useState } from 'react';
 import './print.css';

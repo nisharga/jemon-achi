@@ -1,15 +1,15 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
-import { Badge } from '@/admin/components/ui/badge';
+import { Button } from '@/components/ui/admin-button';
+import { Badge } from '@/components/ui/admin-badge';
 import {
     Dialog,
     DialogContent,
     DialogHeader,
     DialogTitle,
     DialogTrigger
-} from '@/admin/components/ui/dialog';
-import { useGetSingleRepeatCustomerByPhoneNumberQuery } from '@/admin/redux/api-queries/repeat-customer-api';
+} from '@/components/ui/dialog';
+import { useGetSingleRepeatCustomerByPhoneNumberQuery } from '@/redux/api-queries/repeat-customer-api';
 import {
     User,
     Phone,

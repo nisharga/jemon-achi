@@ -7,14 +7,14 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import Image from 'next/image';
 import React from 'react';
-import { IProductSaleChannels, TProduct } from '@/admin/types/product';
+import { IProductSaleChannels, TProduct } from '@/types/product';
 import ProductActions from './product-actions';
 import ProductPublishedStatus from './product-published-status';
-import { getMediaUrl } from '@/admin/utils/get-media-url';
+import { getMediaUrl } from '@/utils/get-media-url';
 
 type ProductsTableProps = {
     products: [];

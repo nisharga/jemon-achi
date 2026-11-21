@@ -11,9 +11,9 @@ import {
     Shield,
     Settings
 } from 'lucide-react';
-import { TProduct } from '@/admin/types/product';
-import { TInventory } from '@/admin/types/product';
-import { cn } from '@/admin/lib/utils';
+import { TProduct } from '@/types/product';
+import { TInventory } from '@/types/product';
+import { cn } from '@/lib/admin-utils';
 
 const formatPrice = (price: number) => {
     return price > 0 ? `৳${price.toLocaleString()}` : 'Not Set';

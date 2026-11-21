@@ -8,8 +8,8 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import { format } from 'date-fns';
 import StockTransferActions from './stock-tranfer-action';
 
@@ -21,7 +21,7 @@ import {
     DialogTitle,
     DialogFooter,
     DialogClose
-} from '@/admin/components/ui/dialog'; // shadcn dialog import
+} from '@/components/ui/dialog'; // shadcn dialog import
 
 type TableProps = {
     stocks: any[];

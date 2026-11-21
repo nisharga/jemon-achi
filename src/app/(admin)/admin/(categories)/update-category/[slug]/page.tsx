@@ -1,6 +1,6 @@
 import React from 'react';
 import UpdateCategoryForm from './_components/update-category-form';
-import SectionTitle from '@/admin/components/shared/section-title';
+import SectionTitle from '@/components/shared/section-title';
 
 const UpdateCategoryPage = async ({
     params

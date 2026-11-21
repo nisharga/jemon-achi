@@ -7,13 +7,13 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
+} from '@/components/ui/table';
 import { format } from 'date-fns';
 import React from 'react';
 import './print.css';
-import { useGetOutletSaleByIdQuery } from '@/admin/redux/api-queries/pos-sale-api';
-import { IPosSaleProduct } from '@/admin/types/pos';
-import { cn } from '@/admin/lib/utils';
+import { useGetOutletSaleByIdQuery } from '@/redux/api-queries/pos-sale-api';
+import { IPosSaleProduct } from '@/types/pos';
+import { cn } from '@/lib/admin-utils';
 
 const TABLE_HEADERS = ['Items', 'Qty', 'Price'];
 

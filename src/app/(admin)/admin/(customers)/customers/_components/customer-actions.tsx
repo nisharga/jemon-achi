@@ -1,12 +1,12 @@
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger
-} from '@/admin/components/ui/dropdown-menu';
-import { TUser } from '@/admin/types/user';
+} from '@/components/ui/admin-dropdown-menu';
+import { TUser } from '@/types/admin-user';
 import { Ellipsis } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import React from 'react';

@@ -1,14 +1,14 @@
 'use client';
 import React from 'react';
-import { Input } from '@/admin/components/ui/input';
+import { Input } from '@/components/ui/admin-input';
 import {
     Select,
     SelectTrigger,
     SelectValue,
     SelectContent,
     SelectItem
-} from '@/admin/components/ui/select';
-import { PaymentMethod } from '@/admin/types/pos';
+} from '@/components/ui/select';
+import { PaymentMethod } from '@/types/pos';
 
 interface Props {
     method: PaymentMethod;

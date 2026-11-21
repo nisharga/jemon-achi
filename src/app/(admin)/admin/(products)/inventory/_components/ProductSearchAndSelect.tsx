@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client';
-import { useGetAllProductsQuery } from '@/admin/redux/api-queries/product-api';
-import { TProduct } from '@/admin/types/product';
+import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
+import { TProduct } from '@/types/product';
 import { useSearchParams } from 'next/navigation';
 import React, {
     Dispatch,
@@ -12,11 +12,11 @@ import React, {
 } from 'react';
 import Popup from 'react-popupkit';
 
-import { Input } from '@/admin/components/ui/input';
-import { Card } from '@/admin/components/ui/card';
-import { Skeleton } from '@/admin/components/ui/skeleton';
+import { Input } from '@/components/ui/admin-input';
+import { Card } from '@/components/ui/admin-card';
+import { Skeleton } from '@/components/ui/admin-skeleton';
 import Image from 'next/image';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 type TProps = {
     setSelectedProduct: Dispatch<SetStateAction<TProduct | null>>;

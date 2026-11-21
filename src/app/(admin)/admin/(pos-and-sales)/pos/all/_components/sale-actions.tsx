@@ -1,14 +1,14 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger
     // DropdownMenuSeparator,
-} from '@/admin/components/ui/dropdown-menu';
-import { IPOSSale } from '@/admin/types/pos-sale';
+} from '@/components/ui/admin-dropdown-menu';
+import { IPOSSale } from '@/types/pos-sale';
 import { Edit, Ellipsis, Trash, Undo2 } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';

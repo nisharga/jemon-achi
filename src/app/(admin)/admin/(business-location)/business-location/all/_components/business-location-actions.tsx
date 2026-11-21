@@ -1,14 +1,14 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger
-} from '@/admin/components/ui/dropdown-menu';
-import { IBusiness_location } from '@/admin/types/business-location';
+} from '@/components/ui/admin-dropdown-menu';
+import { IBusiness_location } from '@/types/business-location';
 import { Edit, Ellipsis, Trash } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';

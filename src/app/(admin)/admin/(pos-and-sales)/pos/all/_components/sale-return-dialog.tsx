@@ -1,21 +1,21 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/admin-input';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import {
     Table,
     TableBody,
@@ -23,11 +23,11 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { usePosSaleReturnMutation } from '@/admin/redux/api-queries/pos-sale-api';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { IPOSSale } from '@/admin/types/pos-sale';
+} from '@/components/ui/table';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { usePosSaleReturnMutation } from '@/redux/api-queries/pos-sale-api';
+import { PermissionEnum } from '@/types/permistion';
+import { IPOSSale } from '@/types/pos-sale';
 import { Loader } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'sonner';

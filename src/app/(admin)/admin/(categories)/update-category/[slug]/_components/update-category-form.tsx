@@ -4,7 +4,7 @@ import React, { useEffect, useState, memo, useMemo } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -12,25 +12,25 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
-import { updateCategorySchema } from '@/admin/schema/category';
-import { ImageUploadInput } from '@/admin/components/ui/image-upload-input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
+import { updateCategorySchema } from '@/schema/category';
+import { ImageUploadInput } from '@/components/ui/image-upload-input';
 import {
     useGetSingleCategoryQuery,
     useUpdateCategoryMutation
-} from '@/admin/redux/api-queries/category-api';
-import { TCategory } from '@/admin/types/category';
+} from '@/redux/api-queries/category-api';
+import { TCategory } from '@/types/category';
 import { Loader, ImageIcon, Play, Trash2, Video } from 'lucide-react';
 import { toast } from 'sonner';
-import { useUploadFileToAWSMutation } from '@/admin/redux/api-queries/file-upload-api';
+import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
 import { useRouter } from 'next/navigation';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
 import { VideoPreviewModal } from './VideoUploadModal';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 const UpdateCategoryForm = ({ slug }: { slug: string }) => {
     const router = useRouter();

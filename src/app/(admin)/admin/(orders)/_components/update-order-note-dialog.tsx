@@ -1,20 +1,20 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { Label } from '@/admin/components/ui/label';
-import { useOrderAdminNoteMutation } from '@/admin/redux/api-queries/order-api';
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/admin-label';
+import { useOrderAdminNoteMutation } from '@/redux/api-queries/order-api';
 import { Loader } from 'lucide-react';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
-import { Textarea } from '@/admin/components/ui/textarea';
-import { IRoles } from '@/admin/types/user';
+import { Textarea } from '@/components/ui/textarea';
+import { IRoles } from '@/types/admin-user';
 import { format } from 'date-fns';
 
 type DialogProps = {

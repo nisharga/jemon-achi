@@ -1,14 +1,14 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { useDeleteBusinessLocationMutation } from '@/admin/redux/api-queries/business-location-api';
+} from '@/components/ui/dialog';
+import { useDeleteBusinessLocationMutation } from '@/redux/api-queries/business-location-api';
 import { Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

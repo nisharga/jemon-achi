@@ -3,7 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod/v3';
-import { Button, buttonVariants } from '@/admin/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -11,35 +11,35 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
 import { useRouter } from 'next/navigation';
 import { ChevronLeft, Loader } from 'lucide-react';
-import { updateStaffSchema } from '@/admin/schema/staff';
+import { updateStaffSchema } from '@/schema/staff';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import {
     useGetStaffByIdQuery,
     useUpdateStaffMutation
-} from '@/admin/redux/api-queries/staff-api';
+} from '@/redux/api-queries/staff-api';
 import { toast } from 'sonner';
-import { TOutlet } from '@/admin/types/product';
+import { TOutlet } from '@/types/product';
 import { useEffect } from 'react';
-import { TUser } from '@/admin/types/user';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { TUser } from '@/types/admin-user';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import Link from 'next/link';
-import { cn } from '@/admin/lib/utils';
+import { cn } from '@/lib/admin-utils';
 
-import { useGetAllRolesQuery } from '@/admin/redux/api-queries/roles-api';
+import { useGetAllRolesQuery } from '@/redux/api-queries/roles-api';
 
 const genderOptions = ['MALE', 'FEMALE'];
 

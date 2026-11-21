@@ -1,11 +1,11 @@
 'use client';
 
 import React, { Suspense, useEffect, useState } from 'react';
-import Pagination from '@/admin/components/shared/pagination';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import Pagination from '@/components/shared/pagination';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { DateRange } from 'react-day-picker';
 import {
     parseAsIsoDate,
@@ -13,27 +13,27 @@ import {
     useQueryState,
     useQueryStates
 } from 'nuqs';
-import useDebounce from '@/admin/hooks/use-debounce';
+import useDebounce from '@/hooks/use-debounce';
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-} from '@/admin/components/ui/accordion';
+} from '@/components/ui/accordion';
 import { Filter } from 'lucide-react';
-import { Input } from '@/admin/components/ui/input';
-import { DateRangeCalendar } from '@/admin/components/ui/date-range-calendar';
-import { Button } from '@/admin/components/ui/button';
-import { Label } from '@/admin/components/ui/label';
+import { Input } from '@/components/ui/admin-input';
+import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
+import { Button } from '@/components/ui/admin-button';
+import { Label } from '@/components/ui/admin-label';
 import {
     SelectItem,
     Select,
     SelectContent,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import OrderTabsV2 from '../_components/order-tabs-v2';
-import { useOrderData } from '@/admin/hooks/useOrderData';
+import { useOrderData } from '@/hooks/useOrderData';
 import { OrdersTable } from '../orders/_components/orders-table';
 
 const AssignedOrdersComponent = () => {

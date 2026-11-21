@@ -4,7 +4,7 @@ import type { Resolver } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import type { z } from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -12,21 +12,21 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { StockTransferSchema } from '@/admin/schema/stock-transfer';
+} from '@/components/ui/admin-form';
+import { StockTransferSchema } from '@/schema/stock-transfer';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import { useState, useEffect } from 'react';
 import { Loader, Trash2, Plus } from 'lucide-react';
 import { toast } from 'sonner';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { Input } from '@/admin/components/ui/input';
-import useDebounce from '@/admin/hooks/use-debounce';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { Input } from '@/components/ui/admin-input';
+import useDebounce from '@/hooks/use-debounce';
 import {
     Table,
     TableBody,
@@ -34,12 +34,12 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { Textarea } from '@/admin/components/ui/textarea';
+} from '@/components/ui/table';
+import { Textarea } from '@/components/ui/textarea';
 import {
     useCreateStockTransferMutation,
     useGetAllStocksQuery
-} from '@/admin/redux/api-queries/stock-api';
+} from '@/redux/api-queries/stock-api';
 import { useRouter } from 'next/navigation';
 
 interface PurchaseItem {

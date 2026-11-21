@@ -1,34 +1,34 @@
 'use client';
 
-import Pagination from '@/admin/components/shared/pagination';
+import Pagination from '@/components/shared/pagination';
 import React, { useEffect, useState } from 'react';
-import { useGetAllPurchasesQuery } from '@/admin/redux/api-queries/purchase-slice';
+import { useGetAllPurchasesQuery } from '@/redux/api-queries/purchase-slice';
 import { PurchaseTable } from './_components/purchase-table';
-import { useGetAllSuppliersQuery } from '@/admin/redux/api-queries/supplier-slice';
-import { TSupplier } from '@/admin/types/supplier';
+import { useGetAllSuppliersQuery } from '@/redux/api-queries/supplier-slice';
+import { TSupplier } from '@/types/supplier';
 import {
     SelectItem,
     Select,
     SelectContent,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-} from '@/admin/components/ui/accordion';
+} from '@/components/ui/accordion';
 import { Filter } from 'lucide-react';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/admin/types/business-location';
-import { PURCHASE_STATUSES } from '@/admin/types/purchase';
-import { Label } from '@/admin/components/ui/label';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { IBusiness_location } from '@/types/business-location';
+import { PURCHASE_STATUSES } from '@/types/purchase';
+import { Label } from '@/components/ui/admin-label';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
 
 const AllPurchasePage = () => {
     // === check permissions ===

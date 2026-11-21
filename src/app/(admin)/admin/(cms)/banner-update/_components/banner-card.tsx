@@ -1,17 +1,17 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     useDeleteBannerMutation,
     useDeleteFeaturedBannerMutation,
     useDeleteMobileBannerMutation
-} from '@/admin/redux/api-queries/banner-api';
-import { TBanner } from '@/admin/types/banner';
+} from '@/redux/api-queries/banner-api';
+import { TBanner } from '@/types/banner';
 import { Loader, Trash } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 import { toast } from 'sonner';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 type TBannerCardProps = {
     banner: TBanner;

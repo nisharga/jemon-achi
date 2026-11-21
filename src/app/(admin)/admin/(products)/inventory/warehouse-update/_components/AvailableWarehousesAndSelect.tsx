@@ -6,9 +6,9 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { useGetAllWarehouseQuery } from '@/admin/redux/api-queries/outlet-api';
-import { TOutlet } from '@/admin/types/product';
+} from '@/components/ui/select';
+import { useGetAllWarehouseQuery } from '@/redux/api-queries/outlet-api';
+import { TOutlet } from '@/types/product';
 import { useRouter, useSearchParams } from 'next/navigation';
 import React, { Dispatch, SetStateAction, useEffect } from 'react';
 

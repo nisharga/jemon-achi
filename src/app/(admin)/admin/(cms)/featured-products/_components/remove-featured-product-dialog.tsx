@@ -8,9 +8,9 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle
-} from '@/admin/components/ui/alert-dialog';
-import { Button } from '@/admin/components/ui/button';
-import { useDeleteFeaturedProductMutation } from '@/admin/redux/api-queries/featured-product-api';
+} from '@/components/ui/alert-dialog';
+import { Button } from '@/components/ui/admin-button';
+import { useDeleteFeaturedProductMutation } from '@/redux/api-queries/featured-product-api';
 import { Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

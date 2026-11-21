@@ -7,11 +7,11 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { IBusiness_location } from '@/admin/types/business-location';
-import { Badge } from '@/admin/components/ui/badge';
+import { IBusiness_location } from '@/types/business-location';
+import { Badge } from '@/components/ui/admin-badge';
 import BusinessLocationActions from './business-location-actions';
 
 type TableProps = {

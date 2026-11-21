@@ -1,16 +1,16 @@
 'use client';
 
-import { OrderStatusBadge } from '@/admin/components/shared/order-status-badge';
-import { Button } from '@/admin/components/ui/button';
-import { Checkbox } from '@/admin/components/ui/checkbox';
+import { OrderStatusBadge } from '@/components/shared/order-status-badge';
+import { Button } from '@/components/ui/admin-button';
+import { Checkbox } from '@/components/ui/checkbox';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/admin-input';
 import {
     Table,
     TableBody,
@@ -18,10 +18,10 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
-import { useReturnOrderMutation } from '@/admin/redux/api-queries/order-api';
-import { OrderStatus, TOrder } from '@/admin/types/order';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
+import { useReturnOrderMutation } from '@/redux/api-queries/order-api';
+import { OrderStatus, TOrder } from '@/types/order';
 import { Loader } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'sonner';

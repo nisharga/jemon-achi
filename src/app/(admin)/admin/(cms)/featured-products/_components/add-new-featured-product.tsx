@@ -2,25 +2,25 @@
 
 import React, { useState } from 'react';
 import { Check, ChevronsUpDown, Loader } from 'lucide-react';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import { toast } from 'sonner';
-import { useGetAllSearchVariantsQuery } from '@/admin/redux/api-queries/product-api';
+import { useGetAllSearchVariantsQuery } from '@/redux/api-queries/product-api';
 import {
     Command,
     CommandEmpty,
     CommandGroup,
     CommandItem,
     CommandList
-} from '@/admin/components/ui/command';
+} from '@/components/ui/command';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger
-} from '@/admin/components/ui/popover';
-import { cn } from '@/admin/lib/utils';
-import { Input } from '@/admin/components/ui/input';
-import useDebounce from '@/admin/hooks/use-debounce';
-import { useCreateFeaturedProductMutation } from '@/admin/redux/api-queries/featured-product-api';
+} from '@/components/ui/popover';
+import { cn } from '@/lib/admin-utils';
+import { Input } from '@/components/ui/admin-input';
+import useDebounce from '@/hooks/use-debounce';
+import { useCreateFeaturedProductMutation } from '@/redux/api-queries/featured-product-api';
 
 const AddNewFeaturedProduct = ({
     featuredProductslength

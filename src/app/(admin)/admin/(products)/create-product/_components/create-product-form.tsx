@@ -8,7 +8,7 @@ import TextAlign from '@tiptap/extension-text-align';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -16,51 +16,51 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-} from '@/admin/components/ui/accordion';
-import { EditorToolbar } from '@/admin/components/tiptap/editor-toolbar';
-import { ProductSchema } from '@/admin/schema/product';
+} from '@/components/ui/accordion';
+import { EditorToolbar } from '@/components/tiptap/editor-toolbar';
+import { ProductSchema } from '@/schema/product';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { PRODUCT_OFFER_TAG_LIST } from '@/admin/constants/product-meta';
-import { Switch } from '@/admin/components/ui/switch';
-import { MultiSelect } from '@/admin/components/ui/multi-select';
-import { TagsInput } from '@/admin/components/ui/tags-input';
+} from '@/components/ui/select';
+import { PRODUCT_OFFER_TAG_LIST } from '@/constants/product-meta';
+import { Switch } from '@/components/ui/switch';
+import { MultiSelect } from '@/components/ui/multi-select';
+import { TagsInput } from '@/components/ui/tags-input';
 import { useEffect, useState } from 'react';
-import { ImageUploadInput } from '@/admin/components/ui/image-upload-input';
-import { ProductShortVideosUpload } from '@/admin/components/ui/product-short-videos-upload';
-import { TProductShortVideo } from '@/admin/types/product';
+import { ImageUploadInput } from '@/components/ui/image-upload-input';
+import { ProductShortVideosUpload } from '@/components/ui/product-short-videos-upload';
+import { TProductShortVideo } from '@/types/product';
 import { Loader } from 'lucide-react';
-import { useGetAllCategoriesQuery } from '@/admin/redux/api-queries/category-api';
-import { TCategory } from '@/admin/types/category';
+import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
+import { TCategory } from '@/types/category';
 import {
     useGetAllSubCategoriesByCategoryIdQuery,
     useGetAllSubSubCategoriesByCategoryIdQuery
-} from '@/admin/redux/api-queries/subcategory-api';
-import { TSubCategory } from '@/admin/types/sub-category';
+} from '@/redux/api-queries/subcategory-api';
+import { TSubCategory } from '@/types/sub-category';
 import {
     useUploadFileToAWSMutation,
     useUploadMultipleFileToAWSMutation
-} from '@/admin/redux/api-queries/file-upload-api';
-import { useCreateProductMutation } from '@/admin/redux/api-queries/product-api';
-import { useGetActiveReturnPoliciesQuery } from '@/admin/redux/api-queries/return-policy-api';
-import { useGetAllBrandsQuery } from '@/admin/redux/api-queries/brand-api';
+} from '@/redux/api-queries/file-upload-api';
+import { useCreateProductMutation } from '@/redux/api-queries/product-api';
+import { useGetActiveReturnPoliciesQuery } from '@/redux/api-queries/return-policy-api';
+import { useGetAllBrandsQuery } from '@/redux/api-queries/brand-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import AttributesAndVariantsAddOrUpdate, {
     TAttributesAndVariantsData
-} from '@/admin/components/shared/AttributesAndVariantsAddOrUpdate';
+} from '@/components/shared/AttributesAndVariantsAddOrUpdate';
 
 const CreateProductForm = () => {
     // === state for selected category ===

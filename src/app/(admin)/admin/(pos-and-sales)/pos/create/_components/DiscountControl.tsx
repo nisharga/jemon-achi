@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { DiscountCalculationType } from '@/admin/types/pos';
-import { Input } from '@/admin/components/ui/input';
+import { DiscountCalculationType } from '@/types/pos';
+import { Input } from '@/components/ui/admin-input';
 import { ToggleSwitch } from './ToggleSwitch';
 
 interface Props {

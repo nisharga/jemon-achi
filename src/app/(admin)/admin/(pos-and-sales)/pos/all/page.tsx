@@ -1,7 +1,7 @@
 // /* eslint-disable @typescript-eslint/no-explicit-any */
 // "use client";
 
-// import Pagination from "@/admin/components/shared/pagination";
+// import Pagination from "@/components/shared/pagination";
 // import React, { Suspense, useEffect, useState } from "react";
 // import { SalesTable } from "./_components/sales-table";
 // import {
@@ -10,28 +10,28 @@
 //   SelectContent,
 //   SelectTrigger,
 //   SelectValue,
-// } from "@/admin/components/ui/select";
+// } from "@/components/ui/select";
 // import {
 //   Accordion,
 //   AccordionContent,
 //   AccordionItem,
 //   AccordionTrigger,
-// } from "@/admin/components/ui/accordion";
+// } from "@/components/ui/accordion";
 // import { File, FileSpreadsheet, Filter, Loader } from "lucide-react";
-// import { useGetAllBusinessLocationsQuery } from "@/admin/redux/api-queries/business-location-api";
-// import { IBusiness_location } from "@/admin/types/business-location";
+// import { useGetAllBusinessLocationsQuery } from "@/redux/api-queries/business-location-api";
+// import { IBusiness_location } from "@/types/business-location";
 // import {
 //   useGetAllPosSalesQuery,
 //   useGetPosSalesReportQuery,
 //   useLazyGetAllPosSalesQuery,
-// } from "@/admin/redux/api-queries/pos-sale-api";
-// import { DateRangeCalendar } from "@/admin/components/ui/date-range-calendar";
+// } from "@/redux/api-queries/pos-sale-api";
+// import { DateRangeCalendar } from "@/components/ui/date-range-calendar";
 // import type { DateRange } from "react-day-picker";
-// import { Label } from "@/admin/components/ui/label";
-// import { Input } from "@/admin/components/ui/input";
+// import { Label } from "@/components/ui/admin-label";
+// import { Input } from "@/components/ui/admin-input";
 // import { endOfDay, format, startOfDay } from "date-fns";
 // import SaleReport from "./_components/sale-report";
-// import { Button } from "@/admin/components/ui/button";
+// import { Button } from "@/components/ui/admin-button";
 // import autoTable from "jspdf-autotable";
 // import jsPDF from "jspdf";
 // import {
@@ -40,15 +40,15 @@
 //   useQueryState,
 //   useQueryStates,
 // } from "nuqs";
-// import useDebounce from "@/admin/hooks/use-debounce";
-// import { useLoggedInUser } from "@/admin/hooks/use-loggedin-user";
+// import useDebounce from "@/hooks/use-debounce";
+// import { useLoggedInUser } from "@/hooks/use-loggedin-user";
 // import * as XLSX from "xlsx";
-// import { useGetAllStaffsQuery } from "@/admin/redux/api-queries/staff-api";
-// import { IRoles, TUser, USER_ROLE } from "@/admin/types/user";
-// import { Badge } from "@/admin/components/ui/badge";
-// import { getRoleBadgeVariant } from "@/admin/utils/getRoleBadgeVariant";
-// import { useHasPermission } from "@/admin/hooks/use-has-permission";
-// import { PermissionEnum } from "@/admin/types/permistion";
+// import { useGetAllStaffsQuery } from "@/redux/api-queries/staff-api";
+// import { IRoles, TUser, USER_ROLE } from "@/types/admin-user";
+// import { Badge } from "@/components/ui/admin-badge";
+// import { getRoleBadgeVariant } from "@/utils/getRoleBadgeVariant";
+// import { useHasPermission } from "@/hooks/use-has-permission";
+// import { PermissionEnum } from "@/types/permistion";
 
 // const AllPosSalesComponent = () => {
 //   // === check permissions ===
@@ -1125,7 +1125,7 @@
 
 'use client';
 
-import Pagination from '@/admin/components/shared/pagination';
+import Pagination from '@/components/shared/pagination';
 import React, { Suspense, useEffect, useState } from 'react';
 import { SalesTable } from './_components/sales-table';
 import {
@@ -1134,28 +1134,28 @@ import {
     SelectContent,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger
-} from '@/admin/components/ui/accordion';
+} from '@/components/ui/accordion';
 import { File, FileSpreadsheet, Filter, Loader } from 'lucide-react';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/admin/types/business-location';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { IBusiness_location } from '@/types/business-location';
 import {
     useGetAllPosSalesQuery,
     useGetPosSalesReportQuery,
     useLazyGetAllPosSalesQuery
-} from '@/admin/redux/api-queries/pos-sale-api';
-import { DateRangeCalendar } from '@/admin/components/ui/date-range-calendar';
+} from '@/redux/api-queries/pos-sale-api';
+import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
 import type { DateRange } from 'react-day-picker';
-import { Label } from '@/admin/components/ui/label';
-import { Input } from '@/admin/components/ui/input';
+import { Label } from '@/components/ui/admin-label';
+import { Input } from '@/components/ui/admin-input';
 import { endOfDay, format, startOfDay } from 'date-fns';
 import SaleReport from './_components/sale-report';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import autoTable from 'jspdf-autotable';
 import jsPDF from 'jspdf';
 import {
@@ -1164,15 +1164,15 @@ import {
     useQueryState,
     useQueryStates
 } from 'nuqs';
-import useDebounce from '@/admin/hooks/use-debounce';
-import { useLoggedInUser } from '@/admin/hooks/use-loggedin-user';
+import useDebounce from '@/hooks/use-debounce';
+import { useLoggedInUser } from '@/hooks/use-loggedin-user';
 import * as XLSX from 'xlsx';
-import { useGetAllStaffsQuery } from '@/admin/redux/api-queries/staff-api';
-import { IRoles, TUser, USER_ROLE } from '@/admin/types/user';
-import { Badge } from '@/admin/components/ui/badge';
-import { getRoleBadgeVariant } from '@/admin/utils/getRoleBadgeVariant';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
+import { useGetAllStaffsQuery } from '@/redux/api-queries/staff-api';
+import { IRoles, TUser, USER_ROLE } from '@/types/admin-user';
+import { Badge } from '@/components/ui/admin-badge';
+import { getRoleBadgeVariant } from '@/utils/getRoleBadgeVariant';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
 
 const AllPosSalesComponent = () => {
     // === check permissions ===

@@ -1,35 +1,35 @@
 'use client';
 
-import useDebounce from '@/admin/hooks/use-debounce';
+import useDebounce from '@/hooks/use-debounce';
 import {
     useEditOrderMutation,
     useGetSingleOrderByIdQuery
-} from '@/admin/redux/api-queries/order-api';
-import { useGetAllSearchVariantsQuery } from '@/admin/redux/api-queries/product-api';
-import { TOrder } from '@/admin/types/order';
-import { Button } from '@/admin/components/ui/button';
+} from '@/redux/api-queries/order-api';
+import { useGetAllSearchVariantsQuery } from '@/redux/api-queries/product-api';
+import { TOrder } from '@/types/order';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
     FormField,
     FormItem,
     FormLabel
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { Textarea } from '@/admin/components/ui/textarea';
+} from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
 import { ImagePlus, Loader, Minus, Plus, X } from 'lucide-react';
 import { ChangeEvent, useEffect, useState } from 'react';
-import { useUploadMultipleFileToAWSMutation } from '@/admin/redux/api-queries/file-upload-api';
+import { useUploadMultipleFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
-import { cn, getImgFullUrl } from '@/admin/lib/utils';
+import { cn, getImgFullUrl } from '@/lib/admin-utils';
 import {
     Table,
     TableBody,
@@ -37,16 +37,16 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
+} from '@/components/ui/table';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import BackBtn from '@/admin/components/shared/back-btn';
-import { FraudData } from '@/admin/redux/api-queries/fraudApi';
-import FraudListModal from '@/admin/components/shared/FraudListModal';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import BackBtn from '@/components/shared/back-btn';
+import { FraudData } from '@/redux/api-queries/fraudApi';
+import FraudListModal from '@/components/shared/FraudListModal';
 
 const EditOrderForm = ({ id }: { id: string }) => {
     // === check permissions ===

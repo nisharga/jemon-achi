@@ -1,5 +1,5 @@
 'use client';
-import FraudCheckerSearchBox from '@/admin/components/shared/fraud-checker-search-box';
+import FraudCheckerSearchBox from '@/components/shared/fraud-checker-search-box';
 import React from 'react';
 
 const page = () => {

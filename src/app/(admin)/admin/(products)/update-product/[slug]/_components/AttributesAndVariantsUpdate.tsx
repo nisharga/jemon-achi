@@ -7,10 +7,10 @@ import React, {
     useMemo,
     useState
 } from 'react';
-import { Input } from '@/admin/components/ui/input';
-import { Button } from '@/admin/components/ui/button';
-import { Switch } from '@/admin/components/ui/switch';
-import { InlineColorPicker } from '@/admin/components/ui/color-picker';
+import { Input } from '@/components/ui/admin-input';
+import { Button } from '@/components/ui/admin-button';
+import { Switch } from '@/components/ui/switch';
+import { InlineColorPicker } from '@/components/ui/color-picker';
 import { Plus, Trash, X, ImagePlus, GripVertical } from 'lucide-react';
 import {
     Table,
@@ -19,22 +19,22 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
+} from '@/components/ui/table';
 import {
     Dialog,
     DialogContent,
     DialogHeader,
     DialogTitle,
     DialogTrigger
-} from '@/admin/components/ui/dialog';
+} from '@/components/ui/dialog';
 import debounce from 'lodash/debounce';
 import {
     defaultAttributesData,
     defaultVariationData
-} from '@/admin/constants/defaultVariationData';
+} from '@/constants/defaultVariationData';
 import Image from 'next/image';
-import { getImgFullUrl } from '@/admin/lib/utils';
-import { useUploadMultipleFileToAWSMutation } from '@/admin/redux/api-queries/file-upload-api';
+import { getImgFullUrl } from '@/lib/admin-utils';
+import { useUploadMultipleFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
 import { toast } from 'sonner';
 import { Loader } from 'lucide-react';
 

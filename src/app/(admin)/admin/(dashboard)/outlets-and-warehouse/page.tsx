@@ -1,11 +1,11 @@
 'use client';
 
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { Badge } from '@/admin/components/ui/badge';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { Badge } from '@/components/ui/admin-badge';
 import { Building2 } from 'lucide-react';
-import OutletsSkeleton from '@/admin/components/skeletons/outlets-skeleton';
-import { TOutlet } from '@/admin/types/product';
-import OutletCard from '@/admin/components/shared/OutletCard';
+import OutletsSkeleton from '@/components/skeletons/outlets-skeleton';
+import { TOutlet } from '@/types/product';
+import OutletCard from '@/components/shared/OutletCard';
 import { toast } from 'sonner';
 // import { useRouter } from "next/navigation";
 

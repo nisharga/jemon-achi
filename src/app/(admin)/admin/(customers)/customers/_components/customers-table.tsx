@@ -7,10 +7,10 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { TUser } from '@/admin/types/user';
+import { TUser } from '@/types/admin-user';
 import CustomerActions from './customer-actions';
 
 type StaffsTableProps = {

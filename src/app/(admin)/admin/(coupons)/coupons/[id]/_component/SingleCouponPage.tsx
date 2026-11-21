@@ -1,6 +1,6 @@
 'use client';
 
-import { useGetSingleCouponByIdQuery } from '@/admin/redux/api-queries/coupon-api';
+import { useGetSingleCouponByIdQuery } from '@/redux/api-queries/coupon-api';
 import React from 'react';
 import { useParams } from 'next/navigation';
 import { format } from 'date-fns';
@@ -13,8 +13,8 @@ import {
     Layers,
     ShoppingCart
 } from 'lucide-react';
-import { Badge } from '@/admin/components/ui/badge';
-import { Separator } from '@/admin/components/ui/separator';
+import { Badge } from '@/components/ui/admin-badge';
+import { Separator } from '@/components/ui/admin-separator';
 
 const SingleCouponPage = () => {
     const params = useParams();

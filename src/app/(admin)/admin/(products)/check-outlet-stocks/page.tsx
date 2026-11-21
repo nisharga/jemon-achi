@@ -1,30 +1,30 @@
 // "use client";
 
-// import Pagination from "@/admin/components/shared/pagination";
-// import { PermissionErrorCard } from "@/admin/components/shared/permission-error-card";
-// import { PermissionLoaderCard } from "@/admin/components/shared/permission-loader-card";
-// import { Button } from "@/admin/components/ui/button";
-// import { Card, CardContent, CardHeader, CardTitle } from "@/admin/components/ui/card";
-// import { Input } from "@/admin/components/ui/input";
-// import { Label } from "@/admin/components/ui/label";
+// import Pagination from "@/components/shared/pagination";
+// import { PermissionErrorCard } from "@/components/shared/permission-error-card";
+// import { PermissionLoaderCard } from "@/components/shared/permission-loader-card";
+// import { Button } from "@/components/ui/admin-button";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/admin-card";
+// import { Input } from "@/components/ui/admin-input";
+// import { Label } from "@/components/ui/admin-label";
 // import {
 //   Select,
 //   SelectContent,
 //   SelectItem,
 //   SelectTrigger,
 //   SelectValue,
-// } from "@/admin/components/ui/select";
-// import useDebounce from "@/admin/hooks/use-debounce";
-// import { useHasPermission } from "@/admin/hooks/use-has-permission";
-// import { useGetAllBusinessLocationsQuery } from "@/admin/redux/api-queries/business-location-api";
+// } from "@/components/ui/select";
+// import useDebounce from "@/hooks/use-debounce";
+// import { useHasPermission } from "@/hooks/use-has-permission";
+// import { useGetAllBusinessLocationsQuery } from "@/redux/api-queries/business-location-api";
 // import {
 //   useGetAllStockReportsQuery,
 //   useGetAllStocksSubcategoryQuery,
-// } from "@/admin/redux/api-queries/stock-api";
-// import { IBusiness_location } from "@/admin/types/business-location";
-// import { PermissionEnum } from "@/admin/types/permistion";
-// import { generateExcel } from "@/admin/utils/excel-generator";
-// import { generateFullPDF } from "@/admin/utils/pdf-generator";
+// } from "@/redux/api-queries/stock-api";
+// import { IBusiness_location } from "@/types/business-location";
+// import { PermissionEnum } from "@/types/permistion";
+// import { generateExcel } from "@/utils/excel-generator";
+// import { generateFullPDF } from "@/utils/pdf-generator";
 // import jsPDF from "jspdf";
 // import autoTable from "jspdf-autotable";
 // import {
@@ -1167,18 +1167,18 @@
 // export default StockReportPage;
 'use client';
 
-import Pagination from '@/admin/components/shared/pagination';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { Badge } from '@/admin/components/ui/badge';
-import { Button } from '@/admin/components/ui/button';
+import Pagination from '@/components/shared/pagination';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { Badge } from '@/components/ui/admin-badge';
+import { Button } from '@/components/ui/admin-button';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle
-} from '@/admin/components/ui/card';
-import { Checkbox } from '@/admin/components/ui/checkbox';
+} from '@/components/ui/admin-card';
+import { Checkbox } from '@/components/ui/checkbox';
 import {
     Command,
     CommandEmpty,
@@ -1186,32 +1186,32 @@ import {
     CommandInput,
     CommandItem,
     CommandList
-} from '@/admin/components/ui/command';
-import { Input } from '@/admin/components/ui/input';
-import { Label } from '@/admin/components/ui/label';
+} from '@/components/ui/command';
+import { Input } from '@/components/ui/admin-input';
+import { Label } from '@/components/ui/admin-label';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger
-} from '@/admin/components/ui/popover';
+} from '@/components/ui/popover';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import useDebounce from '@/admin/hooks/use-debounce';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
+} from '@/components/ui/select';
+import useDebounce from '@/hooks/use-debounce';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
 import {
     useGetAllStockReportsQuery,
     useGetAllStocksSubcategoryQuery
-} from '@/admin/redux/api-queries/stock-api';
-import { IBusiness_location } from '@/admin/types/business-location';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { generateExcel } from '@/admin/utils/excel-generator';
-import { generateFullPDF } from '@/admin/utils/pdf-generator';
+} from '@/redux/api-queries/stock-api';
+import { IBusiness_location } from '@/types/business-location';
+import { PermissionEnum } from '@/types/permistion';
+import { generateExcel } from '@/utils/excel-generator';
+import { generateFullPDF } from '@/utils/pdf-generator';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import {

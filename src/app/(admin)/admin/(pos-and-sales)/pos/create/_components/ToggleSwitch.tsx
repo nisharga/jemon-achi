@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Switch } from '@/admin/components/ui/switch';
-import { Label } from '@/admin/components/ui/label';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/admin-label';
 
 interface ToggleSwitchProps {
     enabled: boolean;

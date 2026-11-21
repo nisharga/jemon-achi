@@ -1,15 +1,15 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useGetSingleBrandQuery } from '@/admin/redux/api-queries/brand-api';
-import { useUpdateBrandMutation } from '@/admin/redux/api-queries/brand-api';
+import { useGetSingleBrandQuery } from '@/redux/api-queries/brand-api';
+import { useUpdateBrandMutation } from '@/redux/api-queries/brand-api';
 import { BrandForm } from '../../_components/brand-form';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 
 const UpdateBrandPage = ({ params }: { params: Promise<{ id: string }> }) => {
     const router = useRouter();

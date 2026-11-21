@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod/v3';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -12,15 +12,15 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
-import { LoginSchema } from '@/admin/schema/login';
-import { useLoginMutation } from '@/admin/redux/api-queries/auth-api';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
+import { LoginSchema } from '@/schema/login';
+import { useLoginMutation } from '@/redux/api-queries/auth-api';
 import { toast } from 'sonner';
 import { Loader } from 'lucide-react';
-import { setAccessToken, setRefreshToken } from '@/admin/auth/cookies';
+import { setAccessToken, setRefreshToken } from '@/auth/admin-cookies';
 import { useRouter } from 'next/navigation';
-// import { ALLOWED_USER_ROLES } from "@/admin/auth/routes";
+// import { ALLOWED_USER_ROLES } from "@/auth/admin-routes";
 
 const LoginForm = () => {
     // === router ===

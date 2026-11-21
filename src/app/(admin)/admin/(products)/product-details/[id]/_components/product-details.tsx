@@ -22,14 +22,14 @@ import {
     Share2
 } from 'lucide-react';
 import Image from 'next/image';
-import { useGetSingleProductByIdForAdminViewQuery } from '@/admin/redux/api-queries/product-api';
-import { TProduct } from '@/admin/types/product';
-import { TInventory } from '@/admin/types/product';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { useGetSingleProductByIdForAdminViewQuery } from '@/redux/api-queries/product-api';
+import { TProduct } from '@/types/product';
+import { TInventory } from '@/types/product';
+import { PermissionEnum } from '@/types/permistion';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 const ProductDetails = ({ id }: { id: string }) => {
     // === check permissions ===

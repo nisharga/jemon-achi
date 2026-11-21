@@ -3,7 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod/v3';
-import { Button, buttonVariants } from '@/admin/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -11,31 +11,31 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { CreateBusinessLocationSchema } from '@/admin/schema/business-location';
+} from '@/components/ui/select';
+import { CreateBusinessLocationSchema } from '@/schema/business-location';
 import {
     useGetBusinessLocationByIdQuery,
     useUpdateBusinessLocationMutation
-} from '@/admin/redux/api-queries/business-location-api';
+} from '@/redux/api-queries/business-location-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { ChevronLeft, Loader } from 'lucide-react';
 import { useEffect } from 'react';
-import { IBusiness_location } from '@/admin/types/business-location';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { IBusiness_location } from '@/types/business-location';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import Link from 'next/link';
-import { cn } from '@/admin/lib/utils';
+import { cn } from '@/lib/admin-utils';
 
 type FormValues = z.infer<typeof CreateBusinessLocationSchema>;
 

@@ -1,18 +1,18 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
-import { Checkbox } from '@/admin/components/ui/checkbox';
+import { Button } from '@/components/ui/admin-button';
+import { Checkbox } from '@/components/ui/checkbox';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { Label } from '@/admin/components/ui/label';
-import { USER_PERMISSIONS } from '@/admin/constants/user-permissions';
-import { useManagePermissionsMutation } from '@/admin/redux/api-queries/staff-api';
-import { PermissionEnum } from '@/admin/types/permistion';
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/admin-label';
+import { USER_PERMISSIONS } from '@/constants/user-permissions';
+import { useManagePermissionsMutation } from '@/redux/api-queries/staff-api';
+import { PermissionEnum } from '@/types/permistion';
 import { Loader } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';

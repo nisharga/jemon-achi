@@ -4,9 +4,9 @@ import {
     CardContent,
     CardHeader,
     CardTitle
-} from '@/admin/components/ui/card';
-import { Badge } from '@/admin/components/ui/badge';
-import { Skeleton } from '@/admin/components/ui/skeleton';
+} from '@/components/ui/admin-card';
+import { Badge } from '@/components/ui/admin-badge';
+import { Skeleton } from '@/components/ui/admin-skeleton';
 import {
     Table,
     TableBody,
@@ -14,7 +14,7 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
+} from '@/components/ui/table';
 import {
     Pagination,
     PaginationContent,
@@ -23,14 +23,14 @@ import {
     PaginationLink,
     PaginationNext,
     PaginationPrevious
-} from '@/admin/components/ui/pagination';
+} from '@/components/ui/pagination';
 import Image from 'next/image';
-import type { TInventory } from '@/admin/types/product';
-import type { TVariantCombination } from '@/admin/types/product';
+import type { TInventory } from '@/types/product';
+import type { TVariantCombination } from '@/types/product';
 import { Package, ShoppingCart } from 'lucide-react';
 import { Dispatch, FC, SetStateAction } from 'react';
 import { BarcodeImage } from './barcode-image';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 type TProps = {
     data: any;

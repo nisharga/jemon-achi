@@ -3,7 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -11,18 +11,18 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
-import { Switch } from '@/admin/components/ui/switch';
-import { FormEditor } from '@/admin/components/form-items';
-import { updateReturnPolicySchema } from '@/admin/schema/return-policy';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
+import { Switch } from '@/components/ui/switch';
+import { FormEditor } from '@/components/form-items';
+import { updateReturnPolicySchema } from '@/schema/return-policy';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 import { Loader, X } from 'lucide-react';
 import {
     useGetSingleReturnPolicyQuery,
     useUpdateReturnPolicyMutation
-} from '@/admin/redux/api-queries/return-policy-api';
+} from '@/redux/api-queries/return-policy-api';
 import { useRouter } from 'next/navigation';
 
 const UpdateReturnPolicyForm = ({ id }: { id: string }) => {

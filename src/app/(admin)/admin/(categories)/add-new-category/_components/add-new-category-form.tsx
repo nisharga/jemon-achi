@@ -4,7 +4,7 @@ import type { Resolver } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -12,15 +12,15 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
-import { createCategorySchema } from '@/admin/schema/category';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
+import { createCategorySchema } from '@/schema/category';
 import React, { useState } from 'react';
-import { ImageUploadInput } from '@/admin/components/ui/image-upload-input';
+import { ImageUploadInput } from '@/components/ui/image-upload-input';
 import { toast } from 'sonner';
 import { Loader, Video, ImageIcon } from 'lucide-react';
-import { useUploadFileToAWSMutation } from '@/admin/redux/api-queries/file-upload-api';
-import { useCreateCategoryMutation } from '@/admin/redux/api-queries/category-api';
+import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+import { useCreateCategoryMutation } from '@/redux/api-queries/category-api';
 import { useRouter } from 'next/navigation';
 
 const AddNewCategoryForm = () => {

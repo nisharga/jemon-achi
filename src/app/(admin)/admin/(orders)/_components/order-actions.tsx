@@ -1,14 +1,14 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
     DropdownMenuSeparator
-} from '@/admin/components/ui/dropdown-menu';
-import { OrderStatus, TOrder } from '@/admin/types/order';
+} from '@/components/ui/admin-dropdown-menu';
+import { OrderStatus, TOrder } from '@/types/order';
 import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
 import React, { ReactElement, useState, useMemo } from 'react';
@@ -22,7 +22,7 @@ import ReturnOrderDialog from './return-order-dialog';
 import {
     useMarkAsDeliveredMutation,
     useMarkAsPendingReturnMutation
-} from '@/admin/redux/api-queries/order-api';
+} from '@/redux/api-queries/order-api';
 import { toast } from 'sonner';
 
 const OrderActions = ({

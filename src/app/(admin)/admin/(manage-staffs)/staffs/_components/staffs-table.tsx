@@ -7,14 +7,14 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { TUser } from '@/admin/types/user';
-import { Badge } from '@/admin/components/ui/badge';
-import { getRoleBadgeVariant } from '@/admin/utils/getRoleBadgeVariant';
+import { TUser } from '@/types/admin-user';
+import { Badge } from '@/components/ui/admin-badge';
+import { getRoleBadgeVariant } from '@/utils/getRoleBadgeVariant';
 import StaffActions from './starff-actions';
-import { useLoggedInUser } from '@/admin/hooks/use-loggedin-user';
+import { useLoggedInUser } from '@/hooks/use-loggedin-user';
 
 type StaffsTableProps = {
     staffs: [];

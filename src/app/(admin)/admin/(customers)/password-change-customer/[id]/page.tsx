@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
-import { cn } from '@/admin/lib/utils';
-import { Button, buttonVariants } from '@/admin/components/ui/button';
+import { cn } from '@/lib/admin-utils';
+import { Button, buttonVariants } from '@/components/ui/admin-button';
 import { ChevronLeft, Eye, EyeOff, Lock, Loader } from 'lucide-react';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod/v3';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,10 +20,10 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
 import { toast } from 'sonner';
-import { useUpdateCustomersMutation } from '@/admin/redux/api-queries/customer-api'; // Adjust import path
+import { useUpdateCustomersMutation } from '@/redux/api-queries/customer-api'; // Adjust import path
 
 // === Validation Schema ===
 const ChangePasswordSchema = z

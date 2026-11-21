@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod/v3';
 import React, { useEffect, useState } from 'react';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -12,34 +12,34 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
-import { updateSubCategorySchema } from '@/admin/schema/sub-category';
-import { ImageUploadInput } from '@/admin/components/ui/image-upload-input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
+import { updateSubCategorySchema } from '@/schema/sub-category';
+import { ImageUploadInput } from '@/components/ui/image-upload-input';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import Image from 'next/image';
-import { TCategory } from '@/admin/types/category';
+import { TCategory } from '@/types/category';
 import {
     useGetSingleSubCategoryQuery,
     useUpdateSubCategoryMutation
-} from '@/admin/redux/api-queries/subcategory-api';
+} from '@/redux/api-queries/subcategory-api';
 import { toast } from 'sonner';
-import { TSubCategory } from '@/admin/types/sub-category';
+import { TSubCategory } from '@/types/sub-category';
 import { Loader, Video, ImageIcon } from 'lucide-react';
-import { useUploadFileToAWSMutation } from '@/admin/redux/api-queries/file-upload-api';
+import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
 import { useRouter } from 'next/navigation';
-import { useGetAllCategoriesQuery } from '@/admin/redux/api-queries/category-api';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 const UpdateSubCategoryForm = ({ slug }: { slug: string }) => {
     // === check permissions ===

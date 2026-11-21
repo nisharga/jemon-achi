@@ -7,19 +7,19 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { IRole } from '@/admin/types/user';
-import { Badge } from '@/admin/components/ui/badge';
+import { IRole } from '@/types/admin-user';
+import { Badge } from '@/components/ui/admin-badge';
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger
-} from '@/admin/components/ui/tooltip';
+} from '@/components/ui/admin-tooltip';
 
-import { useLoggedInUser } from '@/admin/hooks/use-loggedin-user';
+import { useLoggedInUser } from '@/hooks/use-loggedin-user';
 import StaffActions from './starff-actions';
 
 type StaffsTableProps = {

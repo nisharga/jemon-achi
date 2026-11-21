@@ -7,16 +7,16 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import { Loader } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
-import { TCategory } from '@/admin/types/category';
-import { useUpdateCategoryMutation } from '@/admin/redux/api-queries/category-api';
-import { Switch } from '@/admin/components/ui/switch';
+import { TCategory } from '@/types/category';
+import { useUpdateCategoryMutation } from '@/redux/api-queries/category-api';
+import { Switch } from '@/components/ui/switch';
 import { toast } from 'sonner';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 import CategoryActions from './category-actions';
 
 type CategoriesTableProps = {

@@ -7,11 +7,11 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
 import { format } from 'date-fns';
-import { Badge } from '@/admin/components/ui/badge';
+import { Badge } from '@/components/ui/admin-badge';
 
 type TableProps = {
     stockAdjustments: [];

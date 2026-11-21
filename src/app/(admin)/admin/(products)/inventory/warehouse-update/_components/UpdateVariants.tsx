@@ -1,14 +1,14 @@
 'use client';
-import { TOutlet } from '@/admin/types/product';
-import { TProduct } from '@/admin/types/product';
+import { TOutlet } from '@/types/product';
+import { TProduct } from '@/types/product';
 import React, { FC, useEffect, useState } from 'react';
-import { useUpdateInventoryForWarehouseMutation } from '@/admin/redux/api-queries/outlet-api';
-import { Button } from '@/admin/components/ui/button';
+import { useUpdateInventoryForWarehouseMutation } from '@/redux/api-queries/outlet-api';
+import { Button } from '@/components/ui/admin-button';
 import { toast } from 'sonner';
-import { useGetInventoryByProductAndWarehouseIdQuery } from '@/admin/redux/api-queries/inventory-api';
+import { useGetInventoryByProductAndWarehouseIdQuery } from '@/redux/api-queries/inventory-api';
 import AttributesAndVariantsAddOrUpdate, {
     TAttributesAndVariantsData
-} from '@/admin/components/shared/AttributesAndVariantsAddOrUpdate';
+} from '@/components/shared/AttributesAndVariantsAddOrUpdate';
 import { useRouter } from 'next/navigation';
 
 type TProps = {

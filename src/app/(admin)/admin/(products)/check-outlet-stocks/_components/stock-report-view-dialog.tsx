@@ -8,8 +8,8 @@ import {
     DialogDescription,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
-import { Label } from '@/admin/components/ui/label';
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/admin-label';
 import {
     Table,
     TableBody,
@@ -17,10 +17,10 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
-import { getImgFullUrl } from '@/admin/lib/utils';
-import { useGetSingleStockReportByVariantIdQuery } from '@/admin/redux/api-queries/stock-api';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
+import { useGetSingleStockReportByVariantIdQuery } from '@/redux/api-queries/stock-api';
 import Image from 'next/image';
 import React from 'react';
 

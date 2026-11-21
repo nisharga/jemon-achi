@@ -1,6 +1,6 @@
 import React from 'react';
 import LoginForm from './_components/login-form';
-import Container from '@/admin/components/shared/container';
+import Container from '@/components/shared/container';
 
 const LoginPage = () => {
     return (

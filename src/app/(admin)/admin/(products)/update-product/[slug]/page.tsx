@@ -1,6 +1,6 @@
 import React from 'react';
 import UpdateProductForm from './_components/update-product-form';
-import SectionTitle from '@/admin/components/shared/section-title';
+import SectionTitle from '@/components/shared/section-title';
 
 const UpdateProductPage = async ({
     params

@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Table,
     TableBody,
@@ -8,17 +8,17 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import { Loader, SquarePen, Trash2 } from 'lucide-react';
 import React from 'react';
-import { TReturnPolicy } from '@/admin/types/return-policy';
+import { TReturnPolicy } from '@/types/return-policy';
 import Link from 'next/link';
 import {
     useDeleteReturnPolicyMutation,
     useToggleReturnPolicyStatusMutation
-} from '@/admin/redux/api-queries/return-policy-api';
-import { Switch } from '@/admin/components/ui/switch';
+} from '@/redux/api-queries/return-policy-api';
+import { Switch } from '@/components/ui/switch';
 import { toast } from 'sonner';
 
 type ReturnPoliciesTableProps = {

@@ -7,12 +7,12 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
 import { format } from 'date-fns';
-import { IPurchase } from '@/admin/types/purchase';
-import { Badge } from '@/admin/components/ui/badge';
+import { IPurchase } from '@/types/purchase';
+import { Badge } from '@/components/ui/admin-badge';
 import PurchaseActions from './purchase-actions';
 
 type PurchaseTableProps = {

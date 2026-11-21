@@ -1,13 +1,13 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger
-} from '@/admin/components/ui/dropdown-menu';
-import { IPurchase } from '@/admin/types/purchase';
+} from '@/components/ui/admin-dropdown-menu';
+import { IPurchase } from '@/types/purchase';
 import jsPDF from 'jspdf';
 import { Download, Edit, Ellipsis } from 'lucide-react';
 import Link from 'next/link';

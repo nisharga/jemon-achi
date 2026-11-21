@@ -7,11 +7,11 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { Badge } from '@/admin/components/ui/badge';
-import { TSupplier } from '@/admin/types/supplier';
+import { Badge } from '@/components/ui/admin-badge';
+import { TSupplier } from '@/types/supplier';
 import SupplierActions from './supplier-actions';
 
 type TableProps = {

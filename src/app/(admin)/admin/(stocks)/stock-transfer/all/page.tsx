@@ -1,13 +1,13 @@
 'use client';
 
-import Pagination from '@/admin/components/shared/pagination';
+import Pagination from '@/components/shared/pagination';
 import React, { useEffect, useState } from 'react';
 import { StockTransferTable } from './_components/stock-transfer-table';
-import { useGetAllStockTransferQuery } from '@/admin/redux/api-queries/stock-api';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
+import { useGetAllStockTransferQuery } from '@/redux/api-queries/stock-api';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
 
 const AllStockTransferPage = () => {
     // === check permissions ===

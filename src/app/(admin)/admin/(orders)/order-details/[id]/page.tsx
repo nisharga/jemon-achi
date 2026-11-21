@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { cn } from '@/admin/lib/utils';
-import { buttonVariants } from '@/admin/components/ui/button';
+import { cn } from '@/lib/admin-utils';
+import { buttonVariants } from '@/components/ui/admin-button';
 import { ChevronLeft } from 'lucide-react';
 import OrderDetails from './_components/order-details';
 

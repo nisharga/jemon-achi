@@ -1,12 +1,12 @@
 'use client';
 
-import { Button } from '@/admin/components/ui/button';
-import { TProduct } from '@/admin/types/product';
+import { Button } from '@/components/ui/admin-button';
+import { TProduct } from '@/types/product';
 import { Trash } from 'lucide-react';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import RemoveFeaturedProductDialog from './remove-featured-product-dialog';
-import { getImgFullUrl } from '@/admin/lib/utils';
+import { getImgFullUrl } from '@/lib/admin-utils';
 
 const FeaturedProducts = ({ featuredProducts }: { featuredProducts: any }) => {
     // === remove dialog state ===

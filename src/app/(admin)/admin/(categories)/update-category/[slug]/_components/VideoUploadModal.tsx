@@ -5,7 +5,7 @@ import {
     DialogContent,
     DialogHeader,
     DialogTitle
-} from '@/admin/components/ui/dialog';
+} from '@/components/ui/dialog';
 
 export const VideoPreviewModal = ({
     isOpen,

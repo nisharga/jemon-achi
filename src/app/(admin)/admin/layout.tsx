@@ -1,6 +1,6 @@
-import AppHeader from '@/admin/components/app-header';
-import { AppSidebar } from '@/admin/components/app-sidebar';
-import { SidebarInset, SidebarProvider } from '@/admin/components/ui/sidebar';
+import AppHeader from '@/components/app-header';
+import { AppSidebar } from '@/components/app-sidebar';
+import { SidebarInset, SidebarProvider } from '@/components/ui/admin-sidebar';
 import React from 'react';
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {

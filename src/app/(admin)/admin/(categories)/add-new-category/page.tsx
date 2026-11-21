@@ -2,11 +2,11 @@
 
 import React from 'react';
 import AddNewCategoryForm from './_components/add-new-category-form';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import SectionTitle from '@/admin/components/shared/section-title';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import SectionTitle from '@/components/shared/section-title';
 
 const AddNewCategoryPage = () => {
     // === check permissions ===

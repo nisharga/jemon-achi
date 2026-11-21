@@ -4,7 +4,7 @@ import type { Resolver } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import type { z } from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -12,32 +12,32 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { EditPurchaseSchema } from '@/admin/schema/purchase';
+} from '@/components/ui/admin-form';
+import { EditPurchaseSchema } from '@/schema/purchase';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import { useState, useEffect } from 'react';
 import { CalendarIcon, Loader, Trash2, Plus, Check } from 'lucide-react';
 import { toast } from 'sonner';
-import { useGetAllSuppliersQuery } from '@/admin/redux/api-queries/supplier-slice';
-import type { TSupplier } from '@/admin/types/supplier';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
+import { useGetAllSuppliersQuery } from '@/redux/api-queries/supplier-slice';
+import type { TSupplier } from '@/types/supplier';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger
-} from '@/admin/components/ui/popover';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/popover';
+import { cn } from '@/lib/admin-utils';
 import { format } from 'date-fns';
-import { Calendar } from '@/admin/components/ui/calendar';
-import { Input } from '@/admin/components/ui/input';
-import { useGetAllSearchVariantsQuery } from '@/admin/redux/api-queries/product-api';
-import useDebounce from '@/admin/hooks/use-debounce';
+import { Calendar } from '@/components/ui/calendar';
+import { Input } from '@/components/ui/admin-input';
+import { useGetAllSearchVariantsQuery } from '@/redux/api-queries/product-api';
+import useDebounce from '@/hooks/use-debounce';
 import {
     Table,
     TableBody,
@@ -45,18 +45,18 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { Textarea } from '@/admin/components/ui/textarea';
+} from '@/components/ui/table';
+import { Textarea } from '@/components/ui/textarea';
 import {
     useEditPurchaseMutation,
     useGetSinglePurchaseQuery
-} from '@/admin/redux/api-queries/purchase-slice';
+} from '@/redux/api-queries/purchase-slice';
 import { useRouter } from 'next/navigation';
-import { IPurchase } from '@/admin/types/purchase';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
+import { IPurchase } from '@/types/purchase';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
 
 interface PurchaseItem {
     variant: string;

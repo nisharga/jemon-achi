@@ -2,12 +2,12 @@
 
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
-import { Card, CardContent } from '@/admin/components/ui/card';
-import { Badge } from '@/admin/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/admin-card';
+import { Badge } from '@/components/ui/admin-badge';
 import { Package, MapPin, AlertCircle, Warehouse } from 'lucide-react';
 
 import ProductInventoryTable from '../../_components/ProductInventoryTable';
-import { useGetInventoriesByOutletIdQuery } from '@/admin/redux/api-queries/inventory-api';
+import { useGetInventoriesByOutletIdQuery } from '@/redux/api-queries/inventory-api';
 
 const OutletInventoryView = () => {
     const searchParams = useSearchParams();

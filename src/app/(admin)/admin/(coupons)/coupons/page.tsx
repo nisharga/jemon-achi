@@ -1,15 +1,15 @@
 'use client';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import Link from 'next/link';
 import React, { Suspense, useEffect, useState } from 'react';
 import { ProductsTable } from './_components/products-table';
-import Pagination from '@/admin/components/shared/pagination';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import Pagination from '@/components/shared/pagination';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 
-import { useGetAllCouponsQuery } from '@/admin/redux/api-queries/coupon-api';
+import { useGetAllCouponsQuery } from '@/redux/api-queries/coupon-api';
 
 const ProductsPageComponent = () => {
     // === check permissions ===

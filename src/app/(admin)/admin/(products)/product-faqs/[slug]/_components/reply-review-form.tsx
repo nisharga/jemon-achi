@@ -1,20 +1,20 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { toast } from 'sonner';
 import { useState, useEffect } from 'react';
-import { Button } from '@/admin/components/ui/button';
-import { Textarea } from '@/admin/components/ui/textarea';
+import { Button } from '@/components/ui/admin-button';
+import { Textarea } from '@/components/ui/textarea';
 import {
     useGetFaqBySlugQuery,
     useUpdateFaqMutation
-} from '@/admin/redux/api-queries/faq-api';
+} from '@/redux/api-queries/faq-api';
 import Image from 'next/image';
-import { getMediaUrl } from '@/admin/utils/get-media-url';
+import { getMediaUrl } from '@/utils/get-media-url';
 
 const ReplyReviewForm = ({ slug }: { slug: string }) => {
     const router = useRouter();

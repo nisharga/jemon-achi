@@ -3,7 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod/v3';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Form,
     FormControl,
@@ -11,25 +11,25 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/admin/components/ui/form';
-import { Input } from '@/admin/components/ui/input';
+} from '@/components/ui/admin-form';
+import { Input } from '@/components/ui/admin-input';
 import { useRouter } from 'next/navigation';
 import { Eye, EyeOff, Loader } from 'lucide-react';
-import { staffSchema } from '@/admin/schema/staff';
+import { staffSchema } from '@/schema/staff';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { useCreateStaffMutation } from '@/admin/redux/api-queries/staff-api';
+} from '@/components/ui/select';
+import { useCreateStaffMutation } from '@/redux/api-queries/staff-api';
 import { toast } from 'sonner';
-import { TOutlet } from '@/admin/types/product';
+import { TOutlet } from '@/types/product';
 import { useState } from 'react';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { IRole } from '@/admin/types/user';
-import { useGetAllRolesQuery } from '@/admin/redux/api-queries/roles-api';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { IRole } from '@/types/admin-user';
+import { useGetAllRolesQuery } from '@/redux/api-queries/roles-api';
 
 const genderOptions = ['MALE', 'FEMALE'];
 

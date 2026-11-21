@@ -7,10 +7,10 @@ import {
     TableHead,
     TableHeader,
     TableRow
-} from '@/admin/components/ui/table';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/table';
+import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { TUser } from '@/admin/types/user';
+import { TUser } from '@/types/admin-user';
 import { toast } from 'sonner';
 import {
     Select,
@@ -18,11 +18,11 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
+} from '@/components/ui/select';
 import Image from 'next/image';
-import { getMediaUrl } from '@/admin/utils/get-media-url';
+import { getMediaUrl } from '@/utils/get-media-url';
 import ProductActions from './product-actions';
-import { useUpdateFaqMutation } from '@/admin/redux/api-queries/faq-api';
+import { useUpdateFaqMutation } from '@/redux/api-queries/faq-api';
 // import ProductActions from "./product-actions";
 
 type StaffsTableProps = {

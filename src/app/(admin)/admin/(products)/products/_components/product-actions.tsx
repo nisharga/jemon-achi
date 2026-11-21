@@ -1,12 +1,12 @@
 'use client';
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Button, buttonVariants } from '@/admin/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/admin-button';
 import { Ellipsis, Eye } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import DeleteProductDialog from './delete-product-dialog';
-import { TProduct } from '@/admin/types/product';
+import { TProduct } from '@/types/product';
 import { useRouter } from 'next/navigation';
 import {
     DropdownMenu,
@@ -14,8 +14,8 @@ import {
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger
-} from '@/admin/components/ui/dropdown-menu';
-import { cn } from '@/admin/lib/utils';
+} from '@/components/ui/admin-dropdown-menu';
+import { cn } from '@/lib/admin-utils';
 
 const ProductActions = ({ product }: { product: TProduct }) => {
     // delete product dialog state

@@ -3,7 +3,7 @@
 import React from 'react';
 import AddNewFeaturedProduct from './_components/add-new-featured-product';
 import FeaturedProducts from './_components/featured-products';
-import { useGetAllFeaturedProductsQuery } from '@/admin/redux/api-queries/featured-product-api';
+import { useGetAllFeaturedProductsQuery } from '@/redux/api-queries/featured-product-api';
 
 const FeaturedProductsPage = () => {
     // === get featured products ===

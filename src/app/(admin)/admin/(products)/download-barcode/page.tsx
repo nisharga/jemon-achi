@@ -1,15 +1,15 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useGetAllInventoriesQuery } from '@/admin/redux/api-queries/inventory-api';
-import useDebounce from '@/admin/hooks/use-debounce';
-import Pagination from '@/admin/components/shared/pagination';
-import { Input } from '@/admin/components/ui/input';
+import { useGetAllInventoriesQuery } from '@/redux/api-queries/inventory-api';
+import useDebounce from '@/hooks/use-debounce';
+import Pagination from '@/components/shared/pagination';
+import { Input } from '@/components/ui/admin-input';
 import { BarcodeTable } from './_components/barcode-table';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+import { PermissionEnum } from '@/types/permistion';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 
 const DownloadBarcode = () => {
     // === check permissions ===

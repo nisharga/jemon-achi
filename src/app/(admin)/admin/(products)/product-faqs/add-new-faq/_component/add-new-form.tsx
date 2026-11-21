@@ -4,35 +4,35 @@ import React, { useState } from 'react';
 import { toast } from 'sonner';
 import { Loader2, Save, Search, Image as ImageIcon } from 'lucide-react';
 
-import { useGetAllProductsQuery } from '@/admin/redux/api-queries/product-api';
+import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
 
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle,
     CardDescription
-} from '@/admin/components/ui/card';
-import { Input } from '@/admin/components/ui/input';
-import { Label } from '@/admin/components/ui/label';
-import { Skeleton } from '@/admin/components/ui/skeleton';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
+} from '@/components/ui/admin-card';
+import { Input } from '@/components/ui/admin-input';
+import { Label } from '@/components/ui/admin-label';
+import { Skeleton } from '@/components/ui/admin-skeleton';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { Textarea } from '@/admin/components/ui/textarea';
+} from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
 import Image from 'next/image';
-import { getImgFullUrl } from '@/admin/lib/utils';
-import SectionTitle from '@/admin/components/shared/section-title';
-import { useCreateFaqMutation } from '@/admin/redux/api-queries/faq-api';
+import { getImgFullUrl } from '@/lib/admin-utils';
+import SectionTitle from '@/components/shared/section-title';
+import { useCreateFaqMutation } from '@/redux/api-queries/faq-api';
 
 type TStatus = 'active' | 'inactive' | 'pending';
 

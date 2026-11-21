@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Label } from '@/admin/components/ui/label';
-import { Textarea } from '@/admin/components/ui/textarea';
+import { Label } from '@/components/ui/admin-label';
+import { Textarea } from '@/components/ui/textarea';
 
 interface Props {
     saleNote: string;

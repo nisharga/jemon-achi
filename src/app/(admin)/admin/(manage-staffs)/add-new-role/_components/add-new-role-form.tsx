@@ -4,20 +4,20 @@ import React, { useState, useMemo } from 'react';
 import { toast } from 'sonner';
 import { Loader, Save } from 'lucide-react';
 
-import { Button } from '@/admin/components/ui/button';
-import { Checkbox } from '@/admin/components/ui/checkbox';
-import { Label } from '@/admin/components/ui/label';
-import { Input } from '@/admin/components/ui/input';
+import { Button } from '@/components/ui/admin-button';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Label } from '@/components/ui/admin-label';
+import { Input } from '@/components/ui/admin-input';
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle
-} from '@/admin/components/ui/card';
+} from '@/components/ui/admin-card';
 
-import { USER_PERMISSIONS } from '@/admin/constants/user-permissions';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { useCreateRoleMutation } from '@/admin/redux/api-queries/roles-api';
+import { USER_PERMISSIONS } from '@/constants/user-permissions';
+import { PermissionEnum } from '@/types/permistion';
+import { useCreateRoleMutation } from '@/redux/api-queries/roles-api';
 import { useRouter } from 'next/navigation';
 
 const formatKey = (key: string) => {

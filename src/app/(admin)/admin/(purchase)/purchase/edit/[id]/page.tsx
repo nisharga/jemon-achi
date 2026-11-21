@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
-import { cn } from '@/admin/lib/utils';
-import { buttonVariants } from '@/admin/components/ui/button';
+import { cn } from '@/lib/admin-utils';
+import { buttonVariants } from '@/components/ui/admin-button';
 import EditPurchaseForm from './_components/edit-purchase-form';
 
 const PurchaseEditPage = async ({

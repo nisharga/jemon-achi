@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { Input } from '@/admin/components/ui/input';
+import { Input } from '@/components/ui/admin-input';
 import { Scan } from 'lucide-react';
-import { VariantItem } from '@/admin/types/pos';
-import { Button } from '@/admin/components/ui/button';
-import { Label } from '@/admin/components/ui/label';
+import { VariantItem } from '@/types/pos';
+import { Button } from '@/components/ui/admin-button';
+import { Label } from '@/components/ui/admin-label';
 
 interface Props {
     searchTerm: string;

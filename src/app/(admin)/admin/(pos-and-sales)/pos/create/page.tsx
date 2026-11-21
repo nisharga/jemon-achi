@@ -12,41 +12,41 @@ import {
     PaymentMethod,
     CartItemUI,
     CartItemPatch
-} from '@/admin/types/pos';
+} from '@/types/pos';
 import { CustomerSelector } from './_components/CustomerSelector';
 import { ProductSelector } from './_components/ProductSelector';
 import { DiscountControl } from './_components/DiscountControl';
 import { PaymentDetails } from './_components/PaymentDetails';
 import { NotesSection } from './_components/NotesSection';
 import { CartTable } from './_components/CartTable';
-import useDebounce from '@/admin/hooks/use-debounce';
-import useBarcodeScanner from '@/admin/hooks/useBarcodeScanner';
-import { mapScanToVariantItem } from '@/admin/utils/posMappers';
+import useDebounce from '@/hooks/use-debounce';
+import useBarcodeScanner from '@/hooks/useBarcodeScanner';
+import { mapScanToVariantItem } from '@/utils/posMappers';
 import { toast } from 'sonner';
-import { Button } from '@/admin/components/ui/button';
+import { Button } from '@/components/ui/admin-button';
 import { Loader, Printer } from 'lucide-react';
 import PrintableSaleInvoice from './_components/printable-sale-invoice';
 import {
     useGetAllInventoriesForBusinessLocationQuery,
     useLazyGetScanInventoryQuery
-} from '@/admin/redux/api-queries/inventory-api';
-import { useCreateSaleMutation } from '@/admin/redux/api-queries/pos-sale-api';
+} from '@/redux/api-queries/inventory-api';
+import { useCreateSaleMutation } from '@/redux/api-queries/pos-sale-api';
 import { useQueryState } from 'nuqs';
-import { useGetAllBusinessLocationsQuery } from '@/admin/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/admin/types/business-location';
+import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { IBusiness_location } from '@/types/business-location';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/admin/components/ui/select';
-import { Label } from '@/admin/components/ui/label';
-import { useHasPermission } from '@/admin/hooks/use-has-permission';
-import { PermissionEnum } from '@/admin/types/permistion';
-import { PermissionErrorCard } from '@/admin/components/shared/permission-error-card';
-import { PermissionLoaderCard } from '@/admin/components/shared/permission-loader-card';
-import { DatePicker } from '@/admin/components/ui/date-picker';
+} from '@/components/ui/select';
+import { Label } from '@/components/ui/admin-label';
+import { useHasPermission } from '@/hooks/use-has-permission';
+import { PermissionEnum } from '@/types/permistion';
+import { PermissionErrorCard } from '@/components/shared/permission-error-card';
+import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
+import { DatePicker } from '@/components/ui/date-picker';
 
 type TSaveAction = 'SAVE_AND_PRINT' | 'SAVE';
 
