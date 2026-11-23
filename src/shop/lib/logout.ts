@@ -1,10 +1,10 @@
-import { removeAccessToken } from '@/shop/lib/cookies';
-import { removeUser, removeVendorId } from '@/shop/lib/user-store';
+import { logout } from './customer-session';
+import { removeUser, removeVendorId } from './user-store';
 
 /** Clears the session and reloads the storefront home. */
 export const handleLogout = () => {
-    removeAccessToken();
+    // Old leftovers in localStorage from the previous login system.
     removeUser();
     removeVendorId();
-    window.location.href = '/';
+    logout();
 };

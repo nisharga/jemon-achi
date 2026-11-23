@@ -297,13 +297,6 @@ const MobileMenu = ({
                                         >
                                             Login
                                         </Link>
-                                        <Link
-                                            href='/register'
-                                            onClick={closeMenu}
-                                            className='flex-1 rounded-lg border border-primary py-2 text-center text-xs font-normal text-primary'
-                                        >
-                                            Register
-                                        </Link>
                                     </div>
                                 )}
                             </div>

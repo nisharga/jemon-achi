@@ -1,34 +1,30 @@
-import { useGetUserInfoQuery } from '@/shop/redux/api/auth-api';
-import { useState, useEffect } from 'react';
+import { useMounted } from '@/hooks/useMounted';
+import { isLoggedIn } from '@/shop/lib/customer-session';
+import { useGetMyProfileQuery } from '@/shop/redux/api/customer-api';
 
+/**
+ * The logged-in customer, or `null` for guests.
+ *
+ * The profile is only requested in the browser (the login cookie is not read
+ * on the server) and only when a login cookie exists, so guests make no call.
+ */
 export const useUser = () => {
-    const [isMounted, setIsMounted] = useState(false);
-    const [user, setUser] = useState<any>(null);
+    const isMounted = useMounted();
+    const hasLogin = isMounted && isLoggedIn();
 
-    const {
-        data: userData,
-        isLoading: isUserLoading,
-        isError: isUserError,
-        refetch
-    } = useGetUserInfoQuery({}, { skip: !isMounted });
+    const { data, isLoading, isError, refetch } = useGetMyProfileQuery(
+        undefined,
+        { skip: !hasLogin }
+    );
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-    useEffect(() => {
-        if (userData?.data) {
-            setUser(userData.data);
-        } else if (isUserError) {
-            setUser(null);
-        }
-    }, [userData, isUserError]);
+    // Everyone who logs in through the shop is a regular customer.
+    const user = hasLogin && data ? { ...data, role: 'USER' as const } : null;
 
     return {
         user,
-        // We are "loading" if not mounted yet OR the query is fetching
-        isLoading: !isMounted || isUserLoading,
-        isError: isUserError,
+        // Still "loading" until we know whether someone is logged in.
+        isLoading: !isMounted || (hasLogin && isLoading),
+        isError,
         refetch,
         isMounted
     };

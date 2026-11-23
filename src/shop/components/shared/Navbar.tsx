@@ -21,11 +21,8 @@ import { useAppSelector } from '@/shop/redux/store';
 
 import MobileSearch from './MobileSearch';
 import { popoverVariants } from '@/shop/types/navbar';
-import { removeUser, removeVendorId } from '@/shop/lib/user-store';
-import { removeAccessToken } from '@/shop/lib/cookies';
 import DesktopSearch from './DesktopSearch';
 import { selectCartCount } from '@/shop/redux/features/cart-slice';
-import Cookies from 'js-cookie';
 import { containerNav, itemNav } from '@/shop/lib/variants';
 import { cn, isDesktop } from '@/shop/lib/utils';
 import { useGetAllCategoriesQuery } from '@/shop/redux/api/category-api';
@@ -33,6 +30,7 @@ import { useGetTopBarMessagesQuery } from '@/shop/redux/api/topbar-api';
 import { getMediaUrl } from '@/shop/lib/get-media-url';
 import MobileMenu from './MobileMenu';
 import { useUser } from '@/shop/hooks/use-user';
+import { handleLogout } from '@/shop/lib/logout';
 
 interface SubCategory {
     name: string;
@@ -169,13 +167,7 @@ const Navbar = () => {
         };
     }, [searchTerm]);
 
-    const handleLogOut = async () => {
-        removeUser();
-        Cookies.remove('token');
-        removeAccessToken();
-        removeVendorId();
-        window.location.reload();
-    };
+    const handleLogOut = () => handleLogout();
 
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const [isSticky, setIsSticky] = useState(false);
@@ -513,19 +505,6 @@ const Navbar = () => {
                                                                     }
                                                                 >
                                                                     Login
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href='/register'
-                                                                    className='nav-link block px-4 py-2 transition-colors hover:text-primary/80'
-                                                                    onClick={() =>
-                                                                        setIsLoginDropdownOpen(
-                                                                            false
-                                                                        )
-                                                                    }
-                                                                >
-                                                                    Register
                                                                 </Link>
                                                             </li>
                                                         </ul>

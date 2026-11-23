@@ -22,12 +22,14 @@ import userReducer from './features/userSlice';
 import apiSlice from './api/api-slice';
 import apiSliceAuth from './api/api-slice-auth';
 import imgbbFileUploadApi from './api/file-upload-api';
+import customerApi from './api/customer-api';
 
 const rootReducer = combineReducers({
     utils: baseSlice,
     [apiSlice.reducerPath]: apiSlice.reducer,
     [apiSliceAuth.reducerPath]: apiSliceAuth.reducer,
     [imgbbFileUploadApi.reducerPath]: imgbbFileUploadApi.reducer,
+    [customerApi.reducerPath]: customerApi.reducer,
     cart: cartReducer,
     user: userReducer
 });
@@ -72,6 +74,7 @@ export const makeStore = () =>
                 .concat(apiSlice.middleware)
                 .concat(apiSliceAuth.middleware)
                 .concat(imgbbFileUploadApi.middleware)
+                .concat(customerApi.middleware)
     });
 
 export type AppStore = ReturnType<typeof makeStore>;
