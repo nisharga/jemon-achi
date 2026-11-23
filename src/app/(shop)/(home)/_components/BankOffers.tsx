@@ -47,6 +47,7 @@ const BankOffers = () => {
                                 src={getMediaUrl(offer.bankLogo)}
                                 alt={offer.subtitle}
                                 fill
+                                sizes='(min-width: 1024px) 128px, 96px'
                                 className='object-contain'
                             />
                         </div>

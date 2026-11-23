@@ -98,6 +98,7 @@ const ImageZoom = ({
                         src={getMediaUrl(activeImgMobile) || '/placeholder.png'}
                         alt='product mobile'
                         fill
+                        sizes='100vw'
                         className='object-contain p-2'
                     />
                     {/* Visual indicator for zoom */}
@@ -138,6 +139,7 @@ const ImageZoom = ({
                                     src={getMediaUrl(imgUrl)}
                                     alt='thumb'
                                     fill
+                                    sizes='80px'
                                     className='object-contain p-2'
                                 />
                             </button>

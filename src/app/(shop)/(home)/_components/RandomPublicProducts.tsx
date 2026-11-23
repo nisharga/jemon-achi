@@ -1,4 +1,5 @@
 'use client';
+import { useMounted } from '@/hooks/useMounted';
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Container } from '@/shop/components/common/container';
@@ -33,6 +34,9 @@ const RandomPublicProducts = () => {
     const [sheetOpen, setSheetOpen] = useState(false);
     const [hasAutoOpened, setHasAutoOpened] = useState(false);
     const triggerRef = useRef<HTMLAnchorElement | null>(null);
+    // Same skeleton on the server and the hydration render, even if the
+    // query is already cached on the client (e.g. fetched by the Navbar).
+    const mounted = useMounted();
 
     const { data, isLoading, isFetching } = useGetRandomProductsInfiniteQuery({
         page,
@@ -88,7 +92,7 @@ const RandomPublicProducts = () => {
         return () => observer.disconnect();
     }, [products.length, hasAutoOpened]);
 
-    if (isLoading && page === 1) return <Skeleton />;
+    if (!mounted || (isLoading && page === 1)) return <Skeleton />;
 
     return (
         <Container className='group relative py-2 sm:py-8'>
@@ -137,6 +141,7 @@ const RandomPublicProducts = () => {
                                     src={getMediaUrl(thumbnail)}
                                     alt={title}
                                     fill
+                                    sizes='(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 50vw'
                                     className='object-contain transition-transform duration-500 group-hover/item:scale-105'
                                 />
                             </div>

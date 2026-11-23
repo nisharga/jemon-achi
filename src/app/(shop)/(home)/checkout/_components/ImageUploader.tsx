@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Upload, X, Loader2, ImageIcon } from 'lucide-react';
 import { toast } from 'sonner';
 import Image from 'next/image';
+import { API_BASE_URL } from '@/shop/config';
 import { Label } from '@/shop/components/ui/label';
 import { getMediaUrl } from '@/shop/lib/get-media-url';
 
@@ -24,24 +25,32 @@ export default function ImageUploader({
         setIsUploading(true);
 
         const formData = new FormData();
-        formData.append('image', file);
+        formData.append('file', file);
 
         try {
-            const res = await fetch('/api/upload', {
+            // Public, rate-limited backend endpoint for checkout screenshots
+            // (no login needed; images only, max 5 MB).
+            const res = await fetch(`${API_BASE_URL}/upload/payment-proof`, {
                 method: 'POST',
                 body: formData
             });
 
-            const data = await res.json();
+            const data = await res.json().catch(() => null);
+            const url: string | undefined = data?.data?.url;
 
-            if (data.url) {
-                onUploadSuccess(data.url);
-                toast.success('Screenshot uploaded successfully!!!');
-            } else {
-                throw new Error(data.error);
+            if (!res.ok || !url) {
+                throw new Error(
+                    data?.message || 'Upload failed. Please try again.'
+                );
             }
+            onUploadSuccess(url);
+            toast.success('Screenshot uploaded successfully!');
         } catch (error) {
-            toast.error('Upload failed. Please try again.');
+            toast.error(
+                error instanceof Error && error.message
+                    ? error.message
+                    : 'Upload failed. Please try again.'
+            );
             setPreview(null);
         } finally {
             setIsUploading(false);

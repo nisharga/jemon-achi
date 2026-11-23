@@ -1,4 +1,5 @@
 'use client';
+import { useMounted } from '@/hooks/useMounted';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -35,9 +36,12 @@ interface IProps {
 
 const BestSelling = () => {
     const { data, isLoading } = useGetCmsHomePageQuery({});
+    // Same skeleton on the server and the hydration render, even if the
+    // query is already cached on the client (e.g. fetched by the Navbar).
+    const mounted = useMounted();
     const bestSelling = data?.data?.best_selling || [];
 
-    if (isLoading) return <BestSellingSkeleton />;
+    if (!mounted || isLoading) return <BestSellingSkeleton />;
 
     return (
         <Container className='group relative py-2 sm:py-8'>
@@ -94,6 +98,7 @@ const BestSelling = () => {
                                             src={getMediaUrl(thumbnail)}
                                             alt={title}
                                             fill
+                                            sizes='(min-width: 768px) 33vw, 50vw'
                                             className='object-contain transition-transform duration-500 group-hover/item:scale-105'
                                         />
                                     </div>

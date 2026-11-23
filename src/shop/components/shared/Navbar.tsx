@@ -704,6 +704,8 @@ const Logo = () => (
             alt='Griipbuddy Logo'
             width={100}
             height={50}
+            loading='eager'
+            className='h-auto w-auto'
         />
     </motion.a>
 );

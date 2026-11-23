@@ -35,6 +35,7 @@ const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
                         `Product image ${selectedImage + 1}`
                     }
                     fill
+                    sizes='(min-width: 768px) 45vw, 100vw'
                     className='object-cover'
                     priority={true}
                 />
@@ -71,6 +72,7 @@ const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
                             src={image.url}
                             alt={image.alt || `Thumbnail ${index + 1}`}
                             fill
+                            sizes='100px'
                             className='object-cover'
                         />
                     </button>

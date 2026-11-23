@@ -50,6 +50,7 @@ const CommunitySection = () => {
                             src={getMediaUrl(post?.url)}
                             alt={post?.handle}
                             fill
+                            sizes='(min-width: 768px) 25vw, 50vw'
                             className='object-cover transition-transform duration-700 group-hover:scale-105'
                         />
 

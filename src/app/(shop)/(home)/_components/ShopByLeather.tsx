@@ -108,6 +108,7 @@ const ShopByLeather = () => {
                                                 )}
                                                 alt={product?.name}
                                                 fill
+                                                sizes='(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 50vw'
                                                 className='object-contain transition-transform duration-500 group-hover/item:scale-105'
                                                 priority={index < 5}
                                             />

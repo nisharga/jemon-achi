@@ -460,6 +460,7 @@ const ProductQuickViewDetails = ({ product, setOpen }: any) => {
                         src={product?.thumbnail || '/No_Image_Available.jpg'}
                         alt={product?.name || 'Product'}
                         fill
+                        sizes='(min-width: 768px) 40vw, 250px'
                         className='object-contain'
                     />
                 </div>

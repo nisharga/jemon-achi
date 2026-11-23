@@ -1,4 +1,5 @@
 'use client';
+import { useMounted } from '@/hooks/useMounted';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -53,6 +54,9 @@ interface IProduct {
 
 const CategoryProducts = () => {
     const { data, isLoading } = useGetAllCategoriesQuery({});
+    // Same skeleton on the server and the hydration render, even if the
+    // query is already cached on the client (e.g. fetched by the Navbar).
+    const mounted = useMounted();
     const allCategories: ICategory[] = data?.data?.data ?? [];
 
     // Only render published / active categories
@@ -66,7 +70,7 @@ const CategoryProducts = () => {
     //  });
     const categories = allCategories;
 
-    if (isLoading) return <CategoryRowSkeleton />;
+    if (!mounted || isLoading) return <CategoryRowSkeleton />;
 
     return (
         <>
@@ -164,6 +168,7 @@ const CategoryRow = ({ category }: { category: ICategory }) => {
                                             src={getMediaUrl(thumbnail)}
                                             alt={productTitle}
                                             fill
+                                            sizes='(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 50vw'
                                             className='object-contain transition-transform duration-500 group-hover/item:scale-105'
                                         />
                                     </div>

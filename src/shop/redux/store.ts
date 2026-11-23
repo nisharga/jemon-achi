@@ -9,7 +9,7 @@ import {
     PURGE,
     REGISTER
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
 import {
     type TypedUseSelectorHook,
     useDispatch,
@@ -32,6 +32,17 @@ const rootReducer = combineReducers({
     user: userReducer
 });
 
+// localStorage only exists in the browser. On the server use a no-op storage
+// (silences "redux-persist failed to create sync storage").
+const storage =
+    typeof window !== 'undefined'
+        ? createWebStorage('local')
+        : {
+              getItem: () => Promise.resolve(null),
+              setItem: (_key: string, value: string) => Promise.resolve(value),
+              removeItem: () => Promise.resolve()
+          };
+
 const persistConfig = {
     key: 'root',
     storage,
@@ -40,32 +51,35 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export const store = configureStore({
-    reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: {
-                ignoredActions: [
-                    FLUSH,
-                    REHYDRATE,
-                    PAUSE,
-                    PERSIST,
-                    PURGE,
-                    REGISTER
-                ]
-            }
-        })
-            .concat(apiSlice.middleware)
-            .concat(apiSliceAuth.middleware)
-            .concat(imgbbFileUploadApi.middleware)
-});
+// One store per request on the server and one per page load in the browser
+// (created in ProviderWrapper), so requests never share state.
+export const makeStore = () =>
+    configureStore({
+        reducer: persistedReducer,
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware({
+                serializableCheck: {
+                    ignoredActions: [
+                        FLUSH,
+                        REHYDRATE,
+                        PAUSE,
+                        PERSIST,
+                        PURGE,
+                        REGISTER
+                    ]
+                }
+            })
+                .concat(apiSlice.middleware)
+                .concat(apiSliceAuth.middleware)
+                .concat(imgbbFileUploadApi.middleware)
+    });
 
-export const persistor = persistStore(store);
+export type AppStore = ReturnType<typeof makeStore>;
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppDispatch = AppStore['dispatch'];
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+// Restores the persisted cart from localStorage (browser only).
+export const makePersistor = (store: AppStore) => persistStore(store);
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
-
-export default store;
