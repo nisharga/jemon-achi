@@ -12,7 +12,7 @@
 // import React from "react";
 // import { format } from "date-fns";
 // import { Badge } from "@/components/ui/admin-badge";
-// import { IPOSSale } from "@/types/pos-sale";
+// import { IPOSSale } from "@/types/admin/pos-sale";
 // import SaleActions from "./sale-actions";
 
 // type PurchaseTableProps = {
@@ -300,7 +300,7 @@ import { cn } from '@/lib/admin-utils';
 import React, { useState } from 'react';
 import { format } from 'date-fns';
 import { Badge } from '@/components/ui/admin-badge';
-import { IPOSSale } from '@/types/pos-sale';
+import { IPOSSale } from '@/types/admin/pos-sale';
 import SaleActions from './sale-actions';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/admin-label';

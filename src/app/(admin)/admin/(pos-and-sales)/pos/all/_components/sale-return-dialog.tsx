@@ -25,9 +25,9 @@ import {
     TableRow
 } from '@/components/ui/table';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { usePosSaleReturnMutation } from '@/redux/api-queries/pos-sale-api';
-import { PermissionEnum } from '@/types/permistion';
-import { IPOSSale } from '@/types/pos-sale';
+import { usePosSaleReturnMutation } from '@/redux/admin/api/pos-sale-api';
+import { PermissionEnum } from '@/types/admin/permistion';
+import { IPOSSale } from '@/types/admin/pos-sale';
 import { Loader } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'sonner';

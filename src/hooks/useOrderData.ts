@@ -6,11 +6,11 @@ import {
     useGetAllOrderStatusCountQuery,
     useGetAllTodaysActivityCountQuery,
     useGetAllAssignedOrderStatusCountQuery // Add this import
-} from '@/redux/api-queries/order-api';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/types/business-location';
+} from '@/redux/admin/api/order-api';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
+import { IBusiness_location } from '@/types/admin/business-location';
 // hooks/useOrderSummary.ts
-import { useGetAllOrderSummaryQuery } from '@/redux/api-queries/order-api';
+import { useGetAllOrderSummaryQuery } from '@/redux/admin/api/order-api';
 
 interface UseOrderDataParams {
     page: number;

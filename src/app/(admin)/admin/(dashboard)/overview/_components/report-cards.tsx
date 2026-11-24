@@ -11,8 +11,8 @@ import {
     SelectItem
 } from '@/components/ui/select';
 import type { DateRange } from 'react-day-picker';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
-import type { IBusiness_location } from '@/types/business-location';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
+import type { IBusiness_location } from '@/types/admin/business-location';
 import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
 import {
     parseAsIsoDate,
@@ -22,7 +22,7 @@ import {
 } from 'nuqs';
 import { Button } from '@/components/ui/admin-button';
 import { Card, CardContent } from '@/components/ui/admin-card';
-import { useGetBusinessReportQuery } from '@/redux/api-queries/report-api';
+import { useGetBusinessReportQuery } from '@/redux/admin/api/report-api';
 import {
     TrendingUp,
     RotateCcw,

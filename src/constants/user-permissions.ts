@@ -1,4 +1,4 @@
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 
 export const USER_PERMISSIONS = {
     order: [

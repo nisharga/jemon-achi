@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
-import {
-    getCategories,
-    getSubCategoriesOf
-} from '@/shop/server/storefront-api';
+import { getMediaUrl } from '@/lib/get-media-url';
+import { getCategories, getSubCategoriesOf } from '@/server/storefront-api';
 import { EmptyProducts } from '../../products/[slug]/_components/EmptyProduct';
 
 type Props = { params: Promise<{ slug: string }> };

@@ -5,7 +5,7 @@ import { Ellipsis, Eye } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import DeleteProductDialog from './delete-product-dialog';
-import { TProduct } from '@/types/product';
+import { TProduct } from '@/types/admin/product';
 import { useRouter } from 'next/navigation';
 import {
     DropdownMenu,
@@ -15,7 +15,7 @@ import {
     DropdownMenuTrigger
 } from '@/components/ui/admin-dropdown-menu';
 import { cn } from '@/lib/admin-utils';
-import { ICoupon } from '@/types/coupon';
+import { ICoupon } from '@/types/admin/coupon';
 
 const ProductActions = ({ product }: { product: ICoupon }) => {
     // delete product dialog state

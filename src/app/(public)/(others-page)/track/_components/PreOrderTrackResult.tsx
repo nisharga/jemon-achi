@@ -10,7 +10,7 @@ import {
     MapPin,
     CheckCircle2
 } from 'lucide-react';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+import { getMediaUrl } from '@/lib/get-media-url';
 
 type PreOrderTrack = {
     invoice_number: string;

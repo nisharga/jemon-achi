@@ -2,7 +2,7 @@
 import React from 'react';
 import { Input } from '@/components/ui/admin-input';
 import { Scan } from 'lucide-react';
-import { VariantItem } from '@/types/pos';
+import { VariantItem } from '@/types/admin/pos';
 import { Button } from '@/components/ui/admin-button';
 import { Label } from '@/components/ui/admin-label';
 

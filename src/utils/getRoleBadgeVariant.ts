@@ -1,4 +1,4 @@
-import { IRoles } from '@/types/admin-user';
+import { IRoles } from '@/types/admin/user';
 
 export const getRoleBadgeVariant = (
     role: IRoles

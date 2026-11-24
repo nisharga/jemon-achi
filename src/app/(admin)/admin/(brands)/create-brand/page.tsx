@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { useCreateBrandMutation } from '@/redux/api-queries/brand-api';
+import { useCreateBrandMutation } from '@/redux/admin/api/brand-api';
 import { BrandForm } from '../_components/brand-form';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 

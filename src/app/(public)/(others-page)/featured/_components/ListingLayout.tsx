@@ -3,12 +3,12 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import FilterHeader from './FilterHeader';
-import { useGetAllSubCategoriesByCategoryIdQuery } from '@/shop/redux/api/subcategory-api';
+import { useGetAllSubCategoriesByCategoryIdQuery } from '@/redux/public/api/subcategory-api';
 import { useParams, useSearchParams } from 'next/navigation';
-import { useGetAllProductsByIdsQuery } from '@/shop/redux/api/product-api';
-import { Container } from '@/shop/components/common/container';
-import { ProductCardSkeleton } from '@/shop/components/skeleton';
-import ProductCard from '@/shop/components/common/product-card';
+import { useGetAllProductsByIdsQuery } from '@/redux/public/api/product-api';
+import { Container } from '@/components/public/common/container';
+import { ProductCardSkeleton } from '@/components/public/skeleton';
+import ProductCard from '@/components/public/common/product-card';
 
 interface ViewCategoryLayoutProps {
     children: React.ReactNode;

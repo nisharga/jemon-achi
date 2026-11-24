@@ -4,9 +4,9 @@ import useDebounce from '@/hooks/use-debounce';
 import {
     useEditOrderMutation,
     useGetSingleOrderByIdQuery
-} from '@/redux/api-queries/order-api';
-import { useGetAllSearchVariantsQuery } from '@/redux/api-queries/product-api';
-import { TOrder } from '@/types/order';
+} from '@/redux/admin/api/order-api';
+import { useGetAllSearchVariantsQuery } from '@/redux/admin/api/product-api';
+import { TOrder } from '@/types/admin/order';
 import { Button } from '@/components/ui/admin-button';
 import {
     Form,
@@ -26,7 +26,7 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import { ImagePlus, Loader, Minus, Plus, X } from 'lucide-react';
 import { ChangeEvent, useEffect, useState } from 'react';
-import { useUploadMultipleFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+import { useUploadMultipleFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import { cn, getImgFullUrl } from '@/lib/admin-utils';
@@ -41,11 +41,11 @@ import {
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import BackBtn from '@/components/shared/back-btn';
-import { FraudData } from '@/redux/api-queries/fraudApi';
+import { FraudData } from '@/redux/admin/api/fraudApi';
 import FraudListModal from '@/components/shared/FraudListModal';
 
 const EditOrderForm = ({ id }: { id: string }) => {

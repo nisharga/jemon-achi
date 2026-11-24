@@ -10,15 +10,15 @@ import {
     TableRow
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
-import { useGetSingleOrderByIdQuery } from '@/redux/api-queries/order-api';
-import { TOrder } from '@/types/order';
+import { useGetSingleOrderByIdQuery } from '@/redux/admin/api/order-api';
+import { TOrder } from '@/types/admin/order';
 import { format } from 'date-fns';
 import React, { useState } from 'react';
 import AssignOrderDialog from '../../../_components/assign-order-dialog';
 import { Printer } from 'lucide-react';
 import Image from 'next/image';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import OrderActions from '../../../_components/order-actions';

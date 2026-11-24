@@ -1,6 +1,6 @@
 'use client';
 
-import { useGetSingleCouponByIdQuery } from '@/redux/api-queries/coupon-api';
+import { useGetSingleCouponByIdQuery } from '@/redux/admin/api/coupon-api';
 import React from 'react';
 import { useParams } from 'next/navigation';
 import { format } from 'date-fns';

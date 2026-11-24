@@ -20,7 +20,7 @@ import { createReturnPolicySchema } from '@/schema/return-policy';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import { Loader, X } from 'lucide-react';
-import { useCreateReturnPolicyMutation } from '@/redux/api-queries/return-policy-api';
+import { useCreateReturnPolicyMutation } from '@/redux/admin/api/return-policy-api';
 import { useRouter } from 'next/navigation';
 
 const AddNewReturnPolicyForm = () => {

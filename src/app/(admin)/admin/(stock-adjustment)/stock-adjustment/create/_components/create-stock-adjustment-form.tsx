@@ -22,7 +22,7 @@ import {
 import { useState, useEffect } from 'react';
 import { Loader, Trash2, Plus } from 'lucide-react';
 import { toast } from 'sonner';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
 import { Input } from '@/components/ui/admin-input';
 import useDebounce from '@/hooks/use-debounce';
 import {
@@ -37,7 +37,7 @@ import { useRouter } from 'next/navigation';
 import {
     useCreateStockAdjustmentMutation,
     useGetAllStocksQuery
-} from '@/redux/api-queries/stock-api';
+} from '@/redux/admin/api/stock-api';
 import { StockAdjustmentSchema } from '@/schema/stock-adjustment';
 import { Label } from '@/components/ui/admin-label';
 import { Textarea } from '@/components/ui/textarea';

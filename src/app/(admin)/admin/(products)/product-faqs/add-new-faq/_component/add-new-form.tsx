@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { toast } from 'sonner';
 import { Loader2, Save, Search, Image as ImageIcon } from 'lucide-react';
 
-import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
+import { useGetAllProductsQuery } from '@/redux/admin/api/product-api';
 
 import { Button } from '@/components/ui/admin-button';
 import {
@@ -18,7 +18,7 @@ import { Input } from '@/components/ui/admin-input';
 import { Label } from '@/components/ui/admin-label';
 import { Skeleton } from '@/components/ui/admin-skeleton';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import {
@@ -32,7 +32,7 @@ import { Textarea } from '@/components/ui/textarea';
 import Image from 'next/image';
 import { getImgFullUrl } from '@/lib/admin-utils';
 import SectionTitle from '@/components/shared/section-title';
-import { useCreateFaqMutation } from '@/redux/api-queries/faq-api';
+import { useCreateFaqMutation } from '@/redux/admin/api/faq-api';
 
 type TStatus = 'active' | 'inactive' | 'pending';
 

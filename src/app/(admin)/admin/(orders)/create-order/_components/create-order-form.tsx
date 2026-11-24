@@ -20,13 +20,13 @@ import { Textarea } from '@/components/ui/textarea';
 import { Separator } from '@/components/ui/admin-separator';
 import { X, Plus, Minus, Loader, ImagePlus } from 'lucide-react';
 import useDebounce from '@/hooks/use-debounce';
-import { useUploadMultipleFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+import { useUploadMultipleFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
 
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { useCreateOrderByAdminMutation } from '@/redux/api-queries/order-api';
-import { useGetAllSearchVariantsQuery } from '@/redux/api-queries/product-api';
+import { useCreateOrderByAdminMutation } from '@/redux/admin/api/order-api';
+import { useGetAllSearchVariantsQuery } from '@/redux/admin/api/product-api';
 import {
     Select,
     SelectContent,
@@ -34,7 +34,7 @@ import {
     SelectTrigger,
     SelectValue
 } from '@/components/ui/select';
-import { FraudData } from '@/redux/api-queries/fraudApi';
+import { FraudData } from '@/redux/admin/api/fraudApi';
 import FraudListModal from '@/components/shared/FraudListModal';
 import { getImgFullUrl } from '@/lib/admin-utils';
 

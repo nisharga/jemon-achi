@@ -3,11 +3,11 @@ import {
     Popover,
     PopoverContent,
     PopoverTrigger
-} from '@/shop/components/ui/popover';
+} from '@/components/public/ui/popover';
 import { ChevronDown, PlusCircle } from 'lucide-react';
-import { cn } from '@/shop/lib/utils';
-import { Input } from '@/shop/components/ui/input';
-import { Separator } from '@/shop/components/ui/separator';
+import { cn } from '@/lib/public-utils';
+import { Input } from '@/components/public/ui/input';
+import { Separator } from '@/components/public/ui/separator';
 
 const SuggestionDropdown = ({
     value,

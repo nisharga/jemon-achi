@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/admin-input';
 import { RotateCcwIcon, UserPlus } from 'lucide-react';
 import useDebounce from '@/hooks/use-debounce';
 import { Button } from '@/components/ui/admin-button';
-import { useLazySearchUsersByPhoneQuery } from '@/redux/api-queries/pos-sale-api';
+import { useLazySearchUsersByPhoneQuery } from '@/redux/admin/api/pos-sale-api';
 import { Label } from '@/components/ui/admin-label';
 
 // Define a type for the customer object used within the component

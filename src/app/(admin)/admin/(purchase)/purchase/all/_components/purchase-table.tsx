@@ -11,7 +11,7 @@ import {
 import { cn } from '@/lib/admin-utils';
 import React from 'react';
 import { format } from 'date-fns';
-import { IPurchase } from '@/types/purchase';
+import { IPurchase } from '@/types/admin/purchase';
 import { Badge } from '@/components/ui/admin-badge';
 import PurchaseActions from './purchase-actions';
 

@@ -8,7 +8,7 @@ import {
     DropdownMenuTrigger
     // DropdownMenuSeparator,
 } from '@/components/ui/admin-dropdown-menu';
-import { IPOSSale } from '@/types/pos-sale';
+import { IPOSSale } from '@/types/admin/pos-sale';
 import { Edit, Ellipsis, Trash, Undo2 } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';

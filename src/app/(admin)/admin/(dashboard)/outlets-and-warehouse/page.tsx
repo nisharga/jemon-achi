@@ -1,10 +1,10 @@
 'use client';
 
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
 import { Badge } from '@/components/ui/admin-badge';
 import { Building2 } from 'lucide-react';
 import OutletsSkeleton from '@/components/skeletons/outlets-skeleton';
-import { TOutlet } from '@/types/product';
+import { TOutlet } from '@/types/admin/product';
 import OutletCard from '@/components/shared/OutletCard';
 import { toast } from 'sonner';
 // import { useRouter } from "next/navigation";

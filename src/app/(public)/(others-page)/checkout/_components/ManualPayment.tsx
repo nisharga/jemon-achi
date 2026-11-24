@@ -6,11 +6,11 @@ import {
     CardContent,
     CardHeader,
     CardTitle
-} from '@/shop/components/ui/card';
-import { Input } from '@/shop/components/ui/input';
-import { Label } from '@/shop/components/ui/label';
+} from '@/components/public/ui/card';
+import { Input } from '@/components/public/ui/input';
+import { Label } from '@/components/public/ui/label';
 import { Info, ShieldCheck } from 'lucide-react';
-import { BKASH_NUMBER, NAGAD_NUMBER } from '@/shop/config';
+import { BKASH_NUMBER, NAGAD_NUMBER } from '@/configs/storefront';
 import { CopyableText } from './CopyableText';
 import ImageUploader from './ImageUploader';
 import {
@@ -19,8 +19,8 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue
-} from '@/shop/components/ui/select';
-import ManualPaymentLabel from '@/shop/components/common/ManualPaymentLabel';
+} from '@/components/public/ui/select';
+import ManualPaymentLabel from '@/components/public/common/ManualPaymentLabel';
 
 export type ManualPaymentFields = {
     senderPhone: string;

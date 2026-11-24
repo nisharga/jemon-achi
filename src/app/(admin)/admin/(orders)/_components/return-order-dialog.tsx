@@ -20,8 +20,8 @@ import {
     TableRow
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
-import { useReturnOrderMutation } from '@/redux/api-queries/order-api';
-import { OrderStatus, TOrder } from '@/types/order';
+import { useReturnOrderMutation } from '@/redux/admin/api/order-api';
+import { OrderStatus, TOrder } from '@/types/admin/order';
 import { Loader } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'sonner';

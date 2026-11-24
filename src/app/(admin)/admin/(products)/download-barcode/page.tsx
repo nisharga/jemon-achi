@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useGetAllInventoriesQuery } from '@/redux/api-queries/inventory-api';
+import { useGetAllInventoriesQuery } from '@/redux/admin/api/inventory-api';
 import useDebounce from '@/hooks/use-debounce';
 import Pagination from '@/components/shared/pagination';
 import { Input } from '@/components/ui/admin-input';
 import { BarcodeTable } from './_components/barcode-table';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { useHasPermission } from '@/hooks/use-has-permission';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';

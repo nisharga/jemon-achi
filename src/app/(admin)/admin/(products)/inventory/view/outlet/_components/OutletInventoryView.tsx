@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/admin-badge';
 import { Package, MapPin, AlertCircle, Warehouse } from 'lucide-react';
 
 import ProductInventoryTable from '../../_components/ProductInventoryTable';
-import { useGetInventoriesByOutletIdQuery } from '@/redux/api-queries/inventory-api';
+import { useGetInventoriesByOutletIdQuery } from '@/redux/admin/api/inventory-api';
 
 const OutletInventoryView = () => {
     const searchParams = useSearchParams();

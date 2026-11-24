@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Sheet, SheetContent } from '@/shop/components/ui/sheet';
-import { getCategoryImage } from '@/shop/lib/category-image';
-import type { ProductCategory } from '@/shop/types/storefront';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+import { Sheet, SheetContent } from '@/components/public/ui/sheet';
+import { getCategoryImage } from '@/lib/category-image';
+import type { ProductCategory } from '@/types/public/storefront';
+import { getMediaUrl } from '@/lib/get-media-url';
 
 interface IProps {
     open: boolean;

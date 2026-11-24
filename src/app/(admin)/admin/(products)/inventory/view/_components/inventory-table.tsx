@@ -1,6 +1,6 @@
 'use client';
 
-import type { TInventory } from '@/types/product';
+import type { TInventory } from '@/types/admin/product';
 import {
     Card,
     CardContent,

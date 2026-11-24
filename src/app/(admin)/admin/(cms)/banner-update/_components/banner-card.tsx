@@ -5,8 +5,8 @@ import {
     useDeleteBannerMutation,
     useDeleteFeaturedBannerMutation,
     useDeleteMobileBannerMutation
-} from '@/redux/api-queries/banner-api';
-import { TBanner } from '@/types/banner';
+} from '@/redux/admin/api/banner-api';
+import { TBanner } from '@/types/admin/banner';
 import { Loader, Trash } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';

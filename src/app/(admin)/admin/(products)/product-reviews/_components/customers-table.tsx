@@ -10,9 +10,9 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { TUser } from '@/types/admin-user';
+import { TUser } from '@/types/admin/user';
 import { toast } from 'sonner';
-import { useUpdateStatusMutation } from '@/redux/api-queries/reviews-api';
+import { useUpdateStatusMutation } from '@/redux/admin/api/reviews-api';
 import {
     Select,
     SelectContent,

@@ -3,9 +3,9 @@ import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useParams, useSearchParams } from 'next/navigation';
-import { useGetAllProductsQuery } from '@/shop/redux/api/product-api';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
-import { Container } from '@/shop/components/common/container';
+import { useGetAllProductsQuery } from '@/redux/public/api/product-api';
+import { getMediaUrl } from '@/lib/get-media-url';
+import { Container } from '@/components/public/common/container';
 
 interface IProps {
     name: string;

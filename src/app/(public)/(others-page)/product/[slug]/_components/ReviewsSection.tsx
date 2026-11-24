@@ -1,11 +1,11 @@
-import StarRating from '@/shop/components/common/StarRating';
-import ErrorState from '@/shop/components/global/ErrorState';
-import { formatDate } from '@/shop/lib/utils';
+import StarRating from '@/components/public/common/StarRating';
+import ErrorState from '@/components/public/global/ErrorState';
+import { formatDate } from '@/lib/public-utils';
 import {
     useGetReviewRatingByProductIdQuery,
     useGetReviewsByProductIdQuery,
     useUpdateReviewMutation
-} from '@/shop/redux/api/review';
+} from '@/redux/public/api/review';
 import { ThumbsDown, ThumbsUp } from 'lucide-react';
 import React from 'react';
 

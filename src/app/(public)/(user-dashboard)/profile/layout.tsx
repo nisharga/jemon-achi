@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Suspense, type ReactNode } from 'react';
-import PageSkeleton from '@/shop/components/common/PageSkeleton';
 import DashboardShell from './_components/DashboardShell';
+import { PageSkeleton } from '@/components';
 
 // Only logged-in customers reach these pages (see src/proxy.ts).
 export const metadata: Metadata = {

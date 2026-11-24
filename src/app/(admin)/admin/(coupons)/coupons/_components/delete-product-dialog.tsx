@@ -8,7 +8,7 @@ import {
     DialogHeader,
     DialogTitle
 } from '@/components/ui/dialog';
-import { useDeleteCouponMutation } from '@/redux/api-queries/coupon-api';
+import { useDeleteCouponMutation } from '@/redux/admin/api/coupon-api';
 import { Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

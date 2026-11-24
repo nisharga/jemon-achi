@@ -24,10 +24,13 @@ import {
 import { useState, useEffect, useRef } from 'react'; // Added useRef import
 import { CalendarIcon, Loader, Trash2, Plus, Check } from 'lucide-react';
 import { toast } from 'sonner';
-import { useGetAllSuppliersQuery } from '@/redux/api-queries/supplier-slice';
-import type { TSupplier } from '@/types/supplier';
-import { PURCHASE_STATUS_ENUM, PURCHASE_STATUSES } from '@/types/purchase';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { useGetAllSuppliersQuery } from '@/redux/admin/api/supplier-slice';
+import type { TSupplier } from '@/types/admin/supplier';
+import {
+    PURCHASE_STATUS_ENUM,
+    PURCHASE_STATUSES
+} from '@/types/admin/purchase';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
 import {
     Popover,
     PopoverContent,
@@ -37,7 +40,7 @@ import { cn } from '@/lib/admin-utils';
 import { format } from 'date-fns';
 import { Calendar } from '@/components/ui/calendar';
 import { Input } from '@/components/ui/admin-input';
-import { useGetAllSearchVariantsQuery } from '@/redux/api-queries/product-api';
+import { useGetAllSearchVariantsQuery } from '@/redux/admin/api/product-api';
 import useDebounce from '@/hooks/use-debounce';
 import {
     Table,
@@ -48,7 +51,7 @@ import {
     TableRow
 } from '@/components/ui/table';
 import { Textarea } from '@/components/ui/textarea';
-import { useCreatePurchaseMutation } from '@/redux/api-queries/purchase-slice';
+import { useCreatePurchaseMutation } from '@/redux/admin/api/purchase-slice';
 import { useRouter } from 'next/navigation';
 
 interface PurchaseItem {

@@ -5,10 +5,10 @@ import {
     CardHeader,
     CardTitle,
     CardContent
-} from '@/shop/components/ui/card';
-import { Button } from '@/shop/components/ui/button';
-import { Badge } from '@/shop/components/ui/badge';
-import { Separator } from '@/shop/components/ui/separator';
+} from '@/components/public/ui/card';
+import { Button } from '@/components/public/ui/button';
+import { Badge } from '@/components/public/ui/badge';
+import { Separator } from '@/components/public/ui/separator';
 import { toast } from 'sonner'; // Or your preferred toast library
 
 interface OrderDetailsCardProps {

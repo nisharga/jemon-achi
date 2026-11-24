@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { TUser } from '@/types/admin-user';
+import { TUser } from '@/types/admin/user';
 import { toast } from 'sonner';
 import {
     Select,
@@ -22,7 +22,7 @@ import {
 import Image from 'next/image';
 import { getMediaUrl } from '@/utils/get-media-url';
 import ProductActions from './product-actions';
-import { useUpdateFaqMutation } from '@/redux/api-queries/faq-api';
+import { useUpdateFaqMutation } from '@/redux/admin/api/faq-api';
 // import ProductActions from "./product-actions";
 
 type StaffsTableProps = {

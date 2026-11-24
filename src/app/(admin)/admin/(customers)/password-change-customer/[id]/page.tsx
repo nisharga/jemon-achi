@@ -7,7 +7,7 @@ import { cn } from '@/lib/admin-utils';
 import { Button, buttonVariants } from '@/components/ui/admin-button';
 import { ChevronLeft, Eye, EyeOff, Lock, Loader } from 'lucide-react';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { useForm } from 'react-hook-form';
@@ -23,7 +23,7 @@ import {
 } from '@/components/ui/admin-form';
 import { Input } from '@/components/ui/admin-input';
 import { toast } from 'sonner';
-import { useUpdateCustomersMutation } from '@/redux/api-queries/customer-api'; // Adjust import path
+import { useUpdateCustomersMutation } from '@/redux/admin/api/customer-api'; // Adjust import path
 
 // === Validation Schema ===
 const ChangePasswordSchema = z

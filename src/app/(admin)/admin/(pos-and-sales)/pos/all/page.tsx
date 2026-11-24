@@ -18,13 +18,13 @@
 //   AccordionTrigger,
 // } from "@/components/ui/accordion";
 // import { File, FileSpreadsheet, Filter, Loader } from "lucide-react";
-// import { useGetAllBusinessLocationsQuery } from "@/redux/api-queries/business-location-api";
-// import { IBusiness_location } from "@/types/business-location";
+// import { useGetAllBusinessLocationsQuery } from "@/redux/admin/api/business-location-api";
+// import { IBusiness_location } from "@/types/admin/business-location";
 // import {
 //   useGetAllPosSalesQuery,
 //   useGetPosSalesReportQuery,
 //   useLazyGetAllPosSalesQuery,
-// } from "@/redux/api-queries/pos-sale-api";
+// } from "@/redux/admin/api/pos-sale-api";
 // import { DateRangeCalendar } from "@/components/ui/date-range-calendar";
 // import type { DateRange } from "react-day-picker";
 // import { Label } from "@/components/ui/admin-label";
@@ -43,12 +43,12 @@
 // import useDebounce from "@/hooks/use-debounce";
 // import { useLoggedInUser } from "@/hooks/use-loggedin-user";
 // import * as XLSX from "xlsx";
-// import { useGetAllStaffsQuery } from "@/redux/api-queries/staff-api";
-// import { IRoles, TUser, USER_ROLE } from "@/types/admin-user";
+// import { useGetAllStaffsQuery } from "@/redux/admin/api/staff-api";
+// import { IRoles, TUser, USER_ROLE } from "@/types/admin/user";
 // import { Badge } from "@/components/ui/admin-badge";
 // import { getRoleBadgeVariant } from "@/utils/getRoleBadgeVariant";
 // import { useHasPermission } from "@/hooks/use-has-permission";
-// import { PermissionEnum } from "@/types/permistion";
+// import { PermissionEnum } from "@/types/admin/permistion";
 
 // const AllPosSalesComponent = () => {
 //   // === check permissions ===
@@ -1142,13 +1142,13 @@ import {
     AccordionTrigger
 } from '@/components/ui/accordion';
 import { File, FileSpreadsheet, Filter, Loader } from 'lucide-react';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/types/business-location';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
+import { IBusiness_location } from '@/types/admin/business-location';
 import {
     useGetAllPosSalesQuery,
     useGetPosSalesReportQuery,
     useLazyGetAllPosSalesQuery
-} from '@/redux/api-queries/pos-sale-api';
+} from '@/redux/admin/api/pos-sale-api';
 import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
 import type { DateRange } from 'react-day-picker';
 import { Label } from '@/components/ui/admin-label';
@@ -1167,12 +1167,12 @@ import {
 import useDebounce from '@/hooks/use-debounce';
 import { useLoggedInUser } from '@/hooks/use-loggedin-user';
 import * as XLSX from 'xlsx';
-import { useGetAllStaffsQuery } from '@/redux/api-queries/staff-api';
-import { IRoles, TUser, USER_ROLE } from '@/types/admin-user';
+import { useGetAllStaffsQuery } from '@/redux/admin/api/staff-api';
+import { IRoles, TUser, USER_ROLE } from '@/types/admin/user';
 import { Badge } from '@/components/ui/admin-badge';
 import { getRoleBadgeVariant } from '@/utils/getRoleBadgeVariant';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 
 const AllPosSalesComponent = () => {
     // === check permissions ===

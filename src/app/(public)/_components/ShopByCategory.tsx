@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Container } from '@/shop/components/common/container';
-import SectionTitle from '@/shop/components/global/SectionTitle';
-import { getCategoryImage } from '@/shop/lib/category-image';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
-import type { ProductCategory } from '@/shop/types/storefront';
+import { getCategoryImage } from '@/lib/category-image';
+import { getMediaUrl } from '@/lib/get-media-url';
+import type { ProductCategory } from '@/types/public/storefront';
+import { Container, SectionTitle } from '@/components';
 
 type Props = {
     categories: ProductCategory[];

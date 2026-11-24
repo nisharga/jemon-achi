@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Container } from '@/shop/components/common/container';
-import PriceContainer from '@/shop/components/common/PriceContainer';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
-import type { ProductDetailData } from '@/shop/types/storefront';
+import { getMediaUrl } from '@/lib/get-media-url';
+import type { ProductDetailData } from '@/types/public/storefront';
+import { Container, PriceContainer } from '@/components';
 
 /**
  * The top of a product page (main picture, name, price), rendered on the

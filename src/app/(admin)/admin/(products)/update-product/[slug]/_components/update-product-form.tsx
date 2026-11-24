@@ -47,28 +47,28 @@ import {
     useGetSingleProductByIdForAdminViewQuery,
     useUpdateProductMutation,
     useUpdateVariantsByProductIdMutation
-} from '@/redux/api-queries/product-api';
+} from '@/redux/admin/api/product-api';
 import { Loader } from 'lucide-react';
-import { TProduct, TProductShortVideo } from '@/types/product';
-import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
+import { TProduct, TProductShortVideo } from '@/types/admin/product';
+import { useGetAllCategoriesQuery } from '@/redux/admin/api/category-api';
 import {
     useGetAllSubCategoriesByCategoryIdQuery,
     useGetAllSubSubCategoriesByCategoryIdQuery
-} from '@/redux/api-queries/subcategory-api';
-import { TCategory } from '@/types/category';
-import { TSubCategory } from '@/types/sub-category';
-import { useUploadMultipleFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+} from '@/redux/admin/api/subcategory-api';
+import { TCategory } from '@/types/admin/category';
+import { TSubCategory } from '@/types/admin/sub-category';
+import { useUploadMultipleFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
 import { toast } from 'sonner';
 import { ENV } from '@/constants/env';
 import { useRouter } from 'next/navigation';
 import { TAttributesAndVariantsData } from '@/components/shared/AttributesAndVariantsAddOrUpdate';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
-import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
-import { useGetActiveReturnPoliciesQuery } from '@/redux/api-queries/return-policy-api';
-import { useGetAllBrandsQuery } from '@/redux/api-queries/brand-api';
+import { useUploadFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
+import { useGetActiveReturnPoliciesQuery } from '@/redux/admin/api/return-policy-api';
+import { useGetAllBrandsQuery } from '@/redux/admin/api/brand-api';
 import DangerZone from './DangerZone';
 import AttributesAndVariantsUpdate from './AttributesAndVariantsUpdate';
 

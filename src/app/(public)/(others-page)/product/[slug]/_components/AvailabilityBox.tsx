@@ -1,4 +1,4 @@
-import { cn } from '@/shop/lib/utils';
+import { cn } from '@/lib/public-utils';
 import { Info, Truck } from 'lucide-react';
 import React from 'react';
 import {
@@ -7,7 +7,7 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger
-} from '@/shop/components/ui/dialog';
+} from '@/components/public/ui/dialog';
 
 const AvailabilityBox = ({
     sku,

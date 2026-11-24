@@ -7,8 +7,8 @@ import {
     SelectTrigger,
     SelectValue
 } from '@/components/ui/select';
-import { useGetAllOutletQuery } from '@/redux/api-queries/outlet-api';
-import { TOutlet } from '@/types/product';
+import { useGetAllOutletQuery } from '@/redux/admin/api/outlet-api';
+import { TOutlet } from '@/types/admin/product';
 import { useRouter, useSearchParams } from 'next/navigation';
 import React, { Dispatch, SetStateAction, useEffect } from 'react';
 

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { cn } from '@/shop/lib/utils';
+import { cn } from '@/lib/public-utils';
 
 type Props = {
     title: string;

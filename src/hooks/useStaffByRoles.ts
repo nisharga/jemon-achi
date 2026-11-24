@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import { useGetAllStaffsQuery } from '@/redux/api-queries/staff-api';
-import { useGetAllRolesQuery } from '@/redux/api-queries/roles-api';
-import { useGetAllCustomersQuery } from '@/redux/api-queries/customer-api';
+import { useGetAllStaffsQuery } from '@/redux/admin/api/staff-api';
+import { useGetAllRolesQuery } from '@/redux/admin/api/roles-api';
+import { useGetAllCustomersQuery } from '@/redux/admin/api/customer-api';
 
 export const useStaffByRoles = (limit = 1000) => {
     // 1. Fetch Dynamic Roles from Database

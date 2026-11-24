@@ -4,15 +4,15 @@ import {
     getHeroSlides,
     getHomePageContent,
     getRandomProducts
-} from '@/shop/server/storefront-api';
-import type { ProductSummary } from '@/shop/types/storefront';
+} from '@/server/storefront-api';
+import type { ProductSummary } from '@/types/public/storefront';
 import { RANDOM_PAGE_SIZE } from './_lib/constants';
 import BestSelling from './_components/BestSelling';
 import CategoryProducts from './_components/CategoryProducts';
 import HeroSlider from './_components/HeroSlider';
 import RandomPublicProducts from './_components/RandomPublicProducts';
 import ShopByCategory from './_components/ShopByCategory';
-import StorefrontFrame from '@/shop/components/shared/StorefrontFrame';
+import { StorefrontFrame } from '@/components';
 
 /**
  * Storefront home page.

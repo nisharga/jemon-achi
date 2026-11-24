@@ -1,9 +1,11 @@
-import { Container } from '@/shop/components/common/container';
-import ProductRail from '@/shop/components/common/ProductRail';
-import ProductTile from '@/shop/components/common/ProductTile';
-import SectionLink from '@/shop/components/global/SectionLink';
-import SectionTitle from '@/shop/components/global/SectionTitle';
-import type { ProductSummary } from '@/shop/types/storefront';
+import type { ProductSummary } from '@/types/public/storefront';
+import {
+    Container,
+    ProductRail,
+    ProductTile,
+    SectionLink,
+    SectionTitle
+} from '@/components';
 
 /** Sideways-scrolling row of the best selling products (chosen in the admin CMS). */
 type Props = {

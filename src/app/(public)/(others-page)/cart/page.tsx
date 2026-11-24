@@ -18,32 +18,32 @@ import {
     CardContent,
     CardHeader,
     CardTitle
-} from '@/shop/components/ui/card';
-import { Button } from '@/shop/components/ui/button';
-import { Badge } from '@/shop/components/ui/badge';
-import { Input } from '@/shop/components/ui/input';
-import { Separator } from '@/shop/components/ui/separator';
-import { useAppDispatch, useAppSelector } from '@/shop/redux/store';
+} from '@/components/public/ui/card';
+import { Button } from '@/components/public/ui/button';
+import { Badge } from '@/components/public/ui/badge';
+import { Input } from '@/components/public/ui/input';
+import { Separator } from '@/components/public/ui/separator';
+import { useAppDispatch, useAppSelector } from '@/redux/public/store';
 import {
     removeItem,
     selectCartItems,
     updateQty
-} from '@/shop/redux/features/cart-slice';
-import { Container } from '@/shop/components/common/container';
-import { Skeleton } from '@/shop/components/ui/skeleton';
+} from '@/redux/public/features/cart-slice';
+import { Container } from '@/components/public/common/container';
+import { Skeleton } from '@/components/public/ui/skeleton';
 import Image from 'next/image';
 import {
     useGetProductByIdsQuery,
     useGetStockByProductVariantQuery
-} from '@/shop/redux/api/product-api';
-import { computeAvailableFromStockPayload } from '@/shop/components/product/computeAvailableFromStockPayload';
+} from '@/redux/public/api/product-api';
+import { computeAvailableFromStockPayload } from '@/components/public/product/computeAvailableFromStockPayload';
 import { skipToken } from '@reduxjs/toolkit/query';
 
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+import { getMediaUrl } from '@/lib/get-media-url';
 import { sendGTMEvent } from '@next/third-parties/google';
-import { trackMetaFromGtmEvent } from '@/shop/lib/meta-pixel';
-import { useGetCmsOfferQuery } from '@/shop/redux/api/offer';
-import { calculateDiscountedPrice } from '@/shop/lib/offerHelper';
+import { trackMetaFromGtmEvent } from '@/lib/meta-pixel';
+import { useGetCmsOfferQuery } from '@/redux/public/api/offer';
+import { calculateDiscountedPrice } from '@/lib/offerHelper';
 
 type ApiVariant = {
     _id: string;

@@ -608,7 +608,7 @@ import {
 } from '@/components/ui/dialog';
 import Image from 'next/image';
 import { getImgFullUrl } from '@/lib/admin-utils';
-import { useUploadMultipleFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+import { useUploadMultipleFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
 import { toast } from 'sonner';
 import { Loader } from 'lucide-react';
 

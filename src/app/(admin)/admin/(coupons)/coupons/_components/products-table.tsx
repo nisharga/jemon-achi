@@ -10,8 +10,8 @@ import {
 import { cn } from '@/lib/admin-utils';
 import React from 'react';
 import ProductActions from './product-actions';
-import { ICoupon } from '@/types/coupon';
-import { useToggleCouponStatusMutation } from '@/redux/api-queries/coupon-api';
+import { ICoupon } from '@/types/admin/coupon';
+import { useToggleCouponStatusMutation } from '@/redux/admin/api/coupon-api';
 import { toast } from 'sonner';
 import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';

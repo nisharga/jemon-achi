@@ -1,7 +1,7 @@
 'use client';
 
 import { Badge } from '@/components/ui/admin-badge';
-import { OrderStatus } from '@/types/order';
+import { OrderStatus } from '@/types/admin/order';
 import { Options } from 'nuqs';
 import React from 'react';
 

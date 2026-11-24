@@ -8,7 +8,7 @@ import {
     DialogHeader,
     DialogTitle
 } from '@/components/ui/dialog';
-import { useDeleteBusinessLocationMutation } from '@/redux/api-queries/business-location-api';
+import { useDeleteBusinessLocationMutation } from '@/redux/admin/api/business-location-api';
 import { Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

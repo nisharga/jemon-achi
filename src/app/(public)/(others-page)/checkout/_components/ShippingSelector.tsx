@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
     INSIDE_DHAKA_DELIVERY_PRICE,
     OUTSIDE_DHAKA_DELIVERY_PRICE
-} from '@/shop/config';
+} from '@/configs/storefront';
 
 export interface ShippingOption {
     id: string;

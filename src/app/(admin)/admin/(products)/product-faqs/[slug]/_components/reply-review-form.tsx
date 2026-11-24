@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { toast } from 'sonner';
 import { useState, useEffect } from 'react';
@@ -12,7 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import {
     useGetFaqBySlugQuery,
     useUpdateFaqMutation
-} from '@/redux/api-queries/faq-api';
+} from '@/redux/admin/api/faq-api';
 import Image from 'next/image';
 import { getMediaUrl } from '@/utils/get-media-url';
 

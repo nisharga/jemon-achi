@@ -8,7 +8,7 @@ import {
     DropdownMenuTrigger,
     DropdownMenuSeparator
 } from '@/components/ui/admin-dropdown-menu';
-import { OrderStatus, TOrder } from '@/types/order';
+import { OrderStatus, TOrder } from '@/types/admin/order';
 import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
 import React, { ReactElement, useState, useMemo } from 'react';
@@ -22,7 +22,7 @@ import ReturnOrderDialog from './return-order-dialog';
 import {
     useMarkAsDeliveredMutation,
     useMarkAsPendingReturnMutation
-} from '@/redux/api-queries/order-api';
+} from '@/redux/admin/api/order-api';
 import { toast } from 'sonner';
 
 const OrderActions = ({

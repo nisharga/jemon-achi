@@ -28,7 +28,7 @@ import { Loader2 } from 'lucide-react';
 import {
     useGetSingleSupplierQuery,
     useUpdateSupplierMutation
-} from '@/redux/api-queries/supplier-slice';
+} from '@/redux/admin/api/supplier-slice';
 import { CreateSupplierSchema } from '@/schema/supplier';
 import { useEffect } from 'react';
 

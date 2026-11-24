@@ -1,6 +1,6 @@
 'use client';
 
-import { useGetAllInventoryTransfaredHistoryQuery } from '@/redux/api-queries/inventory-api';
+import { useGetAllInventoryTransfaredHistoryQuery } from '@/redux/admin/api/inventory-api';
 import React, { useEffect, useState } from 'react';
 import { InventoryTransferHistoryTable } from './_components/inventory-transfer-history-table';
 import Pagination from '@/components/shared/pagination';

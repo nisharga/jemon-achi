@@ -2,9 +2,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { Container } from '@/shop/components/common/container';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
-import { useGetCmsHomePageQuery } from '@/shop/redux/api/publicApi';
+import { Container } from '@/components/public/common/container';
+import { getMediaUrl } from '@/lib/get-media-url';
+import { useGetCmsHomePageQuery } from '@/redux/public/api/publicApi';
 
 const ProductPage = () => {
     // items

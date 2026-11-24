@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import { Upload, X, Loader2, ImageIcon } from 'lucide-react';
 import { toast } from 'sonner';
 import Image from 'next/image';
-import { API_BASE_URL } from '@/shop/config';
-import { Label } from '@/shop/components/ui/label';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+import { API_BASE_URL } from '@/configs/storefront';
+import { Label } from '@/components/public/ui/label';
+import { getMediaUrl } from '@/lib/get-media-url';
 
 export default function ImageUploader({
     onUploadSuccess

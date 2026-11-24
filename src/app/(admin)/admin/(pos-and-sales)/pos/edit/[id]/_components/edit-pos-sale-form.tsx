@@ -3,7 +3,7 @@
 import {
     useEditPosSaleMutation,
     useGetSinglePosSaleQuery
-} from '@/redux/api-queries/pos-sale-api';
+} from '@/redux/admin/api/pos-sale-api';
 import React, { useEffect, useState } from 'react';
 import { Input } from '@/components/ui/admin-input';
 import { Textarea } from '@/components/ui/textarea';
@@ -28,13 +28,13 @@ import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { Loader, Trash } from 'lucide-react';
 import { DatePicker } from '@/components/ui/date-picker';
-import { PAYMENT_METHODS } from '@/types/pos-sale';
+import { PAYMENT_METHODS } from '@/types/admin/pos-sale';
 import useDebounce from '@/hooks/use-debounce';
-import { useGetAllStocksQuery } from '@/redux/api-queries/stock-api';
+import { useGetAllStocksQuery } from '@/redux/admin/api/stock-api';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import BackBtn from '@/components/shared/back-btn';
 
 interface Discount {

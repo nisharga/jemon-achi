@@ -1,13 +1,13 @@
 'use client';
-import GlobalLoader from '@/shop/components/common/GlobalLoader';
-import { ProductCardSkeleton } from '@/shop/components/skeleton';
-import { IProduct } from '@/shop/types/product';
+import GlobalLoader from '@/components/public/common/GlobalLoader';
+import { ProductCardSkeleton } from '@/components/public/skeleton';
+import { IProduct } from '@/types/public/product';
 import dynamic from 'next/dynamic';
 import { useParams } from 'next/navigation';
 import { useEffect } from 'react';
 
 const ProductCard = dynamic(
-    () => import('@/shop/components/common/product-card'),
+    () => import('@/components/public/common/product-card'),
     {
         loading: () => <GlobalLoader /> // Optional skeleton
     }

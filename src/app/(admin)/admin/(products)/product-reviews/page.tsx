@@ -4,12 +4,12 @@ import React, { useEffect, useState } from 'react';
 // import { CustomersTable } from "./_components/customers-table";
 import Pagination from '@/components/shared/pagination';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
-import { useGetAllReviewsQuery } from '@/redux/api-queries/reviews-api';
+import { useGetAllReviewsQuery } from '@/redux/admin/api/reviews-api';
 import { CustomersTable } from './_components/customers-table';
-// import { useGetAllReviewsQuery } from "@/redux/api-queries/reviews-api";
+// import { useGetAllReviewsQuery } from "@/redux/admin/api/reviews-api";
 
 const CustomersPage = () => {
     // === check permissions ===

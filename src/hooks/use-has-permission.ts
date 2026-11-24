@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useLoggedInUser } from './use-loggedin-user';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 
 type PermissionHookProps = {
     permissions: PermissionEnum[];

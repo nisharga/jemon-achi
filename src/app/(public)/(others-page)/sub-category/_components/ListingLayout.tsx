@@ -3,19 +3,19 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import { Container } from '@/shop/components/common/container';
+import { Container } from '@/components/public/common/container';
 
 import CategoryPage from '../[name]/page';
 import { useParams } from 'next/navigation';
-import { useGetAllRelatedProductsQuery } from '@/shop/redux/api/product-api';
+import { useGetAllRelatedProductsQuery } from '@/redux/public/api/product-api';
 import {
     FilterHeader,
     Pagination,
     RangeSelector,
     SubCategoryFilter
-} from '@/shop/components/filter';
-import { Button } from '@/shop/components/ui/button';
-import { useGetAllCategoriesQuery } from '@/shop/redux/api/category-api';
+} from '@/components/public/filter';
+import { Button } from '@/components/public/ui/button';
+import { useGetAllCategoriesQuery } from '@/redux/public/api/category-api';
 
 interface ViewCategoryLayoutProps {
     children: React.ReactNode;

@@ -15,9 +15,9 @@ import {
 import {
     useGetHomepageQuery,
     useUpsertBestSellingMutation
-} from '@/redux/api-queries/homepage-api';
-import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
-import { TBestSellingItem } from '@/types/homepage';
+} from '@/redux/admin/api/homepage-api';
+import { useGetAllProductsQuery } from '@/redux/admin/api/product-api';
+import { TBestSellingItem } from '@/types/admin/homepage';
 
 import { Button } from '@/components/ui/admin-button';
 import { Card, CardContent, CardHeader } from '@/components/ui/admin-card';
@@ -25,7 +25,7 @@ import { Input } from '@/components/ui/admin-input';
 import { Label } from '@/components/ui/admin-label';
 import { Skeleton } from '@/components/ui/admin-skeleton';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import {

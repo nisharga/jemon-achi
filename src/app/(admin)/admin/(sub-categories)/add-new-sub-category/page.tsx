@@ -3,7 +3,7 @@
 import React from 'react';
 import AddNewSubCategoryForm from './_components/add-new-sub-category-form';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import SectionTitle from '@/components/shared/section-title';

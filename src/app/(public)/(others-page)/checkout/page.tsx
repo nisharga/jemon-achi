@@ -9,21 +9,20 @@ import {
     CardContent,
     CardHeader,
     CardTitle
-} from '@/shop/components/ui/card';
-import { Input } from '@/shop/components/ui/input';
-import { Textarea } from '@/shop/components/ui/textarea';
-import { Label } from '@/shop/components/ui/label';
-import { Skeleton } from '@/shop/components/ui/skeleton';
-import { Container } from '@/shop/components/common/container';
+} from '@/components/public/ui/card';
+import { Input } from '@/components/public/ui/input';
+import { Textarea } from '@/components/public/ui/textarea';
+import { Label } from '@/components/public/ui/label';
+import { Skeleton } from '@/components/public/ui/skeleton';
 import { motion } from 'framer-motion';
 
-import { useAppDispatch, useAppSelector } from '@/shop/redux/store';
+import { useAppDispatch, useAppSelector } from '@/redux/public/store';
 import {
     removeItem as removeLocalItem,
     updateQty as updateLocalQty,
     selectCartItems,
     clearCart
-} from '@/shop/redux/features/cart-slice';
+} from '@/redux/public/features/cart-slice';
 
 import OrderSummary, { OrderItem } from './_components/OrderSummary';
 import ManualPayment, {
@@ -31,25 +30,26 @@ import ManualPayment, {
     PaymentDetails
 } from './_components/ManualPayment';
 import SuggestionDropdown from './_components/SuggestionDropdown';
-import { useGetProductByIdsQuery } from '@/shop/redux/api/product-api';
+import { useGetProductByIdsQuery } from '@/redux/public/api/product-api';
 import {
     API_BASE_URL,
     DEFAULT_DELIVERY_PRICE,
     DEFAULT_LOCKED_AMOUNT,
     INSIDE_DHAKA_DELIVERY_PRICE,
     OUTSIDE_DHAKA_DELIVERY_PRICE
-} from '@/shop/config';
-import { bangladeshDivisions } from '@/shop/lib/data/bangladesh';
+} from '@/configs/storefront';
+import { bangladeshDivisions } from '@/lib/data/bangladesh';
 import { useRouter } from 'next/navigation';
-import { useGetSingleCheckDeliveryChargeQuery } from '@/shop/redux/api/order';
-import { useGetUserInfoQuery } from '@/shop/redux/api/auth-api';
-import { useUser } from '@/shop/hooks/use-user';
+import { useGetSingleCheckDeliveryChargeQuery } from '@/redux/public/api/order';
+import { useGetUserInfoQuery } from '@/redux/public/api/auth-api';
+import { useUser } from '@/hooks/use-user';
 import AnimatedInput from './_components/AnimatedInput';
 import { sendGTMEvent } from '@next/third-parties/google';
-import { trackMetaFromGtmEvent } from '@/shop/lib/meta-pixel';
-import { calculateDiscountedPrice } from '@/shop/lib/offerHelper';
-import { useGetCmsOfferQuery } from '@/shop/redux/api/offer';
+import { trackMetaFromGtmEvent } from '@/lib/meta-pixel';
+import { calculateDiscountedPrice } from '@/lib/offerHelper';
+import { useGetCmsOfferQuery } from '@/redux/public/api/offer';
 import ShippingSelector from './_components/ShippingSelector';
+import { Container } from '@/components/public/common/container';
 
 type PaymentMethod = 'cod' | 'full' | 'delivery_charge';
 

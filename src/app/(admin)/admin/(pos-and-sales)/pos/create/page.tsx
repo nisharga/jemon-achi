@@ -12,7 +12,7 @@ import {
     PaymentMethod,
     CartItemUI,
     CartItemPatch
-} from '@/types/pos';
+} from '@/types/admin/pos';
 import { CustomerSelector } from './_components/CustomerSelector';
 import { ProductSelector } from './_components/ProductSelector';
 import { DiscountControl } from './_components/DiscountControl';
@@ -29,11 +29,11 @@ import PrintableSaleInvoice from './_components/printable-sale-invoice';
 import {
     useGetAllInventoriesForBusinessLocationQuery,
     useLazyGetScanInventoryQuery
-} from '@/redux/api-queries/inventory-api';
-import { useCreateSaleMutation } from '@/redux/api-queries/pos-sale-api';
+} from '@/redux/admin/api/inventory-api';
+import { useCreateSaleMutation } from '@/redux/admin/api/pos-sale-api';
 import { useQueryState } from 'nuqs';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/types/business-location';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
+import { IBusiness_location } from '@/types/admin/business-location';
 import {
     Select,
     SelectContent,
@@ -43,7 +43,7 @@ import {
 } from '@/components/ui/select';
 import { Label } from '@/components/ui/admin-label';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { DatePicker } from '@/components/ui/date-picker';

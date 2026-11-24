@@ -11,8 +11,8 @@ import {
 import { format } from 'date-fns';
 import React from 'react';
 import './print.css';
-import { useGetOutletSaleByIdQuery } from '@/redux/api-queries/pos-sale-api';
-import { IPosSaleProduct } from '@/types/pos';
+import { useGetOutletSaleByIdQuery } from '@/redux/admin/api/pos-sale-api';
+import { IPosSaleProduct } from '@/types/admin/pos';
 import { cn } from '@/lib/admin-utils';
 
 const TABLE_HEADERS = ['Items', 'Qty', 'Price'];

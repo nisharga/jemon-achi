@@ -8,7 +8,7 @@ import {
     DialogHeader,
     DialogTitle
 } from '@/components/ui/dialog';
-import { useDeleteFaqMutation } from '@/redux/api-queries/faq-api';
+import { useDeleteFaqMutation } from '@/redux/admin/api/faq-api';
 import { Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { toast } from 'sonner';
 import { Search, Check, X, Loader2, RefreshCcw } from 'lucide-react';
 
-import { useGetAllSubCategoriesQuery } from '@/redux/api-queries/subcategory-api';
+import { useGetAllSubCategoriesQuery } from '@/redux/admin/api/subcategory-api';
 
 import { Button } from '@/components/ui/admin-button';
 import {
@@ -33,7 +33,7 @@ import { Skeleton } from '@/components/ui/admin-skeleton';
 import {
     useGetOfferPageQuery,
     usePutOfferPageMutation
-} from '@/redux/api-queries/offerpage-api';
+} from '@/redux/admin/api/offerpage-api';
 
 type TOfferTimerMode = 'countdown' | '12h_timer' | '24h_timer';
 

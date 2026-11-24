@@ -16,13 +16,13 @@
 // } from "@/components/ui/select";
 // import useDebounce from "@/hooks/use-debounce";
 // import { useHasPermission } from "@/hooks/use-has-permission";
-// import { useGetAllBusinessLocationsQuery } from "@/redux/api-queries/business-location-api";
+// import { useGetAllBusinessLocationsQuery } from "@/redux/admin/api/business-location-api";
 // import {
 //   useGetAllStockReportsQuery,
 //   useGetAllStocksSubcategoryQuery,
-// } from "@/redux/api-queries/stock-api";
-// import { IBusiness_location } from "@/types/business-location";
-// import { PermissionEnum } from "@/types/permistion";
+// } from "@/redux/admin/api/stock-api";
+// import { IBusiness_location } from "@/types/admin/business-location";
+// import { PermissionEnum } from "@/types/admin/permistion";
 // import { generateExcel } from "@/utils/excel-generator";
 // import { generateFullPDF } from "@/utils/pdf-generator";
 // import jsPDF from "jspdf";
@@ -1203,13 +1203,13 @@ import {
 } from '@/components/ui/select';
 import useDebounce from '@/hooks/use-debounce';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
 import {
     useGetAllStockReportsQuery,
     useGetAllStocksSubcategoryQuery
-} from '@/redux/api-queries/stock-api';
-import { IBusiness_location } from '@/types/business-location';
-import { PermissionEnum } from '@/types/permistion';
+} from '@/redux/admin/api/stock-api';
+import { IBusiness_location } from '@/types/admin/business-location';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { generateExcel } from '@/utils/excel-generator';
 import { generateFullPDF } from '@/utils/pdf-generator';
 import jsPDF from 'jspdf';

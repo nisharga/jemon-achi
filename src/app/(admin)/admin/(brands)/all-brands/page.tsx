@@ -1,12 +1,12 @@
 'use client';
 
-import { useGetAllBrandsForAdminQuery } from '@/redux/api-queries/brand-api';
+import { useGetAllBrandsForAdminQuery } from '@/redux/admin/api/brand-api';
 import React from 'react';
 import { BrandsTable } from './_components/brands-table';
 import { Button } from '@/components/ui/admin-button';
 import Link from 'next/link';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 

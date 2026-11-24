@@ -24,10 +24,10 @@ import {
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { Loader, Camera } from 'lucide-react';
-import { useUploadFileMutation } from '@/redux/api-queries/file-upload-api'; // Adjust path
+import { useUploadFileMutation } from '@/redux/admin/api/file-upload-api'; // Adjust path
 import { ENV } from '@/constants/env';
 import Image from 'next/image';
-import { useCreateCustomerMutation } from '@/redux/api-queries/customer-api';
+import { useCreateCustomerMutation } from '@/redux/admin/api/customer-api';
 
 // Define User Schema based on your API response
 const CreateUserSchema = z.object({

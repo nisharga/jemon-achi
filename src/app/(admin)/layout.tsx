@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { DM_Sans } from 'next/font/google';
 import '@/styles/admin-globals.css';
 import { Toaster } from 'sonner';
-import StoreProvider from '@/provider/store-provider';
+import StoreProvider from '@/providers/admin-store-provider';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
 const dmSans = DM_Sans({

@@ -15,7 +15,7 @@ import {
 } from '@/components/ui/admin-form';
 import { Input } from '@/components/ui/admin-input';
 import { LoginSchema } from '@/schema/login';
-import { useLoginMutation } from '@/redux/api-queries/auth-api';
+import { useLoginMutation } from '@/redux/admin/api/auth-api';
 import { toast } from 'sonner';
 import { Loader } from 'lucide-react';
 import { setAccessToken, setRefreshToken } from '@/auth/admin-cookies';

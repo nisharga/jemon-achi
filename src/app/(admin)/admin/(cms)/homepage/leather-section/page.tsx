@@ -14,10 +14,10 @@ import {
 import {
     useGetHomepageQuery,
     useUpsertLeatherSectionMutation
-} from '@/redux/api-queries/homepage-api';
-import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
-import { TLeatherSection } from '@/types/homepage';
-import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+} from '@/redux/admin/api/homepage-api';
+import { useGetAllProductsQuery } from '@/redux/admin/api/product-api';
+import { TLeatherSection } from '@/types/admin/homepage';
+import { useUploadFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
 
 import { Button } from '@/components/ui/admin-button';
 import {
@@ -32,7 +32,7 @@ import { Label } from '@/components/ui/admin-label';
 import { Skeleton } from '@/components/ui/admin-skeleton';
 import { Switch } from '@/components/ui/switch';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import {

@@ -12,12 +12,12 @@ import {
 import { cn } from '@/lib/admin-utils';
 import { Loader, SquarePen, Trash2 } from 'lucide-react';
 import React from 'react';
-import { TReturnPolicy } from '@/types/return-policy';
+import { TReturnPolicy } from '@/types/admin/return-policy';
 import Link from 'next/link';
 import {
     useDeleteReturnPolicyMutation,
     useToggleReturnPolicyStatusMutation
-} from '@/redux/api-queries/return-policy-api';
+} from '@/redux/admin/api/return-policy-api';
 import { Switch } from '@/components/ui/switch';
 import { toast } from 'sonner';
 

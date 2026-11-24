@@ -9,7 +9,7 @@ import {
     DialogTitle
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/admin-input';
-import { useDeleteOrderMutation } from '@/redux/api-queries/order-api';
+import { useDeleteOrderMutation } from '@/redux/admin/api/order-api';
 import { Label } from '@radix-ui/react-label';
 import { Loader } from 'lucide-react';
 import React, { useState } from 'react';

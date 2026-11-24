@@ -9,7 +9,7 @@ import {
 import { Building2, Calendar, Edit, MapPin, Package } from 'lucide-react';
 import { Badge } from '../ui/admin-badge';
 import { Button } from '../ui/admin-button';
-import { TOutlet } from '@/types/product';
+import { TOutlet } from '@/types/admin/product';
 
 type TProps = {
     data: TOutlet;

@@ -4,13 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
-import { Skeleton } from '@/shop/components/ui/skeleton';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+import { Skeleton } from '@/components/public/ui/skeleton';
+import { getMediaUrl } from '@/lib/get-media-url';
 import {
     getErrorMessage,
     useGetMyOrderQuery
-} from '@/shop/redux/api/customer-api';
-import type { Order, OrderItem } from '@/shop/types/customer';
+} from '@/redux/public/api/customer-api';
+import type { Order, OrderItem } from '@/types/public/customer';
 import { formatDate, formatPrice } from '../../_lib/format';
 import Panel from '../../_components/Panel';
 import OrderStatusBadge from '../../_components/OrderStatusBadge';

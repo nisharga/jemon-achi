@@ -40,22 +40,22 @@ import { TagsInput } from '@/components/ui/tags-input';
 import { useEffect, useState } from 'react';
 import { ImageUploadInput } from '@/components/ui/image-upload-input';
 import { ProductShortVideosUpload } from '@/components/ui/product-short-videos-upload';
-import { TProductShortVideo } from '@/types/product';
+import { TProductShortVideo } from '@/types/admin/product';
 import { Loader } from 'lucide-react';
-import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
-import { TCategory } from '@/types/category';
+import { useGetAllCategoriesQuery } from '@/redux/admin/api/category-api';
+import { TCategory } from '@/types/admin/category';
 import {
     useGetAllSubCategoriesByCategoryIdQuery,
     useGetAllSubSubCategoriesByCategoryIdQuery
-} from '@/redux/api-queries/subcategory-api';
-import { TSubCategory } from '@/types/sub-category';
+} from '@/redux/admin/api/subcategory-api';
+import { TSubCategory } from '@/types/admin/sub-category';
 import {
     useUploadFileToAWSMutation,
     useUploadMultipleFileToAWSMutation
-} from '@/redux/api-queries/file-upload-api';
-import { useCreateProductMutation } from '@/redux/api-queries/product-api';
-import { useGetActiveReturnPoliciesQuery } from '@/redux/api-queries/return-policy-api';
-import { useGetAllBrandsQuery } from '@/redux/api-queries/brand-api';
+} from '@/redux/admin/api/file-upload-api';
+import { useCreateProductMutation } from '@/redux/admin/api/product-api';
+import { useGetActiveReturnPoliciesQuery } from '@/redux/admin/api/return-policy-api';
+import { useGetAllBrandsQuery } from '@/redux/admin/api/brand-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import AttributesAndVariantsAddOrUpdate, {

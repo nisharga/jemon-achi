@@ -22,15 +22,15 @@ import {
     SelectTrigger,
     SelectValue
 } from '@/components/ui/select';
-import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
-import { TCategory } from '@/types/category';
+import { useGetAllCategoriesQuery } from '@/redux/admin/api/category-api';
+import { TCategory } from '@/types/admin/category';
 import Image from 'next/image';
-import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+import { useUploadFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
 import {
     useCreateSubCategoryMutation,
     useCreateSubSubCategoryMutation,
     useGetAllSubCategoryQuery
-} from '@/redux/api-queries/subcategory-api';
+} from '@/redux/admin/api/subcategory-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { Loader, Video, ImageIcon, Loader2 } from 'lucide-react';

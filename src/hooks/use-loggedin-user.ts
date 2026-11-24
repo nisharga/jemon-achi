@@ -1,6 +1,6 @@
 import { removeAccessToken, removeRefreshToken } from '@/auth/admin-cookies';
-import { useGetUserProfileQuery } from '@/redux/api-queries/auth-api';
-import { TUser } from '@/types/admin-user';
+import { useGetUserProfileQuery } from '@/redux/admin/api/auth-api';
+import { TUser } from '@/types/admin/user';
 
 export const useLoggedInUser = () => {
     // === get client profile ===

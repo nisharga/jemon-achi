@@ -20,7 +20,7 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
 import { getImgFullUrl } from '@/lib/admin-utils';
-import { useGetSingleStockReportByVariantIdQuery } from '@/redux/api-queries/stock-api';
+import { useGetSingleStockReportByVariantIdQuery } from '@/redux/admin/api/stock-api';
 import Image from 'next/image';
 import React from 'react';
 

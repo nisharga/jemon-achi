@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { IRole } from '@/types/admin-user';
+import { IRole } from '@/types/admin/user';
 import { Badge } from '@/components/ui/admin-badge';
 import {
     Tooltip,

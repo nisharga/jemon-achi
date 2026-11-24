@@ -23,13 +23,13 @@ import {
     SelectTrigger,
     SelectValue
 } from '@/components/ui/select';
-import { useCreateStaffMutation } from '@/redux/api-queries/staff-api';
+import { useCreateStaffMutation } from '@/redux/admin/api/staff-api';
 import { toast } from 'sonner';
-import { TOutlet } from '@/types/product';
+import { TOutlet } from '@/types/admin/product';
 import { useState } from 'react';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
-import { IRole } from '@/types/admin-user';
-import { useGetAllRolesQuery } from '@/redux/api-queries/roles-api';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
+import { IRole } from '@/types/admin/user';
+import { useGetAllRolesQuery } from '@/redux/admin/api/roles-api';
 
 const genderOptions = ['MALE', 'FEMALE'];
 

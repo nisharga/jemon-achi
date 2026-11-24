@@ -11,7 +11,7 @@ import {
 import {
     useDeleteSubCategoryMutation,
     useDeleteSubSubCategoryMutation
-} from '@/redux/api-queries/subcategory-api';
+} from '@/redux/admin/api/subcategory-api';
 import { AlertTriangle, Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

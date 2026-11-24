@@ -8,7 +8,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from '@/components/ui/admin-dropdown-menu';
-import { IBusiness_location } from '@/types/business-location';
+import { IBusiness_location } from '@/types/admin/business-location';
 import { Edit, Ellipsis, Trash } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';

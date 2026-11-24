@@ -5,10 +5,10 @@ import Link from 'next/link';
 import React from 'react';
 import { StaffsTable } from './_components/staffs-table';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
-import { useGetAllRolesQuery } from '@/redux/api-queries/roles-api';
+import { useGetAllRolesQuery } from '@/redux/admin/api/roles-api';
 
 const StaffsPage = () => {
     // === check permissions ===

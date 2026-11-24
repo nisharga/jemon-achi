@@ -12,8 +12,8 @@ import { cn } from '@/lib/admin-utils';
 import {
     useGetSuggestedOutletProductsQuery,
     useUpdatOrderStatusMutation
-} from '@/redux/api-queries/order-api';
-import { OrderStatus } from '@/types/order';
+} from '@/redux/admin/api/order-api';
+import { OrderStatus } from '@/types/admin/order';
 import { Label } from '@radix-ui/react-label';
 import { CheckCircle, Loader } from 'lucide-react';
 import React, { useEffect, useState } from 'react';

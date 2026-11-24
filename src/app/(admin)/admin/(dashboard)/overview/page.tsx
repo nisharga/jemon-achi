@@ -2,7 +2,7 @@
 
 import { useHasPermission } from '@/hooks/use-has-permission';
 import ReportCards from './_components/report-cards';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 

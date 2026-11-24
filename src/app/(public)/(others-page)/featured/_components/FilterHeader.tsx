@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Search, Filter, ChevronDown, CheckIcon } from 'lucide-react';
 import * as Select from '@radix-ui/react-select';
 import * as Label from '@radix-ui/react-label';
-import useDebounce from '@/shop/hooks/use-debounce';
-import { Container } from '@/shop/components/common/container';
+import useDebounce from '@/hooks/public-use-debounce';
+import { Container } from '@/components/public/common/container';
 
 interface FilterHeaderProps {
     totalItems?: number;

@@ -3,11 +3,11 @@
 import Pagination from '@/components/shared/pagination';
 import React, { useEffect, useState } from 'react';
 import { StockTransferTable } from './_components/stock-transfer-table';
-import { useGetAllStockTransferQuery } from '@/redux/api-queries/stock-api';
+import { useGetAllStockTransferQuery } from '@/redux/admin/api/stock-api';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 
 const AllStockTransferPage = () => {
     // === check permissions ===

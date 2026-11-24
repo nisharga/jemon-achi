@@ -4,11 +4,11 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LayoutDashboard, LogOut, Package, UserRound } from 'lucide-react';
-import { Container } from '@/shop/components/common/container';
-import { Skeleton } from '@/shop/components/ui/skeleton';
-import { useUser } from '@/shop/hooks/use-user';
-import { handleLogout } from '@/shop/lib/logout';
-import { cn } from '@/shop/lib/utils';
+import { Container } from '@/components/public/common/container';
+import { Skeleton } from '@/components/public/ui/skeleton';
+import { useUser } from '@/hooks/use-user';
+import { handleLogout } from '@/lib/logout';
+import { cn } from '@/lib/public-utils';
 import { getInitials, hasRealName } from '../_lib/format';
 
 const MENU = [

@@ -20,7 +20,7 @@ import {
     useUpdateTopBarMessageMutation,
     useDeleteTopBarMessageMutation,
     useToggleTopBarMessageMutation
-} from '@/redux/api-queries/topbar-api';
+} from '@/redux/admin/api/topbar-api';
 
 import { Button } from '@/components/ui/admin-button';
 import {
@@ -34,7 +34,7 @@ import { Input } from '@/components/ui/admin-input';
 import { Label } from '@/components/ui/admin-label';
 import { Skeleton } from '@/components/ui/admin-skeleton';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { Switch } from '@/components/ui/switch';

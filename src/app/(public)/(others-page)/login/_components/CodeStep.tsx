@@ -3,20 +3,20 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { ArrowLeft, Loader2, ShieldCheck } from 'lucide-react';
-import { Button } from '@/shop/components/ui/button';
+import { Button } from '@/components/public/ui/button';
 import {
     InputOTP,
     InputOTPGroup,
     InputOTPSlot
-} from '@/shop/components/ui/input-otp';
+} from '@/components/public/ui/input-otp';
 import {
     getErrorMessage,
     useSendOtpMutation,
     useVerifyOtpMutation
-} from '@/shop/redux/api/customer-api';
-import { saveLogin } from '@/shop/lib/customer-session';
+} from '@/redux/public/api/customer-api';
+import { saveLogin } from '@/lib/customer-session';
 import { getSafeRedirect, NEXT_PARAM } from '@/auth/routes';
-import type { SendOtpResult } from '@/shop/types/customer';
+import type { SendOtpResult } from '@/types/public/customer';
 
 type Props = {
     phone: string;

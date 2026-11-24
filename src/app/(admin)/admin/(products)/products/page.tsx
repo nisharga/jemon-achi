@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/admin-button';
-import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
+import { useGetAllProductsQuery } from '@/redux/admin/api/product-api';
 import Link from 'next/link';
 import React, { Suspense, useEffect, useState } from 'react';
 import { ProductsTable } from './_components/products-table';
@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/admin-input';
 import useDebounce from '@/hooks/use-debounce';
 import Pagination from '@/components/shared/pagination';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import {
@@ -20,8 +20,8 @@ import {
 } from '@/components/ui/accordion';
 import { Filter } from 'lucide-react';
 import { Label } from '@/components/ui/admin-label';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/types/business-location';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
+import { IBusiness_location } from '@/types/admin/business-location';
 import { useQueryState } from 'nuqs';
 import {
     Select,
@@ -30,10 +30,10 @@ import {
     SelectTrigger,
     SelectValue
 } from '@/components/ui/select';
-import { TCategory } from '@/types/category';
-import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
-import { TSubCategory } from '@/types/sub-category';
-import { useGetAllSubCategoriesQuery } from '@/redux/api-queries/subcategory-api';
+import { TCategory } from '@/types/admin/category';
+import { useGetAllCategoriesQuery } from '@/redux/admin/api/category-api';
+import { TSubCategory } from '@/types/admin/sub-category';
+import { useGetAllSubCategoriesQuery } from '@/redux/admin/api/subcategory-api';
 
 const ProductsPageComponent = () => {
     // === check permissions ===

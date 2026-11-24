@@ -1,11 +1,11 @@
 'use client';
-import { TOutlet } from '@/types/product';
-import { TProduct } from '@/types/product';
+import { TOutlet } from '@/types/admin/product';
+import { TProduct } from '@/types/admin/product';
 import React, { FC, useEffect, useState } from 'react';
-import { useUpdateInventoryForWarehouseMutation } from '@/redux/api-queries/outlet-api';
+import { useUpdateInventoryForWarehouseMutation } from '@/redux/admin/api/outlet-api';
 import { Button } from '@/components/ui/admin-button';
 import { toast } from 'sonner';
-import { useGetInventoryByProductAndWarehouseIdQuery } from '@/redux/api-queries/inventory-api';
+import { useGetInventoryByProductAndWarehouseIdQuery } from '@/redux/admin/api/inventory-api';
 import AttributesAndVariantsAddOrUpdate, {
     TAttributesAndVariantsData
 } from '@/components/shared/AttributesAndVariantsAddOrUpdate';

@@ -11,8 +11,8 @@ import {
 } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/admin-label';
 import { USER_PERMISSIONS } from '@/constants/user-permissions';
-import { useManagePermissionsMutation } from '@/redux/api-queries/staff-api';
-import { PermissionEnum } from '@/types/permistion';
+import { useManagePermissionsMutation } from '@/redux/admin/api/staff-api';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { Loader } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';

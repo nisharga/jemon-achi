@@ -2,14 +2,14 @@
 
 import { useState, type FormEvent } from 'react';
 import { Loader2, Phone } from 'lucide-react';
-import { Button } from '@/shop/components/ui/button';
-import { Input } from '@/shop/components/ui/input';
-import { Label } from '@/shop/components/ui/label';
+import { Button } from '@/components/public/ui/button';
+import { Input } from '@/components/public/ui/input';
+import { Label } from '@/components/public/ui/label';
 import {
     getErrorMessage,
     useSendOtpMutation
-} from '@/shop/redux/api/customer-api';
-import type { SendOtpResult } from '@/shop/types/customer';
+} from '@/redux/public/api/customer-api';
+import type { SendOtpResult } from '@/types/public/customer';
 
 type Props = {
     initialPhone: string;

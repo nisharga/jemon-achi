@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { Input } from '@/shop/components/ui/input';
+import { Input } from '@/components/public/ui/input';
 
 interface FormShape {
     value?: string | null;

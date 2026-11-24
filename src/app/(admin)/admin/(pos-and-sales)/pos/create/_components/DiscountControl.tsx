@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { DiscountCalculationType } from '@/types/pos';
+import { DiscountCalculationType } from '@/types/admin/pos';
 import { Input } from '@/components/ui/admin-input';
 import { ToggleSwitch } from './ToggleSwitch';
 

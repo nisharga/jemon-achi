@@ -22,19 +22,19 @@ import { Switch } from '@/components/ui/switch';
 import { MultiSelect } from '@/components/ui/multi-select';
 import { useEffect, useState } from 'react';
 import { Loader } from 'lucide-react';
-import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
+import { useGetAllCategoriesQuery } from '@/redux/admin/api/category-api';
 import {
     useGetAllSubCategoriesByCategoryIdQuery,
     useGetAllSubSubCategoriesByCategoryIdQuery
-} from '@/redux/api-queries/subcategory-api';
+} from '@/redux/admin/api/subcategory-api';
 import { FormEditor, FormInput } from '@/components/form-items';
 import { CouponSchema, CouponFormValues } from '@/schema/coupon';
 import {
     useGetAllProductsQuery,
     useGetAllProductVariantQuery
-} from '@/redux/api-queries/product-api';
+} from '@/redux/admin/api/product-api';
 import { FormDatePicker } from '@/components/form-items/form-date-picker';
-import { useCreateCouponMutation } from '@/redux/api-queries/coupon-api';
+import { useCreateCouponMutation } from '@/redux/admin/api/coupon-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 

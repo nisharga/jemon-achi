@@ -24,7 +24,7 @@ import { Button } from '@/components/ui/admin-button';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import OrderTabsV2 from '../_components/order-tabs-v2';
 import { usePathname } from 'next/navigation';
 import { getTodayDateRange } from '@/utils/getTodayDateRange';
@@ -40,15 +40,15 @@ import {
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/admin-badge';
 import { getRoleBadgeVariant } from '@/utils/getRoleBadgeVariant';
-import { IRoles, TUser } from '@/types/admin-user';
-import { useGetAllStaffsQuery } from '@/redux/api-queries/staff-api';
+import { IRoles, TUser } from '@/types/admin/user';
+import { useGetAllStaffsQuery } from '@/redux/admin/api/staff-api';
 import {
     //  useGetAllOrderSummaryQuery,
     // useGetAllOrderSummaryQuery,
     useLazyGetAllOrdersQuery,
     useLazyGetAllTodaysActivityQuery,
     useLazySynchWithCourierQuery
-} from '@/redux/api-queries/order-api';
+} from '@/redux/admin/api/order-api';
 import { toast } from 'sonner';
 
 const OrdersPageComponent = () => {

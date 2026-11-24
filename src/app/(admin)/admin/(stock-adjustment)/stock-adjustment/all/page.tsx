@@ -2,7 +2,7 @@
 
 import Pagination from '@/components/shared/pagination';
 import React, { Suspense, useEffect, useState } from 'react';
-import { useGetAllStockAdjustmentQuery } from '@/redux/api-queries/stock-api';
+import { useGetAllStockAdjustmentQuery } from '@/redux/admin/api/stock-api';
 import { StockAdjustmentTable } from './_components/stock-adjustment-table';
 import {
     parseAsIsoDate,
@@ -31,15 +31,15 @@ import { Label } from '@/components/ui/admin-label';
 import { Input } from '@/components/ui/admin-input';
 import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
 import { Button } from '@/components/ui/admin-button';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/types/business-location';
-import { useGetAllStaffsQuery } from '@/redux/api-queries/staff-api';
-import { IRoles, TUser } from '@/types/admin-user';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
+import { IBusiness_location } from '@/types/admin/business-location';
+import { useGetAllStaffsQuery } from '@/redux/admin/api/staff-api';
+import { IRoles, TUser } from '@/types/admin/user';
 import { getRoleBadgeVariant } from '@/utils/getRoleBadgeVariant';
 import { Badge } from '@/components/ui/admin-badge';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { useHasPermission } from '@/hooks/use-has-permission';
 
 const AllStockAdjustmentComponent = () => {

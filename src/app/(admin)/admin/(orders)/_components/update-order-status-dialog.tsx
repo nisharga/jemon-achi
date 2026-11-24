@@ -9,7 +9,7 @@ import {
     DialogTitle
 } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/admin-label';
-import { useUpdatOrderStatusMutation } from '@/redux/api-queries/order-api';
+import { useUpdatOrderStatusMutation } from '@/redux/admin/api/order-api';
 import { Loader } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'sonner';
@@ -20,7 +20,7 @@ import {
     SelectTrigger,
     SelectValue
 } from '@/components/ui/select';
-import { OrderStatus } from '@/types/order';
+import { OrderStatus } from '@/types/admin/order';
 
 type DialogProps = {
     open: boolean;

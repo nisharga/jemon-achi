@@ -1,14 +1,14 @@
 'use client';
 
 import { Button } from '@/components/ui/admin-button';
-import { useGetAllSubCategoriesQuery } from '@/redux/api-queries/subcategory-api';
+import { useGetAllSubCategoriesQuery } from '@/redux/admin/api/subcategory-api';
 import Link from 'next/link';
 import React from 'react';
 import { SubCategoriesTable } from './_components/sub-categories-table';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 
 const SubCategoriesPage = () => {
     // === check permissions ===

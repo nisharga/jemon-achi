@@ -19,19 +19,19 @@ import {
     CardContent,
     CardHeader,
     CardTitle
-} from '@/shop/components/ui/card';
-import { Button } from '@/shop/components/ui/button';
-import { Separator } from '@/shop/components/ui/separator';
-import { Skeleton } from '@/shop/components/ui/skeleton';
+} from '@/components/public/ui/card';
+import { Button } from '@/components/public/ui/button';
+import { Separator } from '@/components/public/ui/separator';
+import { Skeleton } from '@/components/public/ui/skeleton';
 import Image from 'next/image';
 import React, { Dispatch, SetStateAction, useState } from 'react';
-import { Input } from '@/shop/components/ui/input';
+import { Input } from '@/components/public/ui/input';
 import { Tag, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
-import { IVariant } from '@/shop/types/stock';
-import { useCouponValidateMutation } from '@/shop/redux/api/order';
+import { IVariant } from '@/types/public/stock';
+import { useCouponValidateMutation } from '@/redux/public/api/order';
 import { PaymentDetails } from './ManualPayment';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+import { getMediaUrl } from '@/lib/get-media-url';
 
 export type OrderItem = {
     id: string;

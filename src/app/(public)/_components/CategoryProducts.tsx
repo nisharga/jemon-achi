@@ -1,10 +1,15 @@
 import Link from 'next/link';
-import { Container } from '@/shop/components/common/container';
-import ProductRail from '@/shop/components/common/ProductRail';
-import ProductTile from '@/shop/components/common/ProductTile';
-import SectionLink from '@/shop/components/global/SectionLink';
-import SectionTitle from '@/shop/components/global/SectionTitle';
-import type { ProductCategory, ProductSummary } from '@/shop/types/storefront';
+import type {
+    ProductCategory,
+    ProductSummary
+} from '@/types/public/storefront';
+import {
+    Container,
+    ProductRail,
+    ProductTile,
+    SectionLink,
+    SectionTitle
+} from '@/components';
 
 export type CategoryRow = {
     category: ProductCategory;

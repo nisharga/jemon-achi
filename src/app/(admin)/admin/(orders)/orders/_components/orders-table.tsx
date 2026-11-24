@@ -8,7 +8,7 @@ import {
     TableRow
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
-import { TOrder } from '@/types/order';
+import { TOrder } from '@/types/admin/order';
 import React from 'react';
 import OrdersTableRow from './order-table-row';
 

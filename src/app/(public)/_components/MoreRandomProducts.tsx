@@ -1,9 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import ProductTile from '@/shop/components/common/ProductTile';
-import { useGetRandomProductsInfiniteQuery } from '@/shop/redux/api/publicApi';
-import type { ProductCategory, ProductSummary } from '@/shop/types/storefront';
+import ProductTile from '@/components/public/common/ProductTile';
+import { useGetRandomProductsInfiniteQuery } from '@/redux/public/api/publicApi';
+import type {
+    ProductCategory,
+    ProductSummary
+} from '@/types/public/storefront';
 import { GRID_TILE_SIZES, RANDOM_PAGE_SIZE } from '../_lib/constants';
 import CategorySheet from './CategorySheet';
 

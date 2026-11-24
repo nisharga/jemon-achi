@@ -6,9 +6,9 @@ import {
     CardHeader,
     CardTitle,
     CardContent
-} from '@/shop/components/ui/card';
-import { Separator } from '@/shop/components/ui/separator';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+} from '@/components/public/ui/card';
+import { Separator } from '@/components/public/ui/separator';
+import { getMediaUrl } from '@/lib/get-media-url';
 
 interface OrderItem {
     id: string;

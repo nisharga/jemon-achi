@@ -3,16 +3,16 @@
 import { useState, type FormEvent } from 'react';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
-import { Button } from '@/shop/components/ui/button';
-import { Input } from '@/shop/components/ui/input';
-import { Label } from '@/shop/components/ui/label';
-import { Skeleton } from '@/shop/components/ui/skeleton';
-import { useUser } from '@/shop/hooks/use-user';
+import { Button } from '@/components/public/ui/button';
+import { Input } from '@/components/public/ui/input';
+import { Label } from '@/components/public/ui/label';
+import { Skeleton } from '@/components/public/ui/skeleton';
+import { useUser } from '@/hooks/use-user';
 import {
     getErrorMessage,
     useUpdateMyProfileMutation
-} from '@/shop/redux/api/customer-api';
-import type { Customer } from '@/shop/types/customer';
+} from '@/redux/public/api/customer-api';
+import type { Customer } from '@/types/public/customer';
 import { hasRealName } from '../_lib/format';
 import Panel from '../_components/Panel';
 

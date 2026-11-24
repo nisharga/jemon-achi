@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { toast } from 'sonner';
 import { useState } from 'react';
@@ -18,7 +18,7 @@ import { Star, User, Calendar, CheckCircle2 } from 'lucide-react';
 import {
     useGetReviewByIdQuery,
     useReviewAdminMutation
-} from '@/redux/api-queries/reviews-api';
+} from '@/redux/admin/api/reviews-api';
 import { getMediaUrl } from '@/utils/get-media-url';
 import Image from 'next/image';
 

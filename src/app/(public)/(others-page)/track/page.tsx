@@ -10,11 +10,11 @@ import {
     Loader2,
     TruckIcon
 } from 'lucide-react';
-import { useGetSingleTrackOrderQuery } from '@/shop/redux/api/order';
-import { useGetPreOrderTrackingQuery } from '@/shop/redux/api/pre-order';
-import { WHATSAPP_NUMBER } from '@/shop/config';
-import { Input } from '@/shop/components/ui/input';
-import { Button } from '@/shop/components/ui/button';
+import { useGetSingleTrackOrderQuery } from '@/redux/public/api/order';
+import { useGetPreOrderTrackingQuery } from '@/redux/public/api/pre-order';
+import { WHATSAPP_NUMBER } from '@/configs/storefront';
+import { Input } from '@/components/public/ui/input';
+import { Button } from '@/components/public/ui/button';
 
 // Components
 import OrderDetailsCard from './_components/OrderDetailsCard';

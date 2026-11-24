@@ -24,9 +24,9 @@ import {
     ShoppingCart,
     TrendingUp
 } from 'lucide-react';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
-import { IBusiness_location } from '@/types/business-location';
-import { useGetPosSalesReportQuery } from '@/redux/api-queries/pos-sale-api';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
+import { IBusiness_location } from '@/types/admin/business-location';
+import { useGetPosSalesReportQuery } from '@/redux/admin/api/pos-sale-api';
 import { DateRangeCalendar } from '@/components/ui/date-range-calendar';
 import type { DateRange } from 'react-day-picker';
 import {

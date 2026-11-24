@@ -1,16 +1,16 @@
 'use client';
 import React, { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Container } from '@/shop/components/common/container';
+import { Container } from '@/components/public/common/container';
 import {
     useGetAllVariantByAProductQuery,
     useGetProductDetailQuery,
     useGetSingleProductByIdQuery,
     useGetStockByProductVariantQuery
-} from '@/shop/redux/api/product-api';
+} from '@/redux/public/api/product-api';
 import ImageZoom from './ImageZoom';
 import ProductShortVideos from './ProductShortVideos';
-import { cn } from '@/shop/lib/utils';
+import { cn } from '@/lib/public-utils';
 import {
     Star,
     MessageSquare,
@@ -18,25 +18,25 @@ import {
     Truck,
     CheckCircle
 } from 'lucide-react';
-import GlobalLoading from '@/shop/components/global/GlobalLoading';
+import GlobalLoading from '@/components/public/global/GlobalLoading';
 import SingleProductDetails from './SingleProductDetails';
 import RelatedProducts from './RelatedProducts';
 import { toast } from 'sonner';
-import { addToCart, selectCartItems } from '@/shop/redux/features/cart-slice';
-import { useAppDispatch, useAppSelector } from '@/shop/redux/store';
+import { addToCart, selectCartItems } from '@/redux/public/features/cart-slice';
+import { useAppDispatch, useAppSelector } from '@/redux/public/store';
 import { skipToken } from '@reduxjs/toolkit/query';
 import { ProductVariantSelector } from './ProductVariantSelector';
 import { sendGTMEvent } from '@next/third-parties/google';
-import ErrorState from '@/shop/components/global/ErrorState';
+import ErrorState from '@/components/public/global/ErrorState';
 import Link from 'next/link';
-import { trackMetaFromGtmEvent } from '@/shop/lib/meta-pixel';
-import { useGetCmsOfferQuery } from '@/shop/redux/api/offer';
-import DiscountBadge from '@/shop/components/shared/DiscountBadge';
-import { useProductOffer } from '@/shop/hooks/useProductOffer';
-import StarRating from '@/shop/components/common/StarRating';
-import { useGetReviewRatingByProductIdQuery } from '@/shop/redux/api/review';
-import { ProductData, Variant } from '@/shop/types/product-detail';
-import { computeAvailableFromStockPayload } from '@/shop/components/product/computeAvailableFromStockPayload';
+import { trackMetaFromGtmEvent } from '@/lib/meta-pixel';
+import { useGetCmsOfferQuery } from '@/redux/public/api/offer';
+import DiscountBadge from '@/components/public/shared/DiscountBadge';
+import { useProductOffer } from '@/hooks/useProductOffer';
+import StarRating from '@/components/public/common/StarRating';
+import { useGetReviewRatingByProductIdQuery } from '@/redux/public/api/review';
+import { ProductData, Variant } from '@/types/public/product-detail';
+import { computeAvailableFromStockPayload } from '@/components/public/product/computeAvailableFromStockPayload';
 
 type ProductDetailProps = {
     slug: string;

@@ -4,11 +4,11 @@ import React, { useEffect, useState } from 'react';
 // import { CustomersTable } from "./_components/customers-table";
 import Pagination from '@/components/shared/pagination';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { CustomersTable } from './_components/customers-table';
-import { useGetAllFaqsQuery } from '@/redux/api-queries/faq-api';
+import { useGetAllFaqsQuery } from '@/redux/admin/api/faq-api';
 import { Button } from '@/components/ui/admin-button';
 import Link from 'next/link';
 

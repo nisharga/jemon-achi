@@ -8,10 +8,10 @@ import {
     SelectTrigger,
     SelectValue
 } from '@/components/ui/select';
-import { orderStatusList } from '@/types/order';
+import { orderStatusList } from '@/types/admin/order';
 import React, { useState } from 'react';
 import { formatString } from './order-details';
-import { useUpdatOrderStatusMutation } from '@/redux/api-queries/order-api';
+import { useUpdatOrderStatusMutation } from '@/redux/admin/api/order-api';
 import { toast } from 'sonner';
 import { Loader } from 'lucide-react';
 

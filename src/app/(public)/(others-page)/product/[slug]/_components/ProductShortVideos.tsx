@@ -13,9 +13,9 @@ import {
     Dialog,
     DialogContent,
     DialogTitle
-} from '@/shop/components/ui/dialog';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
-import { cn } from '@/shop/lib/utils';
+} from '@/components/public/ui/dialog';
+import { getMediaUrl } from '@/lib/get-media-url';
+import { cn } from '@/lib/public-utils';
 
 export type ShortVideo = {
     url: string;

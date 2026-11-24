@@ -9,7 +9,7 @@ import { ChevronLeft } from 'lucide-react';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 
 const AddNewStaffPage = () => {
     // === check permissions ===

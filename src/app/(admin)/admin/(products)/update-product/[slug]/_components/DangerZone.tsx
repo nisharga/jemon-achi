@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/table';
 import { AlertTriangle, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
-import { useDeleteVariantsByProductIdMutation } from '@/redux/api-queries/product-api';
+import { useDeleteVariantsByProductIdMutation } from '@/redux/admin/api/product-api';
 
 type TVariantRow = {
     _id: string;

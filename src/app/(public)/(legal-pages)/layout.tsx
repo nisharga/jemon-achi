@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import StorefrontFrame from '@/shop/components/shared/StorefrontFrame';
+import { StorefrontFrame } from '@/components';
 
 export default function Layout({ children }: { children: ReactNode }) {
     return <StorefrontFrame>{children}</StorefrontFrame>;

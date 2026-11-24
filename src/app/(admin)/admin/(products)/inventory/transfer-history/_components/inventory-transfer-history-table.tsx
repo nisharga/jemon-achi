@@ -10,10 +10,10 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { TInventoryTransferHistory } from '@/types/inventory';
+import { TInventoryTransferHistory } from '@/types/admin/inventory';
 import { Badge } from '@/components/ui/admin-badge';
 import { getRoleBadgeVariant } from '@/utils/getRoleBadgeVariant';
-import { IRoles } from '@/types/admin-user';
+import { IRoles } from '@/types/admin/user';
 import { format } from 'date-fns';
 
 type ProductsTableProps = {

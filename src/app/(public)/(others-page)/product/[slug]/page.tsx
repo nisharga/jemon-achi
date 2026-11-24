@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { FRONTEND_URL } from '@/shop/config';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
-import { getProduct, getProductSlugs } from '@/shop/server/storefront-api';
+import { FRONTEND_URL } from '@/configs/storefront';
+import { getMediaUrl } from '@/lib/get-media-url';
+import { getProduct, getProductSlugs } from '@/server/storefront-api';
 import ProductDetail from './_components/ProductDetail';
 import ProductFirstView from './_components/ProductFirstView';
 

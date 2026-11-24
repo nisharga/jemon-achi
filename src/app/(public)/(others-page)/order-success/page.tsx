@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { OrderIdBadge } from './_components/OrderBatch';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+import { getMediaUrl } from '@/lib/get-media-url';
 
 type VariantAttrs = Record<string, string>;
 

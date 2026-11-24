@@ -8,7 +8,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from '@/components/ui/admin-dropdown-menu';
-import { TCategory } from '@/types/category';
+import { TCategory } from '@/types/admin/category';
 import { Edit, Ellipsis, Trash } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';

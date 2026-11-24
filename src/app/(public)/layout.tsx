@@ -1,16 +1,15 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { Suspense, type ReactNode } from 'react';
-import '@/shop/styles/globals.css';
-import { FRONTEND_URL, META_PIXEL_ID } from '@/shop/config';
-import ProviderWrapper from '@/shop/hooks/ProviderWrapper';
-import MetaPixelPageViewTracker from '@/shop/components/shared/MetaPixelPageViewTracker';
-import ThirdPartyScripts from '@/shop/components/shared/ThirdPartyScripts';
+import '@/styles/public-globals.css';
+import { FRONTEND_URL, META_PIXEL_ID } from '@/configs/storefront';
+import ProviderWrapper from '@/providers/public-store-provider';
+import { MetaPixelPageViewTracker, ThirdPartyScripts } from '@/components';
 
 // The storefront's only font. `display: swap` shows text immediately in a
 // fallback font instead of hiding it while the font downloads.
 const acuminPro = localFont({
-    src: '../../shop/assets/fonts/AcuminPro-Regular.ttf',
+    src: '../../assets/fonts/AcuminPro-Regular.ttf',
     variable: '--font-acumin',
     display: 'swap'
 });

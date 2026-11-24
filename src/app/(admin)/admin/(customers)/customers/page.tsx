@@ -5,11 +5,11 @@ import * as XLSX from 'xlsx';
 import {
     useGetAllCustomersQuery,
     useLazyGetAllCustomersQuery
-} from '@/redux/api-queries/customer-api';
+} from '@/redux/admin/api/customer-api';
 import { CustomersTable } from './_components/customers-table';
 import Pagination from '@/components/shared/pagination';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { Button } from '@/components/ui/admin-button';

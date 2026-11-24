@@ -5,9 +5,9 @@ import {
     CardHeader,
     CardTitle,
     CardContent
-} from '@/shop/components/ui/card';
-import { Separator } from '@/shop/components/ui/separator';
-import WhatsAppChat from '@/shop/components/common/WhatsApp';
+} from '@/components/public/ui/card';
+import { Separator } from '@/components/public/ui/separator';
+import WhatsAppChat from '@/components/public/common/WhatsApp';
 
 interface OrderStep {
     id: string;

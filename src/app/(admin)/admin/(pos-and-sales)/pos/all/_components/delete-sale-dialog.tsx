@@ -9,7 +9,7 @@ import {
     DialogTitle
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/admin-input';
-import { useDeletePosSaleMutation } from '@/redux/api-queries/pos-sale-api';
+import { useDeletePosSaleMutation } from '@/redux/admin/api/pos-sale-api';
 import { Label } from '@radix-ui/react-label';
 import { Loader } from 'lucide-react';
 import React, { useState } from 'react';

@@ -5,11 +5,11 @@ import React, { Suspense, useEffect, useState } from 'react';
 import { ProductsTable } from './_components/products-table';
 import Pagination from '@/components/shared/pagination';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 
-import { useGetAllCouponsQuery } from '@/redux/api-queries/coupon-api';
+import { useGetAllCouponsQuery } from '@/redux/admin/api/coupon-api';
 
 const ProductsPageComponent = () => {
     // === check permissions ===

@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/shop/components/ui/button';
+import { Button } from '@/components/public/ui/button';
 import {
     getErrorMessage,
     useGetMyOrdersQuery
-} from '@/shop/redux/api/customer-api';
+} from '@/redux/public/api/customer-api';
 import Panel from '../_components/Panel';
 import OrderRow from '../_components/OrderRow';
 import NoOrders from '../_components/NoOrders';

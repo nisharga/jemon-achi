@@ -9,11 +9,11 @@ import {
     TableRow
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
-import { TOrder } from '@/types/order';
+import { TOrder } from '@/types/admin/order';
 import React from 'react';
 import { format } from 'date-fns';
 import { Badge } from '@/components/ui/admin-badge';
-import { TVariantCombination } from '@/types/product';
+import { TVariantCombination } from '@/types/admin/product';
 import OrderActions from '../../_components/order-actions';
 import { OrderStatusBadge } from '@/components/shared/order-status-badge';
 import Link from 'next/link';

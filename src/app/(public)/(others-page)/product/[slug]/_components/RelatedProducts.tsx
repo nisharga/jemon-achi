@@ -1,9 +1,9 @@
 'use client';
 
-import { Container } from '@/shop/components/common/container';
-import ProductCard from '@/shop/components/common/product-card';
-import ProductCardSkeleton from '@/shop/components/home/sections/ProductCardSkeleton';
-import { useGetProductsByCategoryQuery } from '@/shop/redux/api/category-api';
+import { Container } from '@/components/public/common/container';
+import ProductCard from '@/components/public/common/product-card';
+import ProductCardSkeleton from '@/components/public/home/sections/ProductCardSkeleton';
+import { useGetProductsByCategoryQuery } from '@/redux/public/api/category-api';
 import { skipToken } from '@reduxjs/toolkit/query';
 
 interface RelatedProductsProps {

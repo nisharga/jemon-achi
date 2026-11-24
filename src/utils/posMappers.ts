@@ -1,4 +1,4 @@
-import { PosScanResponse, VariantItem } from '@/types/pos';
+import { PosScanResponse, VariantItem } from '@/types/admin/pos';
 
 export function mapScanToVariantItem(resp: PosScanResponse): VariantItem {
     if (!resp?.success || !resp?.data?.product) {

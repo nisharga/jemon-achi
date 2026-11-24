@@ -1,14 +1,14 @@
 'use client';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { cn } from '@/shop/lib/utils';
+import { cn } from '@/lib/public-utils';
 import { Play } from 'lucide-react';
 import {
     Dialog,
     DialogContent,
     DialogTitle
-} from '@/shop/components/ui/dialog';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+} from '@/components/public/ui/dialog';
+import { getMediaUrl } from '@/lib/get-media-url';
 import type { ShortVideo } from './ProductShortVideos';
 
 // Convert a ratio string like "9:16" into a CSS aspect-ratio value

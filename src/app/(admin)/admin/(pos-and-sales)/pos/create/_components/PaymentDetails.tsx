@@ -8,7 +8,7 @@ import {
     SelectContent,
     SelectItem
 } from '@/components/ui/select';
-import { PaymentMethod } from '@/types/pos';
+import { PaymentMethod } from '@/types/admin/pos';
 
 interface Props {
     method: PaymentMethod;

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Check, ChevronsUpDown, Loader } from 'lucide-react';
 import { Button } from '@/components/ui/admin-button';
 import { toast } from 'sonner';
-import { useGetAllSearchVariantsQuery } from '@/redux/api-queries/product-api';
+import { useGetAllSearchVariantsQuery } from '@/redux/admin/api/product-api';
 import {
     Command,
     CommandEmpty,
@@ -20,7 +20,7 @@ import {
 import { cn } from '@/lib/admin-utils';
 import { Input } from '@/components/ui/admin-input';
 import useDebounce from '@/hooks/use-debounce';
-import { useCreateFeaturedProductMutation } from '@/redux/api-queries/featured-product-api';
+import { useCreateFeaturedProductMutation } from '@/redux/admin/api/featured-product-api';
 
 const AddNewFeaturedProduct = ({
     featuredProductslength

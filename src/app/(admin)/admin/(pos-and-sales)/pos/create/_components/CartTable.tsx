@@ -18,7 +18,7 @@ import {
     CartItemUI,
     DiscountCalculationType
     // type PosSaleRequest,
-} from '@/types/pos';
+} from '@/types/admin/pos';
 
 interface Props {
     cart: CartItemUI[];

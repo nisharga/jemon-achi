@@ -17,7 +17,7 @@ import {
     TableHeader,
     TableRow
 } from '@/components/ui/table';
-import { useDeleteBrandMutation } from '@/redux/api-queries/brand-api';
+import { useDeleteBrandMutation } from '@/redux/admin/api/brand-api';
 import { toast } from 'sonner';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/admin-badge';

@@ -1,9 +1,10 @@
-import { Container } from '@/shop/components/common/container';
-import ProductTile from '@/shop/components/common/ProductTile';
-import SectionTitle from '@/shop/components/global/SectionTitle';
-import type { ProductCategory, ProductSummary } from '@/shop/types/storefront';
+import type {
+    ProductCategory,
+    ProductSummary
+} from '@/types/public/storefront';
 import { GRID_TILE_SIZES, RANDOM_PAGE_SIZE } from '../_lib/constants';
 import MoreRandomProducts from './MoreRandomProducts';
+import { Container, ProductTile, SectionTitle } from '@/components';
 
 type Props = {
     /** First page, fetched on the server. */

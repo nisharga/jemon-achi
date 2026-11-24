@@ -19,19 +19,19 @@ import {
     ShoppingCart
 } from 'lucide-react';
 import { toast } from 'sonner';
-import { Container } from '@/shop/components/common/container';
-import ExploreMore from '@/shop/components/details/ExploreMore';
-import WhatsAppChat from '@/shop/components/common/WhatsApp';
-import { WHATSAPP_NUMBER } from '@/shop/config';
+import { Container } from '@/components/public/common/container';
+import ExploreMore from '@/components/public/details/ExploreMore';
+import WhatsAppChat from '@/components/public/common/WhatsApp';
+import { WHATSAPP_NUMBER } from '@/configs/storefront';
 
 import ProductImageGallery from './_components/ProductImageGallery';
 import ProductTitleSkeleton from './_components/ProductTitleSkeleton';
 import VariantSelectorSkeleton from './_components/VariantSelectorSkeleton';
 import ProductDescription from './_components/ProductDescription';
 
-import { useAppDispatch } from '@/shop/redux/store'; // ⬅️ same logic as inspiration
-import { useGetProductBySlugQuery } from '@/shop/redux/api/publicApi';
-import { addToCart } from '@/shop/redux/features/cart-slice';
+import { useAppDispatch } from '@/redux/public/store'; // ⬅️ same logic as inspiration
+import { useGetProductBySlugQuery } from '@/redux/public/api/publicApi';
+import { addToCart } from '@/redux/public/features/cart-slice';
 
 /* ----------------------------- Local Types ------------------------------ */
 type Variant = {

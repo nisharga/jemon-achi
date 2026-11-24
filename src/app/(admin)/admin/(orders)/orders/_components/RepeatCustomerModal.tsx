@@ -9,7 +9,7 @@ import {
     DialogTitle,
     DialogTrigger
 } from '@/components/ui/dialog';
-import { useGetSingleRepeatCustomerByPhoneNumberQuery } from '@/redux/api-queries/repeat-customer-api';
+import { useGetSingleRepeatCustomerByPhoneNumberQuery } from '@/redux/admin/api/repeat-customer-api';
 import {
     User,
     Phone,

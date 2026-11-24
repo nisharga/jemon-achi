@@ -11,12 +11,18 @@ const eslintConfig = defineConfig([
     // the strict rules.
     {
         files: [
-            'src/shop/**',
+            'src/components/public/**',
+            'src/redux/public/**',
+            'src/types/public/**',
+            'src/hooks/{use-click-outside,use-debounced-value,use-user,useProductOffer,public-use-debounce}.ts',
+            'src/lib/{category-image,cookies,customer-session,get-media-url,logout,meta-pixel,offerHelper,user-store,public-utils}.ts',
+            'src/lib/data/**',
+            'src/providers/public-store-provider.tsx',
             'src/app/(public)/**',
             // admin code (moved out of src/admin into the shared src/ folders)
             'src/constants/**',
-            'src/provider/**',
-            'src/redux/**',
+            'src/providers/admin-store-provider.tsx',
+            'src/redux/admin/**',
             'src/schema/**',
             'src/components/{form-items,tiptap,shared,skeletons}/**',
             'src/components/app-{header,sidebar}.tsx',
@@ -24,7 +30,7 @@ const eslintConfig = defineConfig([
             'src/lib/admin-utils.ts',
             'src/components/ui/{admin-sidebar,date-picker,date-range-calendar,product-short-videos-upload}.tsx',
             'src/hooks/{admin-use-mobile,use-loggedin-user,useStaffByRoles}.ts',
-            'src/types/{admin-user,inventory,order,pos-sale,pos,product}.ts',
+            'src/types/admin/**',
             'src/utils/{excel-generator,get-media-url,pdf-generator,pdf-summary-generator}.ts',
             'src/app/(admin)/**',
             'src/app/api/fraud-check/**'

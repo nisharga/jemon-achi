@@ -25,8 +25,8 @@ import {
     PaginationPrevious
 } from '@/components/ui/pagination';
 import Image from 'next/image';
-import type { TInventory } from '@/types/product';
-import type { TVariantCombination } from '@/types/product';
+import type { TInventory } from '@/types/admin/product';
+import type { TVariantCombination } from '@/types/admin/product';
 import { Package, ShoppingCart } from 'lucide-react';
 import { Dispatch, FC, SetStateAction } from 'react';
 import { BarcodeImage } from './barcode-image';

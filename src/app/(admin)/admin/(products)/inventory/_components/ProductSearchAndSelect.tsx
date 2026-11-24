@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client';
-import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
-import { TProduct } from '@/types/product';
+import { useGetAllProductsQuery } from '@/redux/admin/api/product-api';
+import { TProduct } from '@/types/admin/product';
 import { useSearchParams } from 'next/navigation';
 import React, {
     Dispatch,

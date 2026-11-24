@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import Pagination from '@/components/shared/pagination';
 import { BusinessLocationTable } from './_components/business-location-table';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 

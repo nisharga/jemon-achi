@@ -22,10 +22,10 @@ import {
     Share2
 } from 'lucide-react';
 import Image from 'next/image';
-import { useGetSingleProductByIdForAdminViewQuery } from '@/redux/api-queries/product-api';
-import { TProduct } from '@/types/product';
-import { TInventory } from '@/types/product';
-import { PermissionEnum } from '@/types/permistion';
+import { useGetSingleProductByIdForAdminViewQuery } from '@/redux/admin/api/product-api';
+import { TProduct } from '@/types/admin/product';
+import { TInventory } from '@/types/admin/product';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { useHasPermission } from '@/hooks/use-has-permission';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';

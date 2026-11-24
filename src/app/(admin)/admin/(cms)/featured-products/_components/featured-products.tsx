@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/admin-button';
-import { TProduct } from '@/types/product';
+import { TProduct } from '@/types/admin/product';
 import { Trash } from 'lucide-react';
 import Image from 'next/image';
 import React, { useState } from 'react';

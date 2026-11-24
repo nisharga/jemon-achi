@@ -13,7 +13,7 @@ import { CornerDownRight, Loader } from 'lucide-react';
 import { getImgFullUrl } from '@/lib/admin-utils';
 import Image from 'next/image';
 import React from 'react';
-import { TSubCategory } from '@/types/sub-category';
+import { TSubCategory } from '@/types/admin/sub-category';
 import SubCategoryActions from './subcategory-actions';
 
 type SubCategoriesTableProps = {

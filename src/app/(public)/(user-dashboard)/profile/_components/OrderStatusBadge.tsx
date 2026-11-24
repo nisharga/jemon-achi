@@ -1,4 +1,4 @@
-import { cn } from '@/shop/lib/utils';
+import { cn } from '@/lib/public-utils';
 import { formatStatus } from '../_lib/format';
 
 // Green = done, red = stopped, blue = on its way, amber = everything else (waiting).

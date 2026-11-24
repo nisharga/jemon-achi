@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { TUser } from '@/types/admin-user';
+import { TUser } from '@/types/admin/user';
 import CustomerActions from './customer-actions';
 
 type StaffsTableProps = {

@@ -1,4 +1,4 @@
-import { Skeleton } from '@/shop/components/ui/skeleton';
+import { Skeleton } from '@/components/public/ui/skeleton';
 
 /** Grey placeholder rows while orders load. */
 export default function OrderListSkeleton({ rows }: { rows: number }) {

@@ -5,22 +5,22 @@ import { Filter, X, Heart, SlidersHorizontal, LucideIcon } from 'lucide-react';
 import {
     useGetAllProductsQuery,
     useGetFilterExploreProductsQuery
-} from '@/shop/redux/api/product-api';
+} from '@/redux/public/api/product-api';
 import Image from 'next/image';
-import { Container } from '@/shop/components/common/container';
+import { Container } from '@/components/public/common/container';
 import {
     Dialog,
     DialogContent,
     DialogHeader,
     DialogTitle,
     DialogTrigger
-} from '@/shop/components/ui/dialog';
-import { cn, slugToText, SORT_MAPPING } from '@/shop/lib/utils';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
+} from '@/components/public/ui/dialog';
+import { cn, slugToText, SORT_MAPPING } from '@/lib/public-utils';
+import { getMediaUrl } from '@/lib/get-media-url';
 import { useParams } from 'next/navigation';
-import { useGetAllSubSubCategoryBySubCategorySlugQuery } from '@/shop/redux/api/category-api';
+import { useGetAllSubSubCategoryBySubCategorySlugQuery } from '@/redux/public/api/category-api';
 import Link from 'next/link';
-import { InfiniteScroll } from '@/shop/components/global/InfiniteScroll';
+import { InfiniteScroll } from '@/components/public/global/InfiniteScroll';
 import { EmptyProducts } from './_components/EmptyProduct';
 
 const ProductPage = () => {

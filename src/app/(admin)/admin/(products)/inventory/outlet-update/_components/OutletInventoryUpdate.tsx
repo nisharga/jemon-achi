@@ -1,5 +1,5 @@
 'use client';
-import { TProduct, TOutlet } from '@/types/product';
+import { TProduct, TOutlet } from '@/types/admin/product';
 import React, { useState } from 'react';
 import ProductSearchAndSelect from '../../_components/ProductSearchAndSelect';
 import AvailableOutletsAndSelect from './AvailableOutletsAndSelect';

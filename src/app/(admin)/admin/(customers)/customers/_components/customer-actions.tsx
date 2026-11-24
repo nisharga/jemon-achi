@@ -6,7 +6,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from '@/components/ui/admin-dropdown-menu';
-import { TUser } from '@/types/admin-user';
+import { TUser } from '@/types/admin/user';
 import { Ellipsis } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import React from 'react';

@@ -11,8 +11,8 @@ import {
     Shield,
     Settings
 } from 'lucide-react';
-import { TProduct } from '@/types/product';
-import { TInventory } from '@/types/product';
+import { TProduct } from '@/types/admin/product';
+import { TInventory } from '@/types/admin/product';
 import { cn } from '@/lib/admin-utils';
 
 const formatPrice = (price: number) => {

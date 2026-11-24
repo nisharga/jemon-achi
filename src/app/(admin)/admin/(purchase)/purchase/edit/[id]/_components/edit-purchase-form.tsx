@@ -24,9 +24,9 @@ import {
 import { useState, useEffect } from 'react';
 import { CalendarIcon, Loader, Trash2, Plus, Check } from 'lucide-react';
 import { toast } from 'sonner';
-import { useGetAllSuppliersQuery } from '@/redux/api-queries/supplier-slice';
-import type { TSupplier } from '@/types/supplier';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
+import { useGetAllSuppliersQuery } from '@/redux/admin/api/supplier-slice';
+import type { TSupplier } from '@/types/admin/supplier';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
 import {
     Popover,
     PopoverContent,
@@ -36,7 +36,7 @@ import { cn } from '@/lib/admin-utils';
 import { format } from 'date-fns';
 import { Calendar } from '@/components/ui/calendar';
 import { Input } from '@/components/ui/admin-input';
-import { useGetAllSearchVariantsQuery } from '@/redux/api-queries/product-api';
+import { useGetAllSearchVariantsQuery } from '@/redux/admin/api/product-api';
 import useDebounce from '@/hooks/use-debounce';
 import {
     Table,
@@ -50,13 +50,13 @@ import { Textarea } from '@/components/ui/textarea';
 import {
     useEditPurchaseMutation,
     useGetSinglePurchaseQuery
-} from '@/redux/api-queries/purchase-slice';
+} from '@/redux/admin/api/purchase-slice';
 import { useRouter } from 'next/navigation';
-import { IPurchase } from '@/types/purchase';
+import { IPurchase } from '@/types/admin/purchase';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 
 interface PurchaseItem {
     variant: string;

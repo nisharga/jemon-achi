@@ -24,19 +24,19 @@ import {
     SelectValue
 } from '@/components/ui/select';
 import Image from 'next/image';
-import { TCategory } from '@/types/category';
+import { TCategory } from '@/types/admin/category';
 import {
     useGetSingleSubCategoryQuery,
     useUpdateSubCategoryMutation
-} from '@/redux/api-queries/subcategory-api';
+} from '@/redux/admin/api/subcategory-api';
 import { toast } from 'sonner';
-import { TSubCategory } from '@/types/sub-category';
+import { TSubCategory } from '@/types/admin/sub-category';
 import { Loader, Video, ImageIcon } from 'lucide-react';
-import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+import { useUploadFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
 import { useRouter } from 'next/navigation';
-import { useGetAllCategoriesQuery } from '@/redux/api-queries/category-api';
+import { useGetAllCategoriesQuery } from '@/redux/admin/api/category-api';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { getImgFullUrl } from '@/lib/admin-utils';

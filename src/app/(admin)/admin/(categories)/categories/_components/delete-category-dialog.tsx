@@ -8,7 +8,7 @@ import {
     DialogHeader,
     DialogTitle
 } from '@/components/ui/dialog';
-import { useDeleteCategoryMutation } from '@/redux/api-queries/category-api';
+import { useDeleteCategoryMutation } from '@/redux/admin/api/category-api';
 import { AlertTriangle, Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

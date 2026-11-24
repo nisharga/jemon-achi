@@ -1,6 +1,6 @@
 'use client';
 
-import { useGetInventoriesByWarehouseIdQuery } from '@/redux/api-queries/inventory-api';
+import { useGetInventoriesByWarehouseIdQuery } from '@/redux/admin/api/inventory-api';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/admin-card';
 import { Badge } from '@/components/ui/admin-badge';

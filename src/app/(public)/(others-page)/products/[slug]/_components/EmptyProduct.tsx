@@ -3,7 +3,7 @@
 import { Search, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { useGetAllCategoriesQuery } from '@/shop/redux/api/category-api';
+import { useGetAllCategoriesQuery } from '@/redux/public/api/category-api';
 
 interface EmptyProductsProps {
     categoryName: string;

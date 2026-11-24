@@ -9,7 +9,7 @@ import {
     DialogTitle
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/admin-input';
-import { useUpdatOrderStatusMutation } from '@/redux/api-queries/order-api';
+import { useUpdatOrderStatusMutation } from '@/redux/admin/api/order-api';
 import { Label } from '@radix-ui/react-label';
 import { Loader } from 'lucide-react';
 import React, { useState } from 'react';

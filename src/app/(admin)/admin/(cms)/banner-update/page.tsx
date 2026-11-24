@@ -5,15 +5,15 @@ import {
     useCreateFeaturedProductsMutation,
     useCreateMobileBannerMutation,
     useGetAllBannersQuery
-} from '@/redux/api-queries/banner-api';
+} from '@/redux/admin/api/banner-api';
 import React, { useState } from 'react';
 import { Check, ChevronsUpDown, Loader, X } from 'lucide-react';
 import { ImageUploadInput } from '@/components/ui/image-upload-input';
 import { Button } from '@/components/ui/admin-button';
 import { toast } from 'sonner';
-import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
-import { useGetAllProductsQuery } from '@/redux/api-queries/product-api';
-import { TProduct } from '@/types/product';
+import { useUploadFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
+import { useGetAllProductsQuery } from '@/redux/admin/api/product-api';
+import { TProduct } from '@/types/admin/product';
 
 import {
     Command,
@@ -32,10 +32,10 @@ import { Input } from '@/components/ui/admin-input';
 import useDebounce from '@/hooks/use-debounce';
 import Image from 'next/image';
 import BannerCard from './_components/banner-card';
-import { TBanner } from '@/types/banner';
+import { TBanner } from '@/types/admin/banner';
 import { Badge } from '@/components/ui/admin-badge';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { getImgFullUrl } from '@/lib/admin-utils';

@@ -8,10 +8,10 @@ import {
     SelectTrigger,
     SelectValue
 } from '@/components/ui/select';
-import { useGetAllBusinessLocationsQuery } from '@/redux/api-queries/business-location-api';
-import { useGetAdminReportMetricsQuery } from '@/redux/api-queries/metadata-api';
+import { useGetAllBusinessLocationsQuery } from '@/redux/admin/api/business-location-api';
+import { useGetAdminReportMetricsQuery } from '@/redux/admin/api/metadata-api';
 
-import { IBusiness_location } from '@/types/business-location';
+import { IBusiness_location } from '@/types/admin/business-location';
 import React, { useState } from 'react';
 import { DateRange } from 'react-day-picker';
 

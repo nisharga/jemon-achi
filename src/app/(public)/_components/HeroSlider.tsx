@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useMounted } from '@/hooks/useMounted';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
-import { cn } from '@/shop/lib/utils';
-import type { HeroSlide } from '@/shop/types/storefront';
+import { getMediaUrl } from '@/lib/get-media-url';
+import { cn } from '@/lib/public-utils';
+import type { HeroSlide } from '@/types/public/storefront';
 
 /**
  * The big banner at the top of the home page. Each slide is a looping video

@@ -16,9 +16,9 @@ import {
     useGetHeroSectionQuery,
     useUpsertHeroSectionMutation,
     useDeleteHeroVideoMutation
-} from '@/redux/api-queries/herosection-api';
-import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
-import { THeroVideoItem, THeroVideoButton } from '@/types/hero-section';
+} from '@/redux/admin/api/herosection-api';
+import { useUploadFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
+import { THeroVideoItem, THeroVideoButton } from '@/types/admin/hero-section';
 
 import { Button } from '@/components/ui/admin-button';
 import {
@@ -33,7 +33,7 @@ import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/admin-label';
 import { Skeleton } from '@/components/ui/admin-skeleton';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { ImageUploadInput } from '@/components/ui/image-upload-input';

@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/admin-badge';
-import { OrderStatus } from '@/types/order';
+import { OrderStatus } from '@/types/admin/order';
 import React from 'react';
 
 export const OrderStatusBadge = ({ status }: { status: string }) => {

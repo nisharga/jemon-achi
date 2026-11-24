@@ -2,7 +2,7 @@
 
 import { TableCell, TableRow } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
-import { TOrder } from '@/types/order';
+import { TOrder } from '@/types/admin/order';
 import OrderActions from '../../_components/order-actions';
 import { Badge } from '@/components/ui/admin-badge';
 import { format } from 'date-fns';
@@ -31,8 +31,8 @@ import {
     useAcceptAwaitingStockOrderMutation,
     useDeclineAwaitingStockOrderMutation,
     useMarkOrderAsCalledMutation
-} from '@/redux/api-queries/order-api';
-import { OrderStatus } from '@/types/order';
+} from '@/redux/admin/api/order-api';
+import { OrderStatus } from '@/types/admin/order';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 

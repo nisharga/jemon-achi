@@ -11,7 +11,7 @@ import {
 import { cn } from '@/lib/admin-utils';
 import Image from 'next/image';
 import React from 'react';
-import { IProductSaleChannels, TProduct } from '@/types/product';
+import { IProductSaleChannels, TProduct } from '@/types/admin/product';
 import ProductActions from './product-actions';
 import ProductPublishedStatus from './product-published-status';
 import { getMediaUrl } from '@/utils/get-media-url';

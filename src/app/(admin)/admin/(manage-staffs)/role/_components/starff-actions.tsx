@@ -13,8 +13,8 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import ManagePermissionsDialog from './manage-permissons-dialog';
-import { PermissionEnum } from '@/types/permistion';
-import { useDeleteRoleMutation } from '@/redux/api-queries/roles-api';
+import { PermissionEnum } from '@/types/admin/permistion';
+import { useDeleteRoleMutation } from '@/redux/admin/api/roles-api';
 
 const StaffActions = ({
     staff,

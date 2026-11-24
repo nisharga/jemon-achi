@@ -21,7 +21,7 @@ import {
     SelectValue
 } from '@/components/ui/select';
 import { CreateBusinessLocationSchema } from '@/schema/business-location';
-import { useCreateBusinessLocationMutation } from '@/redux/api-queries/business-location-api';
+import { useCreateBusinessLocationMutation } from '@/redux/admin/api/business-location-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { Loader } from 'lucide-react';

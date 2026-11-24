@@ -22,7 +22,7 @@ import { Loader, X } from 'lucide-react';
 import {
     useGetSingleReturnPolicyQuery,
     useUpdateReturnPolicyMutation
-} from '@/redux/api-queries/return-policy-api';
+} from '@/redux/admin/api/return-policy-api';
 import { useRouter } from 'next/navigation';
 
 const UpdateReturnPolicyForm = ({ id }: { id: string }) => {

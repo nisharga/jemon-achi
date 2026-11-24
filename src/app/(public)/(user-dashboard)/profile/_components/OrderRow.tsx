@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import type { Order } from '@/shop/types/customer';
+import type { Order } from '@/types/public/customer';
 import { formatDate, formatPrice } from '../_lib/format';
 import OrderStatusBadge from './OrderStatusBadge';
 

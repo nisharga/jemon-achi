@@ -19,16 +19,16 @@ import { ImageUploadInput } from '@/components/ui/image-upload-input';
 import {
     useGetSingleCategoryQuery,
     useUpdateCategoryMutation
-} from '@/redux/api-queries/category-api';
-import { TCategory } from '@/types/category';
+} from '@/redux/admin/api/category-api';
+import { TCategory } from '@/types/admin/category';
 import { Loader, ImageIcon, Play, Trash2, Video } from 'lucide-react';
 import { toast } from 'sonner';
-import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
+import { useUploadFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
 import { useRouter } from 'next/navigation';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { VideoPreviewModal } from './VideoUploadModal';
 import { getImgFullUrl } from '@/lib/admin-utils';
 

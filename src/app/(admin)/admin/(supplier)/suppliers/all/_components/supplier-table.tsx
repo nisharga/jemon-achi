@@ -11,7 +11,7 @@ import {
 import { cn } from '@/lib/admin-utils';
 import React from 'react';
 import { Badge } from '@/components/ui/admin-badge';
-import { TSupplier } from '@/types/supplier';
+import { TSupplier } from '@/types/admin/supplier';
 import SupplierActions from './supplier-actions';
 
 type TableProps = {

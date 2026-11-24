@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/admin-utils';
 import React from 'react';
-import { IBusiness_location } from '@/types/business-location';
+import { IBusiness_location } from '@/types/admin/business-location';
 import { Badge } from '@/components/ui/admin-badge';
 import BusinessLocationActions from './business-location-actions';
 

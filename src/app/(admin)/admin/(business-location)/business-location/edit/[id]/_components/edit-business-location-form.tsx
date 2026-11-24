@@ -24,14 +24,14 @@ import { CreateBusinessLocationSchema } from '@/schema/business-location';
 import {
     useGetBusinessLocationByIdQuery,
     useUpdateBusinessLocationMutation
-} from '@/redux/api-queries/business-location-api';
+} from '@/redux/admin/api/business-location-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { ChevronLeft, Loader } from 'lucide-react';
 import { useEffect } from 'react';
-import { IBusiness_location } from '@/types/business-location';
+import { IBusiness_location } from '@/types/admin/business-location';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 import Link from 'next/link';

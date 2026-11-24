@@ -2,7 +2,7 @@
 // hooks/useRepeatCustomers.ts
 'use client';
 
-import { useGetSingleRepeatCustomerByPhoneNumberQuery } from '@/redux/api-queries/repeat-customer-api';
+import { useGetSingleRepeatCustomerByPhoneNumberQuery } from '@/redux/admin/api/repeat-customer-api';
 import { useMemo } from 'react';
 
 export const useRepeatCustomers = (phoneNumbers: string[]) => {

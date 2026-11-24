@@ -5,7 +5,7 @@ import { Button, buttonVariants } from '@/components/ui/admin-button';
 import { Ellipsis, Eye } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { TProduct } from '@/types/product';
+import { TProduct } from '@/types/admin/product';
 import { useRouter } from 'next/navigation';
 import {
     DropdownMenu,

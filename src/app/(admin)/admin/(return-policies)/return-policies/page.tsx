@@ -1,12 +1,12 @@
 'use client';
 
-import { useGetAllReturnPoliciesQuery } from '@/redux/api-queries/return-policy-api';
+import { useGetAllReturnPoliciesQuery } from '@/redux/admin/api/return-policy-api';
 import React from 'react';
 import { ReturnPoliciesTable } from './_components/return-policies-table';
 import { Button } from '@/components/ui/admin-button';
 import Link from 'next/link';
 import { useHasPermission } from '@/hooks/use-has-permission';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 import { PermissionErrorCard } from '@/components/shared/permission-error-card';
 import { PermissionLoaderCard } from '@/components/shared/permission-loader-card';
 

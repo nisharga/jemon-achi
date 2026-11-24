@@ -8,13 +8,13 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from '@/components/ui/admin-dropdown-menu';
-import { TUser } from '@/types/admin-user';
+import { TUser } from '@/types/admin/user';
 import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import DeleteStaffDialog from './delete-staff-dialog';
 import ManagePermissionsDialog from './manage-permissons-dialog';
-import { PermissionEnum } from '@/types/permistion';
+import { PermissionEnum } from '@/types/admin/permistion';
 
 const StaffActions = ({
     staff,

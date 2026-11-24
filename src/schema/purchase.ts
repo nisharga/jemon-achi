@@ -1,4 +1,4 @@
-import { PURCHASE_STATUS_ENUM } from '@/types/purchase';
+import { PURCHASE_STATUS_ENUM } from '@/types/admin/purchase';
 import { z } from 'zod/v3';
 
 const purchaseItemSchema = z.object({

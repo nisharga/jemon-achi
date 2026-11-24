@@ -8,7 +8,7 @@ import {
     DialogHeader,
     DialogTitle
 } from '@/components/ui/dialog';
-import { useDeleteProductMutation } from '@/redux/api-queries/product-api';
+import { useDeleteProductMutation } from '@/redux/admin/api/product-api';
 import { Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

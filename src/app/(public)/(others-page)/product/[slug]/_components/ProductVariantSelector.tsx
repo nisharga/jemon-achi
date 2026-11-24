@@ -1,10 +1,10 @@
-import { Badge } from '@/shop/components/ui/badge';
-import { Button } from '@/shop/components/ui/button';
-import { cn } from '@/shop/lib/utils';
+import { Badge } from '@/components/public/ui/badge';
+import { Button } from '@/components/public/ui/button';
+import { cn } from '@/lib/public-utils';
 import { Minus, Plus } from 'lucide-react';
 import AvailabilityBox from './AvailabilityBox';
 import { useEffect, useMemo } from 'react';
-import { StockAlert } from '@/shop/components/skeleton';
+import { StockAlert } from '@/components/public/skeleton';
 import { useRouter } from 'next/navigation';
 
 interface VariantSelectorProps {

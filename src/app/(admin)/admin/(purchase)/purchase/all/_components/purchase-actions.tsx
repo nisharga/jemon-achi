@@ -7,7 +7,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger
 } from '@/components/ui/admin-dropdown-menu';
-import { IPurchase } from '@/types/purchase';
+import { IPurchase } from '@/types/admin/purchase';
 import jsPDF from 'jspdf';
 import { Download, Edit, Ellipsis } from 'lucide-react';
 import Link from 'next/link';

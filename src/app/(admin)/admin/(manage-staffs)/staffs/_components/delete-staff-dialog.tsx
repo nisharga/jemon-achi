@@ -8,7 +8,7 @@ import {
     DialogHeader,
     DialogTitle
 } from '@/components/ui/dialog';
-import { useDeleteStaffMutation } from '@/redux/api-queries/staff-api';
+import { useDeleteStaffMutation } from '@/redux/admin/api/staff-api';
 import { Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

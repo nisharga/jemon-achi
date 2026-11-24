@@ -2,8 +2,8 @@ import React, { FC, useEffect, useState } from 'react';
 import {
     useGetInventoryByProductAndOutletIdQuery,
     useGetInventoryByProductAndWarehouseIdQuery
-} from '@/redux/api-queries/inventory-api';
-import { TProduct, TOutlet, TVariantCombination } from '@/types/product';
+} from '@/redux/admin/api/inventory-api';
+import { TProduct, TOutlet, TVariantCombination } from '@/types/admin/product';
 import { Button } from '@/components/ui/admin-button';
 import {
     Card,
@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/admin-card';
 import { Input } from '@/components/ui/admin-input';
 import { Checkbox } from '@/components/ui/checkbox';
-import { useUpdateInventoryWarehouseToOutletMutation } from '@/redux/api-queries/outlet-api';
+import { useUpdateInventoryWarehouseToOutletMutation } from '@/redux/admin/api/outlet-api';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 

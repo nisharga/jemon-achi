@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ShoppingBag } from 'lucide-react';
-import { Button } from '@/shop/components/ui/button';
+import { Button } from '@/components/public/ui/button';
 
 /** Shown instead of an order list when the customer has not ordered yet. */
 export default function NoOrders() {

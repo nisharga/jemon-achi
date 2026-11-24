@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/table';
 import { Checkbox } from '@/components/ui/checkbox'; // ✅ Add a checkbox UI component
 import { cn } from '@/lib/admin-utils';
-import { TVariantCombination } from '@/types/product';
+import { TVariantCombination } from '@/types/admin/product';
 import { useBarcode } from 'next-barcode';
 import React, { useState } from 'react';
 import './print.css';

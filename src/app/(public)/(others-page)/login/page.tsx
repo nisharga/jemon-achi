@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Card, CardContent } from '@/shop/components/ui/card';
-import type { SendOtpResult } from '@/shop/types/customer';
+import { Card, CardContent } from '@/components/public/ui/card';
+import type { SendOtpResult } from '@/types/public/customer';
 import PhoneStep from './_components/PhoneStep';
 import CodeStep from './_components/CodeStep';
 

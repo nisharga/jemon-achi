@@ -22,15 +22,15 @@ import {
     Package
 } from 'lucide-react';
 
-import { Input } from '@/shop/components/ui/input';
-import { Label } from '@/shop/components/ui/label';
-import { Button } from '@/shop/components/ui/button';
-import { Textarea } from '@/shop/components/ui/textarea';
-import { Container } from '@/shop/components/common/container';
-import { getMediaUrl } from '@/shop/lib/get-media-url';
-import { API_BASE_URL } from '@/shop/config';
-import { cn } from '@/shop/lib/utils';
-import { useCreatePreOrderMutation } from '@/shop/redux/api/pre-order';
+import { Input } from '@/components/public/ui/input';
+import { Label } from '@/components/public/ui/label';
+import { Button } from '@/components/public/ui/button';
+import { Textarea } from '@/components/public/ui/textarea';
+import { Container } from '@/components/public/common/container';
+import { getMediaUrl } from '@/lib/get-media-url';
+import { API_BASE_URL } from '@/configs/storefront';
+import { cn } from '@/lib/public-utils';
+import { useCreatePreOrderMutation } from '@/redux/public/api/pre-order';
 
 const MAX_IMAGE_SIZE = 6 * 1024 * 1024; // 6 MB
 const MAX_IMAGES = 6;

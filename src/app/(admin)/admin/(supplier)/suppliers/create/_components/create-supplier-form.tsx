@@ -25,7 +25,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
-import { useCreateSupplierMutation } from '@/redux/api-queries/supplier-slice';
+import { useCreateSupplierMutation } from '@/redux/admin/api/supplier-slice';
 import { CreateSupplierSchema } from '@/schema/supplier';
 
 type FormValues = z.infer<typeof CreateSupplierSchema>;

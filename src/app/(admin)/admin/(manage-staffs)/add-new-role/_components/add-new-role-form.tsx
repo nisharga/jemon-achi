@@ -16,8 +16,8 @@ import {
 } from '@/components/ui/admin-card';
 
 import { USER_PERMISSIONS } from '@/constants/user-permissions';
-import { PermissionEnum } from '@/types/permistion';
-import { useCreateRoleMutation } from '@/redux/api-queries/roles-api';
+import { PermissionEnum } from '@/types/admin/permistion';
+import { useCreateRoleMutation } from '@/redux/admin/api/roles-api';
 import { useRouter } from 'next/navigation';
 
 const formatKey = (key: string) => {

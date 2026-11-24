@@ -1,4 +1,3 @@
-import PageSkeleton from '@/shop/components/common/PageSkeleton';
-
+import { PageSkeleton } from '@/components';
 // Shown while the server renders this page (its content depends on the URL).
 export default PageSkeleton;

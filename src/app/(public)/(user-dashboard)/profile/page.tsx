@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { CalendarDays, Package, Phone, UserRoundPen } from 'lucide-react';
-import { Skeleton } from '@/shop/components/ui/skeleton';
-import { useUser } from '@/shop/hooks/use-user';
-import { useGetMyOrdersQuery } from '@/shop/redux/api/customer-api';
+import { Skeleton } from '@/components/public/ui/skeleton';
+import { useUser } from '@/hooks/use-user';
+import { useGetMyOrdersQuery } from '@/redux/public/api/customer-api';
 import { formatDate, hasRealName } from './_lib/format';
 import Panel from './_components/Panel';
 import OrderRow from './_components/OrderRow';

@@ -8,8 +8,8 @@ import { Loader, Sparkles, Video, XCircle } from 'lucide-react';
 import { Button } from '@/components/ui/admin-button';
 import { Input } from '@/components/ui/admin-input';
 import { cn } from '@/lib/admin-utils';
-import { useUploadVideoToAWSMutation } from '@/redux/api-queries/file-upload-api';
-import { TProductShortVideo } from '@/types/product';
+import { useUploadVideoToAWSMutation } from '@/redux/admin/api/file-upload-api';
+import { TProductShortVideo } from '@/types/admin/product';
 import { getMediaUrl } from '@/utils/get-media-url';
 
 // Max video size: 500MB

@@ -19,8 +19,8 @@ import React, { useState } from 'react';
 import { ImageUploadInput } from '@/components/ui/image-upload-input';
 import { toast } from 'sonner';
 import { Loader, Video, ImageIcon } from 'lucide-react';
-import { useUploadFileToAWSMutation } from '@/redux/api-queries/file-upload-api';
-import { useCreateCategoryMutation } from '@/redux/api-queries/category-api';
+import { useUploadFileToAWSMutation } from '@/redux/admin/api/file-upload-api';
+import { useCreateCategoryMutation } from '@/redux/admin/api/category-api';
 import { useRouter } from 'next/navigation';
 
 const AddNewCategoryForm = () => {

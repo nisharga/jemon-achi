@@ -8,7 +8,7 @@ import {
     DialogHeader,
     DialogTitle
 } from '@/components/ui/dialog';
-import { useDeleteReviewMutation } from '@/redux/api-queries/reviews-api';
+import { useDeleteReviewMutation } from '@/redux/admin/api/reviews-api';
 import { Loader } from 'lucide-react';
 import React from 'react';
 import { toast } from 'sonner';

@@ -1,8 +1,8 @@
-import { useCreateFAQMutation, useGetFAQsQuery } from '@/shop/redux/api/faqs';
+import { useCreateFAQMutation, useGetFAQsQuery } from '@/redux/public/api/faqs';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
-import ErrorState, { NoData } from '@/shop/components/global/ErrorState';
+import ErrorState, { NoData } from '@/components/public/global/ErrorState';
 
 const FAQPage = ({ productId, slug }: { productId: string; slug: string }) => {
     const { data, isLoading, isError, error, refetch } = useGetFAQsQuery({

@@ -9,12 +9,12 @@ import {
     DialogTitle
 } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/admin-label';
-import { useOrderAdminNoteMutation } from '@/redux/api-queries/order-api';
+import { useOrderAdminNoteMutation } from '@/redux/admin/api/order-api';
 import { Loader } from 'lucide-react';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import { Textarea } from '@/components/ui/textarea';
-import { IRoles } from '@/types/admin-user';
+import { IRoles } from '@/types/admin/user';
 import { format } from 'date-fns';
 
 type DialogProps = {
