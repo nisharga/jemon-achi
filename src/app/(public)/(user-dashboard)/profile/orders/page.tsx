@@ -53,8 +53,8 @@ export default function MyOrdersPage() {
     };
 
     return (
-        <div className='space-y-6'>
-            <h1 className='text-2xl font-semibold text-gray-900'>My orders</h1>
+        <div className='space-y-4'>
+            <h1 className='two-xl-medium'>My orders</h1>
 
             <Panel
                 title={data ? `${data.meta.total} orders` : 'Orders'}

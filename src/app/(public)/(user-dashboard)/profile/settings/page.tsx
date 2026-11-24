@@ -21,10 +21,8 @@ export default function AccountSettingsPage() {
     const { user, isLoading } = useUser();
 
     return (
-        <div className='space-y-6'>
-            <h1 className='text-2xl font-semibold text-gray-900'>
-                Account details
-            </h1>
+        <div className='space-y-4'>
+            <h1 className='two-xl-medium'>Account details</h1>
 
             <Panel title='Personal information'>
                 {isLoading || !user ? (

@@ -5,13 +5,14 @@ import Link from 'next/link';
 import { ChevronDown, User } from 'lucide-react';
 import { useClickOutside } from '@/hooks/use-click-outside';
 import { useUser } from '@/hooks/use-user';
-import { handleLogout } from '@/lib/logout';
+import LogoutDialog from '@/components/public/shared/LogoutDialog';
 import { cn } from '@/lib/public-utils';
 
 /** User icon with a small menu: "Login" for guests, "My account" and "Logout" for customers. */
 export default function AccountMenu() {
     const { user } = useUser();
     const [isOpen, setIsOpen] = useState(false);
+    const [isLogoutOpen, setIsLogoutOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     useClickOutside(menuRef, () => setIsOpen(false));
 
@@ -52,7 +53,10 @@ export default function AccountMenu() {
                             <li>
                                 <button
                                     type='button'
-                                    onClick={handleLogout}
+                                    onClick={() => {
+                                        close();
+                                        setIsLogoutOpen(true);
+                                    }}
                                     className='nav-link block w-full px-4 py-2 text-left text-red-700 hover:bg-red-50'
                                 >
                                     Logout
@@ -72,6 +76,8 @@ export default function AccountMenu() {
                     )}
                 </ul>
             )}
+
+            <LogoutDialog open={isLogoutOpen} onOpenChange={setIsLogoutOpen} />
         </div>
     );
 }
