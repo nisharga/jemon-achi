@@ -27,5 +27,10 @@ export const DEFAULT_LOCKED_AMOUNT: number = 80;
 export const CLOUDFRONT_BASE_URL =
     process.env.NEXT_PUBLIC_CLOUDFRONT_BASE_URL ||
     'https://d11ml80zmgyrxk.cloudfront.net';
-export const GTM_ID = "GTM-KLT379P8'";
+// Analytics / marketing IDs (loaded by src/shop/components/shared/ThirdPartyScripts.tsx).
+// The GTM id used to end in a stray quote ("GTM-KLT379P8'"), so GTM never matched a container.
+export const GTM_ID = 'GTM-KLT379P8';
+export const GA_ID = 'G-LJ4WTXYF3Y';
+export const TRUSTPILOT_KEY = 'tkfiXgI7wiABpbkY';
+export const PLAUSIBLE_DOMAIN = 'griipbuddy.com';
 export const META_PIXEL_ID = '1570751320714912';

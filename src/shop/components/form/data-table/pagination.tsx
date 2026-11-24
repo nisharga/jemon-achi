@@ -25,7 +25,7 @@ const Pagination: React.FC<PaginationProps> = ({
                 disabled={isFirstPage}
                 className={`rounded-md border px-4 py-2 transition ${
                     isFirstPage
-                        ? 'cursor-not-allowed border-gray-300 text-gray-400'
+                        ? 'cursor-not-allowed border-gray-300 text-gray-600'
                         : 'border-gray-400 text-gray-800 hover:bg-gray-100'
                 }`}
             >
@@ -38,7 +38,7 @@ const Pagination: React.FC<PaginationProps> = ({
                 disabled={isLastPage}
                 className={`rounded-md border px-3 py-1.5 transition lg:px-4 lg:py-2 ${
                     isLastPage
-                        ? 'cursor-not-allowed border-gray-300 text-gray-400'
+                        ? 'cursor-not-allowed border-gray-300 text-gray-600'
                         : 'border-gray-400 text-gray-800 hover:bg-gray-100'
                 }`}
             >

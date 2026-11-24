@@ -131,13 +131,13 @@ const ShopByCategory: React.FC = () => {
                             className='group flex cursor-pointer flex-col items-center rounded-xl border border-gray-100 bg-[#f6f8fa] p-2 transition-all duration-300 lg:px-6 lg:py-3'
                         >
                             <div className='mb-4 flex size-10 items-center justify-center rounded-xl bg-gray-50 transition-colors duration-300 group-hover:bg-blue-50 lg:size-[70px]'>
-                                <div className='text-gray-400 transition-colors duration-300 group-hover:text-primary'>
+                                <div className='group-hover:text-primary-ink text-gray-600 transition-colors duration-300'>
                                     {category.icon}
                                 </div>
                             </div>
 
                             {/* Category Name */}
-                            <h3 className='text-center text-[10px] leading-tight font-medium text-gray-500 transition-colors duration-300 group-hover:text-primary lg:text-sm'>
+                            <h3 className='group-hover:text-primary-ink text-center text-[10px] leading-tight font-medium text-gray-600 transition-colors duration-300 lg:text-sm'>
                                 {category.name}
                             </h3>
                         </div>

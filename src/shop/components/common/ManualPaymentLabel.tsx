@@ -12,7 +12,7 @@ const ManualPaymentLabel = ({ title, content, amount }: IProps) => {
             <div className='flex items-center'>
                 <div className='flex-shrink-0'>
                     <svg
-                        className='h-5 w-5 text-primary'
+                        className='text-primary-ink h-5 w-5'
                         viewBox='0 0 20 20'
                         fill='currentColor'
                     >
@@ -24,10 +24,10 @@ const ManualPaymentLabel = ({ title, content, amount }: IProps) => {
                     </svg>
                 </div>
                 <div className='ml-3'>
-                    <p className='text-sm text-primary'>
+                    <p className='text-primary-ink text-sm'>
                         <span className='font-medium'>{title}</span> {content}{' '}
                         {amount && (
-                            <span className='font-medium text-primary'>
+                            <span className='text-primary-ink font-medium'>
                                 ৳{amount}
                             </span>
                         )}

@@ -9,7 +9,7 @@ import productImg8 from '@/shop/assets/img/8.png';
 import productImg9 from '@/shop/assets/img/9.png';
 import productImg10 from '@/shop/assets/img/10.png';
 import { StaticImageData } from 'next/image';
-// import { Product, ProductReview } from "@/app/(shop)/(home)/details/[id]/page";
+// import { Product, ProductReview } from "@/app/(public)/(others-page)/details/[id]/page";
 
 export interface Product_data {
     id: string;

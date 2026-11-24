@@ -36,7 +36,7 @@ const RangeSelector = ({
                     onChange={(e) => setMinPrice(Number(e.target.value) || 0)}
                     className='w-full rounded border border-gray-300 px-2 py-1 text-sm'
                 />
-                <span className='text-gray-500'>-</span>
+                <span className='text-gray-600'>-</span>
                 <input
                     type='number'
                     value={maxPrice}

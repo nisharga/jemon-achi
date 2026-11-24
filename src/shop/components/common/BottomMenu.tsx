@@ -60,7 +60,7 @@ const BottomMenu = () => {
     ];
 
     return (
-        <div className='fixed bottom-0 z-50 flex w-full items-center justify-between bg-white p-4 text-primary shadow-sm md:hidden'>
+        <div className='text-primary-ink fixed bottom-0 z-50 flex w-full items-center justify-between bg-white p-4 shadow-sm md:hidden'>
             {menuLinks?.map((link, index) => (
                 <Link
                     key={index}
@@ -72,7 +72,7 @@ const BottomMenu = () => {
                     {isMounted &&
                         link?.count !== undefined &&
                         Number(link?.count) > 0 && (
-                            <span className='absolute -top-1.5 -right-2 flex h-4 w-4 items-center justify-center rounded-full border border-white/40 bg-primary pt-0.5 text-[11px] font-medium text-white backdrop-blur'>
+                            <span className='absolute -top-1.5 -right-2 flex h-4 w-4 items-center justify-center rounded-full border border-white/40 bg-primary pt-0.5 text-[11px] font-medium text-primary-foreground backdrop-blur'>
                                 {link?.count}
                             </span>
                         )}

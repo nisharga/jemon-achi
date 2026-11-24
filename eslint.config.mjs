@@ -12,7 +12,7 @@ const eslintConfig = defineConfig([
     {
         files: [
             'src/shop/**',
-            'src/app/(shop)/**',
+            'src/app/(public)/**',
             // admin code (moved out of src/admin into the shared src/ folders)
             'src/constants/**',
             'src/provider/**',

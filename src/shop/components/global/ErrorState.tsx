@@ -33,7 +33,7 @@ export default ErrorState;
 export const NoData = ({ message }: { message: string }) => {
     return (
         <div className='rounded-lg border-2 border-dashed border-gray-200 py-20 text-center'>
-            <p className='text-lg text-gray-400'>{message}</p>
+            <p className='text-lg text-gray-600'>{message}</p>
         </div>
     );
 };

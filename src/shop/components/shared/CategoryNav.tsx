@@ -48,15 +48,15 @@ const CategoryNav = () => {
                             >
                                 <Link
                                     href={`/category/${category.slug}`}
-                                    className='group relative flex items-center py-1 text-[12px] font-medium text-gray-700 transition-colors hover:text-primary'
+                                    className='group hover:text-primary-ink relative flex items-center py-1 text-[12px] font-medium text-gray-700 transition-colors'
                                 >
                                     {category.name_en}
                                     {hasSubmenu && (
                                         <ChevronDown
                                             className={`ml-1 h-3 w-3 transition-transform duration-300 ${
                                                 isHovered
-                                                    ? 'rotate-180 text-primary'
-                                                    : 'text-gray-400'
+                                                    ? 'text-primary-ink rotate-180'
+                                                    : 'text-gray-600'
                                             }`}
                                         />
                                     )}
@@ -115,7 +115,7 @@ const CategoryNav = () => {
                                                     <li key={nested._id}>
                                                         <Link
                                                             href={`/sub-sub-category/${nested.slug}`} //${sub.slug}
-                                                            className='block text-[13px] leading-relaxed font-medium text-gray-600 transition-colors hover:text-primary'
+                                                            className='hover:text-primary-ink block text-[13px] leading-relaxed font-medium text-gray-600 transition-colors'
                                                             onClick={() =>
                                                                 setHoveredCategory(
                                                                     null

@@ -38,14 +38,14 @@ const StarRating = ({
                             {/* Gray Background Star (Empty) */}
                             <Star
                                 size={size}
-                                className='text-gray-300'
+                                className='text-gray-600'
                                 fill='none'
                                 strokeWidth={1.5}
                             />
 
                             {/* Gold Filled Star (Layered on top with a clip) */}
                             <div
-                                className='absolute top-0 left-0 overflow-hidden text-[#C49B3B]'
+                                className='absolute top-0 left-0 overflow-hidden text-[#7a5c12]'
                                 style={{ width: `${fillPercentage}%` }}
                             >
                                 <Star
@@ -60,7 +60,7 @@ const StarRating = ({
             </div>
 
             {showCount && (
-                <span className='text-sm font-normal text-[#C49B3B]'>
+                <span className='text-sm font-normal text-[#7a5c12]'>
                     {rating.toFixed(1)} ({reviews})
                 </span>
             )}

@@ -42,14 +42,14 @@ const BrandCard: React.FC<BrandCardProps> = ({ brand }) => {
                             <div className='text-lg font-semibold text-blue-600'>
                                 {brand.reviewCount}
                             </div>
-                            <div className='text-xs text-gray-500'>Reviews</div>
+                            <div className='text-xs text-gray-600'>Reviews</div>
                         </div>
 
                         <div className='flex-1 border-l border-gray-100 text-center'>
                             <div className='text-lg font-semibold text-blue-600'>
                                 {brand.productCount}
                             </div>
-                            <div className='text-xs text-gray-500'>
+                            <div className='text-xs text-gray-600'>
                                 Products
                             </div>
                         </div>

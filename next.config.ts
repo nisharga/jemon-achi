@@ -23,10 +23,12 @@ const nextConfig: NextConfig = {
     images: {
         // next/image serves AVIF where supported, WebP otherwise.
         formats: ['image/avif', 'image/webp'],
-        // Dev only: lets next/image load from the local backend (localhost:5007).
-        // Next 16 blocks local addresses by default (SSRF protection); production
-        // images come from CloudFront, so this stays off there.
-        dangerouslyAllowLocalIP: process.env.NODE_ENV === 'development',
+        // Lets next/image load from a local backend (localhost:5007). Next 16
+        // blocks local addresses by default (SSRF protection), so this is only
+        // on while the API itself is local; production images come from CloudFront.
+        dangerouslyAllowLocalIP: /localhost|127\.0\.0\.1/.test(
+            process.env.NEXT_PUBLIC_API_BASE_URL ?? ''
+        ),
         // Storefront product images.
         remotePatterns: [
             // Local backend uploads (dev).
@@ -50,7 +52,7 @@ const nextConfig: NextConfig = {
         ]
     },
     experimental: {
-        // One 404 page for the whole app (we have two root layouts: (site) and (shop)).
+        // One 404 page for the whole app (we have two root layouts: (site) and (public)).
         globalNotFound: true,
         // Import only what is used from these barrel-heavy packages
         // (lucide-react is optimised by Next by default).

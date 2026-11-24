@@ -5,7 +5,7 @@ export const routes = {
     landing: '/landing',
     contactUs: '/landing/contact-us',
     blogs: '/landing/blog',
-    // Storefront customer pages (src/app/(shop)).
+    // Storefront customer pages (src/app/(public)).
     login: '/login',
     register: '/register',
     profile: '/profile',

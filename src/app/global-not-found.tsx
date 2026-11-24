@@ -1,11 +1,22 @@
 import { Button } from '@/components/core';
-import { FONT_DEFAULT } from '@/configs';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
+import { Be_Vietnam_Pro } from 'next/font/google';
 
-// Unmatched URLs anywhere on the site. With two root layouts ((site) and (shop))
+// Unmatched URLs anywhere on the site. With two root layouts ((site) and (public))
 // there is no single layout to render a 404 in, so this page brings its own
 // <html>, styles and font.
+
+// Same font as the marketing site, but NOT preloaded: Next.js preloads this
+// file's fonts on every route of the app, so a preloaded font here made each
+// shop page download five font files it never uses.
+const notFoundFont = Be_Vietnam_Pro({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-be-vietnam-pro',
+    weight: ['400', '600'],
+    preload: false
+});
 export const metadata: Metadata = {
     title: '404 - Page Not Found',
     robots: { index: false }
@@ -13,7 +24,7 @@ export const metadata: Metadata = {
 
 const NotFoundPage = () => {
     return (
-        <html lang='en' className={FONT_DEFAULT.variable}>
+        <html lang='en' className={notFoundFont.variable}>
             <body>
                 <section className='flex min-h-screen items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat dark:bg-linear-to-t dark:from-gray-950 dark:to-gray-950'>
                     <div className='container'>

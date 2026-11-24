@@ -1,10 +1,19 @@
-@import 'tailwindcss';
+/* Only scan the storefront's own files for class names. Without source(none)
+   Tailwind scans the whole repo (admin, starter/, docs) and the shop would
+   download every class used anywhere: ~260 KB of render-blocking CSS. */
+@import 'tailwindcss' source(none);
 @import 'tw-animate-css';
+@source '../';
+@source '../../app/(public)';
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:is(.dark *));
 
 :root {
+    /* Brand orange: for backgrounds and decoration. Text on it is dark (see
+       --primary-foreground); orange TEXT uses the darker --primary-ink, because
+       #fd8d5d on white is only 2.3:1 contrast (WCAG needs 4.5:1). */
     --primary: #fd8d5d;
+    --primary-ink: #ca3e02;
     --secondary: #f0f0f0;
     --tertiary: #212121;
     --muted: #073b74;
@@ -15,7 +24,7 @@
     --card-foreground: oklch(0.13 0.028 261.692);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.13 0.028 261.692);
-    --primary-foreground: oklch(0.985 0.002 247.839);
+    --primary-foreground: #1a1a1a;
     --secondary-foreground: oklch(0.21 0.034 264.665);
     /* --muted: oklch(0.967 0.003 264.542); */
     --muted-foreground: oklch(0.551 0.027 264.364);
@@ -44,6 +53,7 @@
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-primary: var(--primary);
+    --color-primary-ink: var(--primary-ink);
     --color-secondary: var(--secondary);
     --color-tertiary: var(--tertiary);
     --font-sans: var(--font-geist-sans);
@@ -189,7 +199,7 @@
 }
 
 .ProseMirror a {
-    @apply text-primary underline;
+    @apply text-primary-ink underline;
 }
 
 .prose {
@@ -229,7 +239,7 @@
 }
 
 .prose a {
-    @apply text-primary underline;
+    @apply text-primary-ink underline;
 }
 
 .announcement {
@@ -249,20 +259,20 @@
 
 @layer base {
     .heading-logo {
-        @apply text-2xl font-black text-primary;
+        @apply text-primary-ink text-2xl font-black;
     }
     .nav-link {
         @apply text-sm font-medium text-gray-900 xl:text-[15px];
     }
     .nav-cart {
-        @apply text-[12px] font-semibold text-white;
+        @apply text-[12px] font-semibold text-primary-foreground;
     }
     .nav-see-more {
         @apply text-[13px] font-normal text-black;
     }
 
     .xss-normal {
-        @apply text-xs font-normal text-secondary;
+        @apply text-xs font-normal text-gray-600;
     }
     .xs-normal {
         @apply text-xs font-medium text-gray-900;
@@ -272,29 +282,29 @@
         @apply text-sm font-medium text-gray-900;
     }
     .sm-normal-gray {
-        @apply text-sm font-normal text-gray-500;
+        @apply text-sm font-normal text-gray-600;
     }
     .sm-normal-primary {
-        @apply text-[13px] font-normal text-primary;
+        @apply text-primary-ink text-[13px] font-normal;
     }
     .sm-gray {
         @apply !text-sm font-normal text-gray-600;
     }
     .sm-medium {
-        @apply !text-sm font-medium text-primary;
+        @apply text-primary-ink !text-sm font-medium;
     }
     .sm-semibold {
         @apply text-sm font-semibold text-gray-900;
     }
 
     .base-normal {
-        @apply text-sm font-normal text-primary sm:text-base;
+        @apply text-primary-ink text-sm font-normal sm:text-base;
     }
     .base-medium {
         @apply text-sm font-medium text-gray-700 lg:text-base;
     }
     .base-semibold {
-        @apply text-sm font-semibold text-primary sm:text-base;
+        @apply text-primary-ink text-sm font-semibold sm:text-base;
     }
 
     .lg-normal {

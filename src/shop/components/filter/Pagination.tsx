@@ -76,7 +76,7 @@ const Pagination = ({ isLoading, page, limit, total, setPage }: IProps) => {
                     item === '...' ? (
                         <span
                             key={`ellipsis-${index}`}
-                            className='px-1 text-gray-400'
+                            className='px-1 text-gray-600'
                         >
                             ...
                         </span>
@@ -87,7 +87,7 @@ const Pagination = ({ isLoading, page, limit, total, setPage }: IProps) => {
                             className={cn(
                                 'h-8 w-8 rounded text-sm transition-colors',
                                 page === item
-                                    ? 'bg-primary font-medium text-white'
+                                    ? 'bg-primary font-medium text-primary-foreground'
                                     : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
                             )}
                         >

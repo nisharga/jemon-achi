@@ -95,12 +95,12 @@ const DesktopSearch = () => {
                                 }}
                                 onKeyDown={handleSubmit}
                             />
-                            <Search className='absolute top-[27px] left-4 h-5 w-5 -translate-y-1/2 text-gray-400' />
+                            <Search className='absolute top-[27px] left-4 h-5 w-5 -translate-y-1/2 text-gray-600' />
 
                             {/* --- 3. The Results (Nested inside the search bar container) --- */}
                             <div className='border-t border-gray-100 bg-white'>
                                 {!shouldSearch ? (
-                                    <div className='p-4 text-center text-sm text-gray-500'>
+                                    <div className='p-4 text-center text-sm text-gray-600'>
                                         Type to see recommendations
                                     </div>
                                 ) : isFetching ? (
@@ -133,7 +133,7 @@ const DesktopSearch = () => {
                                         ))}
                                         <Link
                                             href={`/search?q=${encodeURIComponent(searchTerm)}`}
-                                            className='block bg-gray-50 py-3 text-center text-sm font-semibold text-primary hover:bg-gray-100'
+                                            className='text-primary-ink block bg-gray-50 py-3 text-center text-sm font-semibold hover:bg-gray-100'
                                             onClick={() =>
                                                 setIsInputVisible(false)
                                             }
@@ -142,7 +142,7 @@ const DesktopSearch = () => {
                                         </Link>
                                     </div>
                                 ) : (
-                                    <div className='p-6 text-center text-sm text-gray-500'>
+                                    <div className='p-6 text-center text-sm text-gray-600'>
                                         No products found.
                                     </div>
                                 )}

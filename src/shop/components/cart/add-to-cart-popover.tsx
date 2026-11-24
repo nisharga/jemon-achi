@@ -141,7 +141,7 @@
 //         className={cn(
 //           "flex items-center justify-center gap-1 sm:gap-2 py-1.5 sm:py-2 rounded-lg text-[10px] sm:text-xs font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#EFBB29] focus:ring-offset-2 relative",
 //           isMaxQuantity
-//             ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+//             ? "bg-gray-300 text-gray-600 cursor-not-allowed"
 //             : totalProductQuantity > 0
 //             ? "bg-green-500 text-white hover:bg-green-600 shadow-md"
 //             : "bg-[#023344] text-white hover:bg-[#023344]/90 hover:shadow-md",
@@ -203,7 +203,7 @@
 //                   onClick={() => setIsOpen(false)}
 //                   className="p-1.5 hover:bg-gray-100 rounded-full transition-colors"
 //                 >
-//                   <X className="h-4 w-4 text-gray-500" />
+//                   <X className="h-4 w-4 text-gray-600" />
 //                 </button>
 //               </div>
 
@@ -303,7 +303,7 @@
 //                   "w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold transition-all duration-200 shadow-md",
 //                   canAddToCart()
 //                     ? "bg-[#EFBB29] text-[#023344] hover:bg-[#EFBB29]/90 hover:shadow-lg transform hover:scale-[1.02]"
-//                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
+//                     : "bg-gray-300 text-gray-600 cursor-not-allowed"
 //                 )}
 //               >
 //                 {getButtonIcon()}

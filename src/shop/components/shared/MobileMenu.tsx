@@ -11,7 +11,6 @@ import { handleLogout } from '@/shop/lib/logout';
 const MobileMenu = ({
     isMobileMenuOpen,
     setIsMobileMenuOpen,
-    setIsSearchPopoverOpen,
     categoriesData
 }: any) => {
     // 1. Track levels of navigation
@@ -22,7 +21,6 @@ const MobileMenu = ({
 
     const closeMenu = () => {
         setIsMobileMenuOpen(false);
-        setIsSearchPopoverOpen(false);
         setActiveCategory(null);
         setActiveSubCategory(null);
     };
@@ -81,7 +79,7 @@ const MobileMenu = ({
                                         onClick={closeMenu}
                                         className='rounded-md p-2 hover:bg-gray-100'
                                     >
-                                        <X className='h-6 w-6 text-primary' />
+                                        <X className='text-primary-ink h-6 w-6' />
                                     </button>
                                 </>
                             )}
@@ -293,7 +291,7 @@ const MobileMenu = ({
                                         <Link
                                             href='/login'
                                             onClick={closeMenu}
-                                            className='flex-1 rounded-lg bg-primary py-2 text-center text-xs font-normal text-white'
+                                            className='flex-1 rounded-lg bg-primary py-2 text-center text-xs font-normal text-primary-foreground'
                                         >
                                             Login
                                         </Link>

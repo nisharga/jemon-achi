@@ -14,7 +14,7 @@ const ProductCardProperty = ({ product_card_properties }: any) => {
                             {data?.title}
                         </h5>
                         <div className='mb-1 flex items-center justify-center gap-2'>
-                            <p className='text-xs font-medium text-primary'>
+                            <p className='text-primary-ink text-xs font-medium'>
                                 {data?.min_text}
                             </p>
                             <div className='flex items-center justify-center gap-1'>
@@ -31,7 +31,7 @@ const ProductCardProperty = ({ product_card_properties }: any) => {
                                 })}
                             </div>
 
-                            <p className='text-xs font-medium text-primary'>
+                            <p className='text-primary-ink text-xs font-medium'>
                                 {data?.max_text}
                             </p>
                         </div>

@@ -39,11 +39,11 @@ const PriceContainer = ({
                     {/* Old Price & Discount Tag */}
                     {hasDiscount && (
                         <>
-                            <span className='text-sm text-gray-400 line-through'>
+                            <span className='text-sm text-gray-600 line-through'>
                                 ৳{previousPrice}
                             </span>
 
-                            <span className='xss-normal text-red-600'>
+                            <span className='xss-normal text-red-700'>
                                 {percentOff}% OFF
                             </span>
                         </>
@@ -51,7 +51,7 @@ const PriceContainer = ({
                 </>
             ) : (
                 /* Fallback when price is 0, undefined, or missing */
-                <span className='lg-medium font-medium text-gray-500 lg:font-semibold'>
+                <span className='lg-medium font-medium text-gray-600 lg:font-semibold'>
                     TBA
                 </span>
             )}

@@ -32,7 +32,7 @@ export const ProductActionsBtn: React.FC<ProductOptionsProps> = ({
                     disabled={!isInStock}
                     className={`flex-1 rounded-full border-2 p-2 transition-colors sm:p-4 ${
                         !isInStock
-                            ? 'cursor-not-allowed border-gray-200 bg-gray-50 text-gray-400 opacity-70'
+                            ? 'cursor-not-allowed border-gray-200 bg-gray-50 text-gray-600 opacity-70'
                             : 'cursor-pointer border-gray-300 text-gray-900 hover:bg-gray-50'
                     }`}
                 >
@@ -47,8 +47,8 @@ export const ProductActionsBtn: React.FC<ProductOptionsProps> = ({
                     disabled={!isInStock}
                     className={`flex-1 rounded-full p-2 transition-colors sm:p-4 ${
                         !isInStock
-                            ? 'cursor-not-allowed bg-gray-300 text-gray-500 opacity-70'
-                            : 'cursor-pointer bg-primary text-white hover:bg-primary/90'
+                            ? 'cursor-not-allowed bg-gray-300 text-gray-600 opacity-70'
+                            : 'cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90'
                     }`}
                 >
                     <div className='text-sm font-medium sm:text-base sm:font-semibold'>

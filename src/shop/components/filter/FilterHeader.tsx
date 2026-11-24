@@ -41,7 +41,7 @@ const FilterHeader = ({
                         <h1 className='text-lg leading-tight font-medium text-gray-900 sm:text-2xl'>
                             {formatSlugToTitle(`${title}`)}
                         </h1>
-                        <p className='text-xs text-gray-500 sm:text-sm'>
+                        <p className='text-xs text-gray-600 sm:text-sm'>
                             {totalItems} items found
                         </p>
                     </div>
@@ -111,7 +111,7 @@ const SortDropdown = ({ sortBy, setSortBy }: any) => {
                 {/* Select.Value will show the placeholder only if sortBy is an empty string */}
                 <Select.Value placeholder='Default' />
                 <Select.Icon>
-                    <ChevronDown className='ml-2 h-4 w-4 text-gray-500' />
+                    <ChevronDown className='ml-2 h-4 w-4 text-gray-600' />
                 </Select.Icon>
             </Select.Trigger>
 

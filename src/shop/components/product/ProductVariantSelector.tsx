@@ -109,7 +109,7 @@ export function ProductVariantSelector({
             {/* SKU & Stock Status */}
             <div className='flex items-center gap-4 border-y border-gray-50 py-2'>
                 <div className='flex flex-col gap-1'>
-                    <span className='text-[10px] font-semibold tracking-wider text-gray-400 uppercase'>
+                    <span className='text-[10px] font-semibold tracking-wider text-gray-600 uppercase'>
                         SKU
                     </span>
                     <Badge
@@ -121,11 +121,11 @@ export function ProductVariantSelector({
                 </div>
 
                 <div className='flex flex-col gap-1'>
-                    <span className='text-[10px] font-semibold tracking-wider text-gray-400 uppercase'>
+                    <span className='text-[10px] font-semibold tracking-wider text-gray-600 uppercase'>
                         Availability
                     </span>
                     {/* {stockLoading ? (
-            <span className="text-xs text-gray-400 animate-pulse">
+            <span className="text-xs text-gray-600 animate-pulse">
               Checking...
             </span>
           ) : (
@@ -147,7 +147,7 @@ export function ProductVariantSelector({
             </span>
           )} */}
                     {stockLoading ? (
-                        <span className='animate-pulse text-xs text-gray-400'>
+                        <span className='animate-pulse text-xs text-gray-600'>
                             Checking stock…
                         </span>
                     ) : (
@@ -230,7 +230,7 @@ export function ProductVariantSelector({
                     disabled={!isInStock}
                     className={`flex-1 rounded-full bg-primary py-1.5 font-semibold tracking-widest text-secondary uppercase transition-all hover:bg-black lg:py-3 ${
                         !isInStock
-                            ? 'cursor-not-allowed border-gray-200 bg-gray-50 text-gray-400 opacity-70'
+                            ? 'cursor-not-allowed border-gray-200 bg-gray-50 text-gray-600 opacity-70'
                             : 'cursor-pointer border-gray-300 text-gray-900'
                     }`}
                 >

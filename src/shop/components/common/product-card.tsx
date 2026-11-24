@@ -85,13 +85,13 @@ export default function ProductCard({ product, onAddToCart }: any) {
                         <span className='text-[13px] font-medium text-black md:text-base'>
                             ৳ {sell_price}
                         </span>
-                        <span className='text-[10px] text-gray-400 line-through md:text-[13px]'>
+                        <span className='text-[10px] text-gray-600 line-through md:text-[13px]'>
                             ৳{regular_price}
                         </span>
                     </div>
 
                     {/* <div className='flex gap-1 md:gap-2 px-2 mb-1 sm:mb-2 pb-1'>
-      <button className='flex-1 bg-gradient-to-r from-primary/70 via-primary/90 to-primary hover:bg-primary text-white text-[9px] md:text-[11px] font-medium py-1.5 md:py-2 rounded transition-colors uppercase cursor-pointer'>
+      <button className='flex-1 bg-gradient-to-r from-primary/70 via-primary/90 to-primary hover:bg-primary text-primary-foreground text-[9px] md:text-[11px] font-medium py-1.5 md:py-2 rounded transition-colors uppercase cursor-pointer'>
        View
       </button>
 
@@ -127,14 +127,14 @@ const Batches = ({ offerTag, regular_price, sell_price }: IProps) => {
     return (
         <div className='flex items-start justify-between'>
             {regular_price && sell_price && (
-                <span className='rounded-br-2xl bg-gradient-to-r from-primary/70 via-primary/90 to-primary p-1 px-4 py-1 text-[9px] font-medium text-white md:text-[11px]'>
+                <span className='rounded-br-2xl bg-gradient-to-r from-primary/70 via-primary/90 to-primary p-1 px-4 py-1 text-[9px] font-medium text-primary-foreground md:text-[11px]'>
                     {calculateDiscount(regular_price, sell_price)}
                 </span>
             )}
             {offerTag && (
                 <span
                     className={cn(
-                        'flex items-center gap-0.5 rounded-bl-2xl bg-gradient-to-r from-primary/70 via-primary/90 to-primary p-1 !px-4 py-1 text-[9px] font-medium text-white md:text-[11px]'
+                        'flex items-center gap-0.5 rounded-bl-2xl bg-gradient-to-r from-primary/70 via-primary/90 to-primary p-1 !px-4 py-1 text-[9px] font-medium text-primary-foreground md:text-[11px]'
                     )}
                 >
                     <Flame className='h-2.5 w-2.5 shrink-0 fill-current md:h-3 md:w-3' />
@@ -484,7 +484,7 @@ const ProductQuickViewDetails = ({ product, setOpen }: any) => {
                             </span>
                             {regularPriceValue > salePriceValue && (
                                 <>
-                                    <span className='text-lg text-gray-500 line-through sm:text-xl'>
+                                    <span className='text-lg text-gray-600 line-through sm:text-xl'>
                                         Tk{' '}
                                         {Number(
                                             regularPriceValue
@@ -552,13 +552,13 @@ const ProductQuickViewDetails = ({ product, setOpen }: any) => {
 }
 {
     /* <div className="flex justify-between items-start">
-            <span className="bg-gradient-to-r from-primary/70 via-primary/90 to-primary text-white text-[9px] md:text-[11px] font-medium px-4 py-1 rounded-br-2xl p-1">
+            <span className="bg-gradient-to-r from-primary/70 via-primary/90 to-primary text-primary-foreground text-[9px] md:text-[11px] font-medium px-4 py-1 rounded-br-2xl p-1">
               {calculateDiscount(regular_price, sell_price)}
             </span>
             {offerTag && (
               <span
                 className={cn(
-                  "bg-gradient-to-r from-primary/70 via-primary/90 to-primary text-[9px] md:text-[11px] font-medium !px-4 py-1 flex items-center gap-0.5 text-white p-1 rounded-bl-2xl"
+                  "bg-gradient-to-r from-primary/70 via-primary/90 to-primary text-[9px] md:text-[11px] font-medium !px-4 py-1 flex items-center gap-0.5 text-primary-foreground p-1 rounded-bl-2xl"
                 )}
               >
                 <Flame className="w-2.5 h-2.5 md:w-3 md:h-3 fill-current shrink-0" />

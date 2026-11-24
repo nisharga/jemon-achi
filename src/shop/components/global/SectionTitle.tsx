@@ -1,19 +1,11 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-
-const SectionTitle = ({ title }: any) => {
-    return (
-        <motion.h2
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className='section-title'
-        >
-            {title}
-        </motion.h2>
-    );
-};
+/**
+ * Heading of a storefront section.
+ *
+ * A plain server component on purpose: it used to fade in with framer-motion,
+ * which kept every section heading invisible until the JavaScript had loaded.
+ */
+const SectionTitle = ({ title }: { title: string }) => (
+    <h2 className='section-title'>{title}</h2>
+);
 
 export default SectionTitle;

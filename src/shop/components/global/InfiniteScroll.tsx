@@ -59,7 +59,10 @@ export const InfiniteScroll = ({
                 className='flex h-10 w-full items-center justify-center'
             >
                 {isLoading && (
-                    <Loader2 className='animate-spin text-primary' size={24} />
+                    <Loader2
+                        className='text-primary-ink animate-spin'
+                        size={24}
+                    />
                 )}
             </div>
         </>

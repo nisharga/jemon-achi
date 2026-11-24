@@ -178,7 +178,7 @@ const MobileSearch = ({ isOpen, onClose }: MobileSearchOverlayProps) => {
                                         onClick={() => setSearchTerm('')}
                                         className='absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-1 transition-colors hover:bg-gray-200'
                                     >
-                                        <X className='h-4 w-4 text-gray-500' />
+                                        <X className='h-4 w-4 text-gray-600' />
                                     </motion.button>
                                 )}
                             </div>
@@ -259,7 +259,7 @@ const MobileSearch = ({ isOpen, onClose }: MobileSearchOverlayProps) => {
                               )} */}
                                                             </div>
                                                             <div className='min-w-0 flex-1'>
-                                                                <h4 className='sm-semibold line-clamp-2 transition-colors group-hover:text-primary'>
+                                                                <h4 className='sm-semibold group-hover:text-primary-ink line-clamp-2 transition-colors'>
                                                                     {item.name}
                                                                 </h4>
                                                                 {/*  <div className="flex items-center gap-2">
@@ -268,7 +268,7 @@ const MobileSearch = ({ isOpen, onClose }: MobileSearchOverlayProps) => {
                                     <span className="text-base font-bold text-red-500">
                                       ৳ {item.variants[0].sale_price}
                                     </span>
-                                    <span className="text-sm text-gray-500 line-through">
+                                    <span className="text-sm text-gray-600 line-through">
                                       {item.variants[0].regular_price}
                                     </span>
                                   </>
@@ -279,7 +279,7 @@ const MobileSearch = ({ isOpen, onClose }: MobileSearchOverlayProps) => {
                                 )}
                               </div> */}
                                                             </div>
-                                                            <ChevronDown className='h-5 w-5 -rotate-90 text-gray-900 transition-colors group-hover:text-primary' />
+                                                            <ChevronDown className='group-hover:text-primary-ink h-5 w-5 -rotate-90 text-gray-900 transition-colors' />
                                                         </Link>
                                                     </div>
                                                 ))}
@@ -289,7 +289,7 @@ const MobileSearch = ({ isOpen, onClose }: MobileSearchOverlayProps) => {
                         <div className="text-center pt-2">
                           <Link
                             href={`/search?q=${encodeURIComponent(searchTerm)}`}
-                            className="base-semibold hover:text-primary/80 transition-colors"
+                            className="base-semibold hover:text-primary-ink/80 transition-colors"
                             onClick={onClose}
                           >
                             View all {filteredRecommendations.length} results
@@ -305,7 +305,7 @@ const MobileSearch = ({ isOpen, onClose }: MobileSearchOverlayProps) => {
                                         className='py-12 text-center'
                                     >
                                         <div className='mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gray-100'>
-                                            <Search className='h-8 w-8 text-gray-400' />
+                                            <Search className='h-8 w-8 text-gray-600' />
                                         </div>
                                         <h3 className='mb-2 text-lg font-semibold text-gray-800'>
                                             No results found
@@ -316,7 +316,7 @@ const MobileSearch = ({ isOpen, onClose }: MobileSearchOverlayProps) => {
                                         </p>
                                         <button
                                             onClick={() => setSearchTerm('')}
-                                            className='rounded-full bg-primary px-6 py-2 text-white transition-colors hover:bg-primary/90'
+                                            className='rounded-full bg-primary px-6 py-2 text-primary-foreground transition-colors hover:bg-primary/90'
                                         >
                                             Clear Search
                                         </button>
