@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
+import { fileUrl } from '@/lib/file-url';
 import { useEffect, useState, useRef } from 'react';
 import { toast } from 'sonner';
 import { XCircle, Video } from 'lucide-react';
@@ -98,7 +99,7 @@ export const VideoUploadInput = ({
                 // Preview state
                 <div className='space-y-3'>
                     <video
-                        src={localVideo.url}
+                        src={localVideo.url && fileUrl(localVideo.url)}
                         controls
                         className='w-full rounded-md bg-black'
                         style={{ maxHeight: '200px' }}
@@ -267,7 +268,7 @@ export const VideoUploadInputMultiple = ({
                     {localVideos.map((video, index) => (
                         <div key={index} className='space-y-2'>
                             <video
-                                src={video.url}
+                                src={video.url && fileUrl(video.url)}
                                 controls
                                 className='w-full rounded-md bg-black'
                                 style={{ maxHeight: '200px' }}

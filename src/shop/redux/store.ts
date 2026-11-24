@@ -1,14 +1,5 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import {
-    persistReducer,
-    persistStore,
-    FLUSH,
-    REHYDRATE,
-    PAUSE,
-    PERSIST,
-    PURGE,
-    REGISTER
-} from 'redux-persist';
+import { persistReducer, persistStore } from 'redux-persist';
 import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
 import {
     type TypedUseSelectorHook,
@@ -60,16 +51,12 @@ export const makeStore = () =>
         reducer: persistedReducer,
         middleware: (getDefaultMiddleware) =>
             getDefaultMiddleware({
-                serializableCheck: {
-                    ignoredActions: [
-                        FLUSH,
-                        REHYDRATE,
-                        PAUSE,
-                        PERSIST,
-                        PURGE,
-                        REGISTER
-                    ]
-                }
+                // Redux's two development-only checks time every action with
+                // Date.now(). Data hooks dispatch while a page is prerendered, and
+                // Next.js (cacheComponents) stops on clock reads during prerender.
+                // These checks never run in production, so nothing changes there.
+                immutableCheck: false,
+                serializableCheck: false
             })
                 .concat(apiSlice.middleware)
                 .concat(apiSliceAuth.middleware)

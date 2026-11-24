@@ -23,6 +23,14 @@ import type {
 
 type ApiEnvelope<T> = { success: boolean; data: T };
 
+/** Logs each warning only once per server start (cached pages re-run often in dev). */
+const warned = new Set<string>();
+const warnOnce = (message: string) => {
+    if (warned.has(message)) return;
+    warned.add(message);
+    console.warn(message);
+};
+
 /**
  * GET a public endpoint and return its `data`, or `fallback` when there is none.
  *
@@ -38,7 +46,7 @@ async function getPublic<T>(path: string, fallback: T): Promise<T> {
             throw new Error(`API answered ${response.status} for ${path}`);
         }
         if (!response.ok) {
-            console.warn(`[storefront-api] ${response.status} for ${path}`);
+            warnOnce(`[storefront-api] ${response.status} for ${path}`);
             return fallback;
         }
 
@@ -150,4 +158,12 @@ export async function getProductSlugs(limit = 200): Promise<string[]> {
     return (result.products ?? [])
         .filter((product) => product.is_published !== false)
         .map((product) => product.slug);
+}
+
+/** Messages rotating in the black bar above the header (set in the admin CMS). */
+export async function getTopBarMessages(): Promise<string[]> {
+    'use cache';
+    cacheLife('minutes');
+    cacheTag('storefront');
+    return getPublic<string[]>('/cms/top-bar-messages', []);
 }

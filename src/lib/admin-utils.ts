@@ -1,3 +1,4 @@
+import { fileUrl } from '@/lib/file-url';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -39,8 +40,8 @@ export function getImgFullUrl(key: any) {
     // ✅ blob url string (already a local preview string)
     if (trimmed.startsWith('blob:')) return trimmed;
 
-    // ✅ Cloudfront path
-    return `https://d11ml80zmgyrxk.cloudfront.net/${trimmed}`;
+    // Short path from the backend ("uploads/<id>.jpg") → NEXT_PUBLIC_FILE_BASE_URL + path.
+    return fileUrl(trimmed);
 }
 
 // export function getImgFullUrl(key: any) {

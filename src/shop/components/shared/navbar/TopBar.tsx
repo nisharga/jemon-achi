@@ -2,14 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useGetTopBarMessagesQuery } from '@/shop/redux/api/topbar-api';
 
 const SECONDS_PER_MESSAGE = 4;
 
 /** Black announcement strip above the header; rotates the admin's messages. */
-export default function TopBar() {
-    const { data } = useGetTopBarMessagesQuery({});
-    const messages: string[] = data?.data ?? [];
+export default function TopBar({ messages }: { messages: string[] }) {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {

@@ -10,7 +10,14 @@ export const store = configureStore({
         // [fraudApi.reducerPath]: fraudApi.reducer,
     },
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat(
+        getDefaultMiddleware({
+            // Redux's two development-only checks time every action with
+            // Date.now(). Data hooks dispatch while a page is prerendered, and
+            // Next.js (cacheComponents) stops on clock reads during prerender.
+            // These checks never run in production, so nothing changes there.
+            immutableCheck: false,
+            serializableCheck: false
+        }).concat(
             apiSlice.middleware,
             imgbbFileUploadApi.middleware
             // fraudApi.middleware

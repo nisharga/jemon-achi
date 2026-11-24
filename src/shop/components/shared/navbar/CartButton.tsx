@@ -11,7 +11,9 @@ export default function CartButton() {
     // The cart lives in the browser (localStorage), so the count is only shown after mount.
     const isMounted = useMounted();
     const count = useAppSelector(selectCartCount);
-    const label = count > 0 ? `Cart, ${count} items` : 'Cart';
+    // Same label on the server and the first browser render (no cart yet), then the real count.
+    const shownCount = isMounted ? count : 0;
+    const label = shownCount > 0 ? `Cart, ${shownCount} items` : 'Cart';
 
     return (
         <Link
@@ -20,9 +22,9 @@ export default function CartButton() {
             className='text-primary-ink relative p-1 hover:text-black'
         >
             <ShoppingCart className='size-5' aria-hidden='true' />
-            {isMounted && count > 0 && (
+            {shownCount > 0 && (
                 <span className='nav-cart absolute -top-1 -right-1 flex size-4 items-center justify-center rounded-full bg-primary'>
-                    {count > 99 ? '99+' : count}
+                    {shownCount > 99 ? '99+' : shownCount}
                 </span>
             )}
         </Link>

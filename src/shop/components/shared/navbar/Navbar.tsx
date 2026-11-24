@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { Menu, Search, TicketPercent, Truck } from 'lucide-react';
-import { useGetAllCategoriesQuery } from '@/shop/redux/api/category-api';
 import { cn, isDesktop } from '@/shop/lib/utils';
-import DesktopSearch from '../DesktopSearch';
+import DesktopSearch from './DesktopSearch';
 import MobileMenu from '../MobileMenu';
-import MobileSearch from '../MobileSearch';
+import MobileSearch from './MobileSearch';
 import AccountMenu from './AccountMenu';
 import CartButton from './CartButton';
 import CategoryMenu from './CategoryMenu';
@@ -16,19 +15,27 @@ import MegaMenu from './MegaMenu';
 import TopBar from './TopBar';
 import type { NavCategory } from './types';
 
-/**
- * Site header. On the home page (`isHome`) it floats over the banner and
- * sticks to the top once the visitor scrolls; elsewhere it is always sticky.
- */
-export default function Navbar({ isHome = false }: { isHome?: boolean }) {
+type Props = {
+    /** Home page: the header floats over the banner until the visitor scrolls. */
+    isHome?: boolean;
+    /** Fetched on the server by StorefrontFrame. */
+    categories: NavCategory[];
+    topBarMessages: string[];
+};
+
+/** Site header: top bar, logo, category menu, search and account icons. */
+export default function Navbar({
+    isHome = false,
+    categories: allCategories,
+    topBarMessages
+}: Props) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
     const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
     const isScrolled = useIsScrolled(isHome);
 
-    const { data } = useGetAllCategoriesQuery({});
-    const categories: NavCategory[] = (data?.data?.data ?? []).filter(
-        (category: NavCategory) => category.is_published
+    const categories = allCategories.filter(
+        (category) => category.is_published !== false
     );
     const subcategories =
         categories.find((category) => category.name_en === hoveredCategory)
@@ -43,7 +50,7 @@ export default function Navbar({ isHome = false }: { isHome?: boolean }) {
                 isHome && (isScrolled ? 'fixed top-0' : 'absolute top-0')
             )}
         >
-            <TopBar />
+            <TopBar messages={topBarMessages} />
 
             <div className='px-2 lg:px-4'>
                 <nav

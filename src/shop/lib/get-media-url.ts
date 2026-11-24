@@ -1,4 +1,4 @@
-import { CLOUDFRONT_BASE_URL } from '@/shop/config';
+import { fileUrl } from '@/lib/file-url';
 
 // export function getMediaUrl(key: any) {
 //   if (!key) return "";
@@ -79,9 +79,8 @@ export function getMediaUrl(key: any) {
         return trimmed;
     }
 
-    // 5. Fallback to Cloudfront for relative paths
-    const cleanPath = trimmed.startsWith('/') ? trimmed.slice(1) : trimmed;
-    return `https://d11ml80zmgyrxk.cloudfront.net/${cleanPath}`;
+    // Short paths from the backend ("uploads/<id>.jpg") → NEXT_PUBLIC_FILE_BASE_URL + path.
+    return fileUrl(trimmed);
 
     // from mokkah fabrics
     //  return `https://d38ry6e5iuvq8e.cloudfront.net/${cleanPath}`;
