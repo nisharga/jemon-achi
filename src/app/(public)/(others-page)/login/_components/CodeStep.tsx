@@ -114,9 +114,7 @@ export default function CodeStep({
                 <div className='mx-auto flex size-12 items-center justify-center rounded-full bg-primary/10'>
                     <ShieldCheck className='text-primary-ink size-6' />
                 </div>
-                <h1 className='text-2xl font-semibold text-gray-900'>
-                    Enter your code
-                </h1>
+                <h1 className='two-xl-medium'>Enter your code</h1>
                 <p className='text-sm text-gray-600'>
                     We sent a 6-digit code to{' '}
                     <span className='font-medium text-gray-900'>{phone}</span>.

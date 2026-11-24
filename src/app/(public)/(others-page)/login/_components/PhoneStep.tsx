@@ -60,9 +60,7 @@ export default function PhoneStep({ initialPhone, onCodeSent }: Props) {
                 <div className='mx-auto flex size-12 items-center justify-center rounded-full bg-primary/10'>
                     <Phone className='text-primary-ink size-6' />
                 </div>
-                <h1 className='text-2xl font-semibold text-gray-900'>
-                    Log in with your phone
-                </h1>
+                <h1 className='two-xl-medium'>Log in with your phone</h1>
                 <p className='text-sm text-gray-600'>
                     We will text you a 6-digit code. New here? Your account is
                     created automatically.
